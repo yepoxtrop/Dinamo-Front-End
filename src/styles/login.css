@@ -155,6 +155,10 @@
     flex-direction: column;
 }
 
+.container-form-login{
+    width: 100%;
+}
+
 hr{
     width: 100%;
     height: 2px;

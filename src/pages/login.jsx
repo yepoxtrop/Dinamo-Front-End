@@ -14,7 +14,7 @@ import { URL_API } from "../settings/variablesEntrono.js";
 {/* Estilos */}
 import '../styles/login.css';
 {/* Imagenes */}
-import logo from "../../public/logo/logo.png";
+import logo from "../assets/logo/logo.png";
 
 
 
@@ -62,6 +62,7 @@ export const Login = () =>{
                                         "text":{
                                             "campo":{
                                                 "label": "Usuario De Dominio",
+                                                "labelClassName": "label-username",
                                                 "placeholder": "luis.sarmiento",
                                                 "type": "text",
                                                 "name": "username",
@@ -76,6 +77,7 @@ export const Login = () =>{
                                         "password": {
                                             "campo":{
                                                 "label": "Contraseña",
+                                                "labelClassName": "label-password",
                                                 "placeholder": "Ingresa tu contraseña",
                                                 "type": "password",
                                                 "name": "password",
