@@ -5,9 +5,6 @@ import { Lineicons } from "@lineiconshq/react-lineicons";
 import {
   User4Outlined,
   Locked2Outlined,
-  CloudBolt1Outlined,
-  CloudBolt1Duotone,
-  CloudBolt1Solid,
 } from "@lineiconshq/free-icons";
 {/* Constantes */}
 import { URL_API } from "../settings/variablesEntrono.js";
@@ -46,7 +43,7 @@ export const Login = () =>{
                             </div>
                         </div>
 
-                        <hr classname="line-form-login" />
+                        <hr className="line-form-login" />
 
                         <div className="container-description-form-login" id="container-description-form-login">
                             <span className="description-login">Bienvenido</span>
@@ -89,6 +86,16 @@ export const Login = () =>{
                                                 "icon": Locked2Outlined
                                             }
                                         },
+                                        "checkbox": {
+                                            "campo":{
+                                                "label": "Recordar mis credenciales",
+                                                "type": "checkbox",
+                                                "name": "remember",
+                                                "className": "input-checkbox",
+                                                "id": "remember",
+                                                "required": false,
+                                            }
+                                        },
                                         "submit": {
                                             "campo":{
                                                 "label": "Iniciar Sesión",
@@ -96,15 +103,6 @@ export const Login = () =>{
                                                 "className": "input-submit",
                                                 "value": "Iniciar Sesión",
                                                 "id": "submit"
-                                            }
-                                        },
-                                        "checkbox": {
-                                            "campo":{
-                                                "label": "Recordar mis credenciales",
-                                                "type": "checkbox",
-                                                "name": "remember",
-                                                "className": "input-checkbox",
-                                                "id": "remember"
                                             }
                                         }
 
@@ -114,10 +112,9 @@ export const Login = () =>{
                             />
                         </div>
 
-                        <hr classname="line-form-login" />
 
                         <div className="container-footer-form-login">
-                            <span>ACS Soluciones Integrales S.A.S</span>
+                            <span className="info-footer-form-login">ACS Soluciones Integrales S.A.S</span>
                         </div>
                          
                     </div>

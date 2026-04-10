@@ -1,8 +1,7 @@
 {/* Componentes */}
-import { InputText } from "../../components/inputs/inputText.jsx";
-import { InputPassword } from "../../components/inputs/inputPassword.jsx";
 import { InputSubmit } from "../../components/inputs/inputSubmit.jsx";
 import { Label } from "../../components/labels/label.jsx";
+import { TargetInputText, TargetInputPassword, TargetInputCheckbox } from "../combinations/targetInputs.jsx";
 {/* Librerias */}
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
@@ -12,9 +11,10 @@ import '../../styles/forms.css';
 export function Form ({params, api_url}){
     
     const fieldComponents = {
-        text: InputText,
-        password: InputPassword,
+        text: TargetInputText,
+        password: TargetInputPassword,
         submit: InputSubmit,
+        checkbox: TargetInputCheckbox
     };
 
     const handleSubmit = async (event) => {
@@ -40,7 +40,7 @@ export function Form ({params, api_url}){
             <form onSubmit={handleSubmit}>
                 {Object.entries(params).map(([key, value]) => {
                     const Component = fieldComponents[key];
-                    return <div className="container-inputs">{Component ? <><Label params={{"htmlFor":value.campo.name, "value": value.campo.label, "className": value.campo.labelClassName}} /><Component key={key} params={value.campo} /></> : null}</div>;
+                    return <div className="container-inputs">{Component ? <Component key={key} params={value.campo} /> : null}</div>;
                 })}
             </form>
         </>

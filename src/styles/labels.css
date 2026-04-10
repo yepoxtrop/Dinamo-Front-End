@@ -1,0 +1,5 @@
+.label-default{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--second-color);
+}

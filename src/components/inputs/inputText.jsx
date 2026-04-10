@@ -2,8 +2,22 @@
 import { Lineicons } from "@lineiconshq/react-lineicons";
 {/* Estilos */}
 import '../../styles/inputs.css';
+{/* Hooks */}
+import { useState } from "react";
 
 export function InputText ({params}){
+
+    const [inputValue, setInputValue] = useState("");
+    const [className, setClassName] = useState(params.className);
+    const handleChange = (event) => {
+        setInputValue(event.target.value);
+        if (inputValue === "") {
+            setClassName(params.className);
+        }else{
+            setClassName(params.className + "-active");
+        }
+    };
+
     return(
         <>
             <div className="container-input">
@@ -17,6 +31,7 @@ export function InputText ({params}){
                     maxLength={params.maxLength}
                     minLength={params.minLength}
                     id={params.id}
+                    onChange={handleChange}
                 />
             </div>
             
