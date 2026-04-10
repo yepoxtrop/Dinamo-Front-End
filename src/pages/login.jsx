@@ -1,11 +1,8 @@
 {/* Componentes */}
 import { Form } from "../components/forms/form.jsx";
 import { Lineicons } from "@lineiconshq/react-lineicons";
-
-import {
-  User4Outlined,
-  Locked2Outlined,
-} from "@lineiconshq/free-icons";
+import { ToastLogin } from "../components/combinations/toasts.jsx";
+import {  User4Outlined,   Locked2Outlined,} from "@lineiconshq/free-icons";
 {/* Constantes */}
 import { URL_API } from "../settings/variablesEntrono.js";
 {/* Estilos */}
@@ -13,14 +10,18 @@ import '../styles/login.css';
 {/* Imagenes */}
 import logo from "../assets/logo/logo.png";
 
-
-
 export const Login = () =>{
     return(
         <>  
 
             {/* Pagina de inicio de sesión */}
             <section className="body-login" id="body-login">
+
+                <ToastLogin params={{
+                    "icon":"",
+                    "title":"Fallo En Inicio De Sesion",
+                    "message":"Credenciales invalidas, reviselas e intente nuevamente"
+                }} />
 
                 {/* Panel izquierdo(diseño) */}
                 <section className="left-panel-login" id="left-panel-login">

@@ -2,13 +2,15 @@
 import { InputSubmit } from "../../components/inputs/inputSubmit.jsx";
 import { Label } from "../../components/labels/label.jsx";
 import { TargetInputText, TargetInputPassword, TargetInputCheckbox } from "../combinations/targetInputs.jsx";
-{/* Librerias */}
+
+{/* Hooks */}
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 {/* Estilos */}
 import '../../styles/forms.css';
 
 export function Form ({params, api_url}){
+
     
     const fieldComponents = {
         text: TargetInputText,
@@ -21,13 +23,13 @@ export function Form ({params, api_url}){
         try {
             event.preventDefault();
         
-            const datos = {
+            const data = {
                 "usuario": event.target.username.value,
                 "contrasena": event.target.password.value,
                 "fecha": new Date()
             }
 
-            const peticion = await axios.post(`${api_url}`, datos);
+            const peticion = await axios.post(`${api_url}`, data);
 
         } catch (error) {
 
