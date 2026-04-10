@@ -1,45 +1,124 @@
+{/* Componentes */}
 import { Form } from "../components/forms/form.jsx";
+import { Lineicons } from "@lineiconshq/react-lineicons";
+
+import {
+  User4Outlined,
+  Locked2Outlined,
+  CloudBolt1Outlined,
+  CloudBolt1Duotone,
+  CloudBolt1Solid,
+} from "@lineiconshq/free-icons";
+{/* Constantes */}
+import { URL_API } from "../settings/variablesEntrono.js";
+{/* Estilos */}
+import '../styles/login.css';
+{/* Imagenes */}
+import logo from "../../public/logo/logo.png";
+
+
 
 export const Login = () =>{
     return(
         <>  
-            <section>
 
-                <section></section>
+            {/* Pagina de inicio de sesión */}
+            <section className="body-login" id="body-login">
 
-                <section>
-                    <h1>Login</h1>
-                    <Form params={{
-                        "text":{
-                            "campo":{
-                                "label": "Usuario De Dominio",
-                                "placeholder": "luis.sarmiento",
-                                "type": "text",
-                                "name": "username",
-                                "required": true,
-                                "maxLength": 50,
-                                "minLength": 3
-                            }, 
-                        }, 
-                        "password": {
-                            "campo":{
-                                "label": "Contraseña",
-                                "placeholder": "Ingresa tu contraseña",
-                                "type": "password",
-                                "name": "password",
-                                "required": true,
-                                "maxLength": 100,
-                                "minLength": 6
-                            }
-                        },
-                        "submit": {
-                            "campo":{
-                                "label": "Iniciar Sesión",
-                                "type": "submit"
-                            }
-                        }
+                {/* Panel izquierdo(diseño) */}
+                <section className="left-panel-login" id="left-panel-login">
 
-                    }}/>
+                </section>
+
+                {/* Panel derecho(formulario de inicio de sesión) */}
+                <section className="right-panel-login" id="right-panel-login">
+
+                    {/* Contedor padre del formulario */}
+                    <div className="container-father-form-login" id="container-father-form-login">
+
+                        <div className="container-title-form-login" id="container-title-form-login">
+                            <div className="container-logo-header" id="container-logo-header">
+                                <img src={logo} alt="logo-empresa" id="logo-png-empresa"/> {/* Cambiar logo de la empresa */}
+                            </div>
+                            <div className="container-title-header" id="container-title-header">
+                                <span className="title-login">Dinamo</span> {/* Cambiar el nombre de la empresa */}
+                                <span className="title2-login">Gestión Documental</span>
+                            </div>
+                        </div>
+
+                        <hr classname="line-form-login" />
+
+                        <div className="container-description-form-login" id="container-description-form-login">
+                            <span className="description-login">Bienvenido</span>
+                            <span className="description2-login">Ingresa tus credenciales</span>
+                        </div>
+
+
+                        {/* Contendor del formulario de inicio de sesión */}
+                        <div className="container-form-login">
+                            <Form 
+                                params={
+                                    {
+                                        "text":{
+                                            "campo":{
+                                                "label": "Usuario De Dominio",
+                                                "placeholder": "luis.sarmiento",
+                                                "type": "text",
+                                                "name": "username",
+                                                "required": true,
+                                                "maxLength": 50,
+                                                "minLength": 3,
+                                                "className": "input-text",
+                                                "id": "username",
+                                                "icon": User4Outlined
+                                            }, 
+                                        }, 
+                                        "password": {
+                                            "campo":{
+                                                "label": "Contraseña",
+                                                "placeholder": "Ingresa tu contraseña",
+                                                "type": "password",
+                                                "name": "password",
+                                                "required": true,
+                                                "maxLength": 100,
+                                                "minLength": 6,
+                                                "className": "input-password",
+                                                "id": "password",
+                                                "icon": Locked2Outlined
+                                            }
+                                        },
+                                        "submit": {
+                                            "campo":{
+                                                "label": "Iniciar Sesión",
+                                                "type": "submit",
+                                                "className": "input-submit",
+                                                "value": "Iniciar Sesión",
+                                                "id": "submit"
+                                            }
+                                        },
+                                        "checkbox": {
+                                            "campo":{
+                                                "label": "Recordar mis credenciales",
+                                                "type": "checkbox",
+                                                "name": "remember",
+                                                "className": "input-checkbox",
+                                                "id": "remember"
+                                            }
+                                        }
+
+                                    }
+                                } 
+                                api_url={`${URL_API}/Inicio_Sesion`}
+                            />
+                        </div>
+
+                        <hr classname="line-form-login" />
+
+                        <div className="container-footer-form-login">
+                            <span>ACS Soluciones Integrales S.A.S</span>
+                        </div>
+                         
+                    </div>
                 </section>
             </section>
             

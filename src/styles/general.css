@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-family);
+    box-sizing: border-box;
+}
+
+:root{
+    /* Paleta de colores */
+    --first-color: #B5D4F4;
+    --second-color: #185FA5;
+    --third-color: #042C53;
+    --fourth-color: #0C447C;
+    --fifth-color: #378ADD;
+    --sixth-color: #F0F5FB;
+    --seventh-color: #FFFFFF;
+    --eighth-color: #E6F1FB;
+
+    
+    /* Tipografía */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
