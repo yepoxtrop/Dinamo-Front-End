@@ -2,7 +2,9 @@
 import { Form } from "../components/forms/form.jsx";
 import { Lineicons } from "@lineiconshq/react-lineicons";
 import { ToastLogin } from "../components/combinations/toasts.jsx";
-import {  User4Outlined,   Locked2Outlined,} from "@lineiconshq/free-icons";
+import {  User4Outlined,   Locked2Outlined, XmarkSolid} from "@lineiconshq/free-icons";
+import { BiSolidMessageSquareError } from "react-icons/bi";
+import { TbAlertTriangleFilled } from "react-icons/tb";
 {/* Constantes */}
 import { URL_API } from "../settings/variablesEntrono.js";
 {/* Estilos */}
@@ -18,7 +20,7 @@ export const Login = () =>{
             <section className="body-login" id="body-login">
 
                 <ToastLogin params={{
-                    "icon":"",
+                    "icon":< BiSolidMessageSquareError />,
                     "title":"Fallo En Inicio De Sesion",
                     "message":"Credenciales invalidas, reviselas e intente nuevamente"
                 }} />
