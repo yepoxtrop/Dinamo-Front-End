@@ -2,7 +2,6 @@
 import { InputSubmit } from "../../components/inputs/inputSubmit.jsx";
 import { Label } from "../../components/labels/label.jsx";
 import { TargetInputText, TargetInputPassword, TargetInputCheckbox } from "../combinations/targetInputs.jsx";
-
 {/* Hooks */}
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
@@ -10,7 +9,7 @@ import axios from "axios";
 import '../../styles/forms.css';
 
 export function Form ({params, api_url}){
-
+    
     
     const fieldComponents = {
         text: TargetInputText,
