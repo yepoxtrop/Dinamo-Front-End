@@ -1,9 +1,15 @@
+{/* Componentes */}
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 import { Login } from './pages/login.jsx'
+import { Index } from './pages/index.jsx'
+import { App } from './app.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Login />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </StrictMode>,
 )

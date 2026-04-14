@@ -10,7 +10,6 @@ import '../../styles/forms.css';
 
 export function Form ({params, api_url}){
     
-    
     const fieldComponents = {
         text: TargetInputText,
         password: TargetInputPassword,
@@ -18,6 +17,7 @@ export function Form ({params, api_url}){
         checkbox: TargetInputCheckbox
     };
 
+    
     const handleSubmit = async (event) => {
         try {
             event.preventDefault();

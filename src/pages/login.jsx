@@ -20,6 +20,59 @@ import vector3 from "../assets/circulo3.svg";
 import vector4 from "../assets/documentos.svg";
 
 export const Login = () =>{
+    const paramsFormn = {
+        "text":{
+            "campo":{
+                "label": "Usuario De Dominio",
+                "labelClassName": "label-username",
+                "placeholder": "luis.sarmiento",
+                "type": "text",
+                "name": "username",
+                "required": true,
+                "maxLength": 50,
+                "minLength": 3,
+                "className": "input-text",
+                "id": "username",
+                "icon": User4Outlined
+            }, 
+        }, 
+        "password": {
+            "campo":{
+                "label": "Contraseña",
+                "labelClassName": "label-password",
+                "placeholder": "Ingresa tu contraseña",
+                "type": "password",
+                "name": "password",
+                "required": true,
+                "maxLength": 100,
+                "minLength": 6,
+                "className": "input-password",
+                "id": "password",
+                "icon": Locked2Outlined
+            }
+        },
+        "checkbox": {
+            "campo":{
+                "label": "Recordar mis credenciales",
+                "type": "checkbox",
+                "name": "remember",
+                "className": "input-checkbox",
+                "id": "remember",
+                "required": false,
+            }
+        },
+        "submit": {
+            "campo":{
+                "label": "Iniciar Sesión",
+                "type": "submit",
+                "className": "input-submit",
+                "value": "Iniciar Sesión",
+                "id": "submit"
+            }
+        }
+    }; 
+    const url = `${URL_API}/Inicio_Sesion`;
+
     return(
         <>  
 
@@ -50,8 +103,8 @@ export const Login = () =>{
                                 <span className="title2-login-panel-left">Gestión Documental</span>
                             </div>
                         </div>
-                        <div className="container-logo-header-panel-left">
-                            <img src={vector4} alt="logo-empresa" className="logo-png-empresa-panel-left"/>
+                        <div className="container-vector-panel-left">
+                            <img src={vector4} alt="vector" className="vector-panel-left"/>
                         </div>
                         <div className="container-skills-login">
                             <div className="skills-login1">
@@ -100,61 +153,8 @@ export const Login = () =>{
                         {/* Contendor del formulario de inicio de sesión */}
                         <div className="container-form-login">
                             <Form 
-                                params={
-                                    {
-                                        "text":{
-                                            "campo":{
-                                                "label": "Usuario De Dominio",
-                                                "labelClassName": "label-username",
-                                                "placeholder": "luis.sarmiento",
-                                                "type": "text",
-                                                "name": "username",
-                                                "required": true,
-                                                "maxLength": 50,
-                                                "minLength": 3,
-                                                "className": "input-text",
-                                                "id": "username",
-                                                "icon": User4Outlined
-                                            }, 
-                                        }, 
-                                        "password": {
-                                            "campo":{
-                                                "label": "Contraseña",
-                                                "labelClassName": "label-password",
-                                                "placeholder": "Ingresa tu contraseña",
-                                                "type": "password",
-                                                "name": "password",
-                                                "required": true,
-                                                "maxLength": 100,
-                                                "minLength": 6,
-                                                "className": "input-password",
-                                                "id": "password",
-                                                "icon": Locked2Outlined
-                                            }
-                                        },
-                                        "checkbox": {
-                                            "campo":{
-                                                "label": "Recordar mis credenciales",
-                                                "type": "checkbox",
-                                                "name": "remember",
-                                                "className": "input-checkbox",
-                                                "id": "remember",
-                                                "required": false,
-                                            }
-                                        },
-                                        "submit": {
-                                            "campo":{
-                                                "label": "Iniciar Sesión",
-                                                "type": "submit",
-                                                "className": "input-submit",
-                                                "value": "Iniciar Sesión",
-                                                "id": "submit"
-                                            }
-                                        }
-
-                                    }
-                                } 
-                                api_url={`${URL_API}/Inicio_Sesion`}
+                                params={paramsFormn} 
+                                api_url={url}
                             />
                         </div>
 
