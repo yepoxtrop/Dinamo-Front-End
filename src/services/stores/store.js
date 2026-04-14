@@ -1,8 +1,10 @@
 /* Paqutes */
 import { configureStore } from "@reduxjs/toolkit";
 /* Reducers */
-import { exampleReducer } from "./reducers.js";
+import usersReducer from "../users/slice.js";
 
 export const store = configureStore({
-    reducer: {},
+    reducer: {
+        users: usersReducer,
+    },
 });

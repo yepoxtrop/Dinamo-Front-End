@@ -7,6 +7,12 @@ import { BsExclamationSquareFill } from "react-icons/bs";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { PiCertificateFill } from "react-icons/pi";
 import { SiReadthedocs } from "react-icons/si";
+{/* Hooks */}
+import { useSelector } from "react-redux";
+{/* Estado */}
+import { store } from "../services/stores/store.js";
+{/* Actions */}
+import { setLogin } from "../services/users/slice.js";
 {/* Constantes */}
 import { URL_API } from "../settings/variablesEntrono.js";
 {/* Estilos */}
@@ -20,6 +26,8 @@ import vector3 from "../assets/circulo3.svg";
 import vector4 from "../assets/documentos.svg";
 
 export const Login = () =>{
+
+    {/* Parámetros del formulario */}
     const paramsFormn = {
         "text":{
             "campo":{
@@ -72,6 +80,16 @@ export const Login = () =>{
         }
     }; 
     const url = `${URL_API}/Inicio_Sesion`;
+
+    {/* Estado del aplicativo */}
+    const users = useSelector((state) => {
+        state.users
+    });
+    const dispatch = store.dispatch;
+
+    {/* */}
+    
+
 
     return(
         <>  

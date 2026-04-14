@@ -3,13 +3,16 @@ import { InputSubmit } from "../../components/inputs/inputSubmit.jsx";
 import { Label } from "../../components/labels/label.jsx";
 import { TargetInputText, TargetInputPassword, TargetInputCheckbox } from "../combinations/targetInputs.jsx";
 {/* Hooks */}
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, use } from "react";
+import { useSendFormData } from "../../hooks/forms.jsx";
+{/* Paquetes */}
 import axios from "axios";
 {/* Estilos */}
 import '../../styles/forms.css';
 
 export function Form ({params, api_url}){
     
+    {/* Componentes de inputs */}
     const fieldComponents = {
         text: TargetInputText,
         password: TargetInputPassword,
@@ -17,24 +20,8 @@ export function Form ({params, api_url}){
         checkbox: TargetInputCheckbox
     };
 
-    
-    const handleSubmit = async (event) => {
-        try {
-            event.preventDefault();
-        
-            const data = {
-                "usuario": event.target.username.value,
-                "contrasena": event.target.password.value,
-                "fecha": new Date()
-            }
-
-            const peticion = await axios.post(`${api_url}`, data);
-
-        } catch (error) {
-
-            console.error("Error al enviar el formulario:", error);
-        }
-    }
+    {/* Envio de datos con hook personalizado */}
+    const handleSubmit = useSendFormData(api_url);
 
     return(
         <>
