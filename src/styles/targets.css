@@ -1,15 +1,19 @@
+/* Target del input tipo text */
 .target-input-text{
     margin: 0 0 1rem 0;
 }
 
+/* Target del input tipo password */
 .target-input-password{
     margin: 0 0 1rem 0;
 }
 
+/* Target del input tipo checkbox */
 .target-input-checkbox{
     margin: 0 0 0.5rem 0;
 }
 
+/* Target del componente sidebar */
 .target-item-menu{
     width: 100%;
     display: flex;
@@ -17,7 +21,33 @@
     align-items: center;
     gap: 5px;
     padding: 5px 8px;
+
+    position: relative;
+    overflow: hidden;
+
+    cursor: pointer;
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
+
+.target-item-menu::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--nineth-color);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.25s ease;
+}
+
+.target-item-menu:hover::before{
+    transform: scaleY(1);
+}
+
 
 .icon-target-menu{
     width: 1.5rem;
@@ -34,10 +64,64 @@
 
 .target-item-menu:hover{
     background-color: var(--second-color);
-    border-left-color: var(--nineth-color);
-    border-left-width: 0.5rem;
-    border-left-style: solid;
+    
+}
+
+
+/* Target del componente sub menu */
+.target-sub-item-menu{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 8px;
+
+    position: relative;
+    overflow: hidden;
+
+    cursor: pointer;
 
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+.target-sub-item-menu::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--third-color);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.25s ease;
+}
+
+.target-sub-item-menu:hover::before{
+    transform: scaleY(1);
+}
+
+
+.icon-target-sub-menu{
+    width: 1.2rem;
+    height: 1.2rem;
+    color: var(--seventh-color);
+}
+
+.text-sub-item-menu{
+    color: var(--first-color);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+
+.target-sub-item-menu:hover{
+    background-color: var(--fifth-color);
+}
+
+.target-sub-item-menu:hover {
+    background-color: var(--fifth-color);
 }

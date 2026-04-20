@@ -42,4 +42,15 @@
 
 .list-left-menu, .sublist-left-menu{
     list-style: none;
+    width: 100%;
+}
+
+.sublist-left-menu{
+    padding:  0rem 2rem;
+}
+
+.description-left-menu{
+    padding-left: 5px;
+    font-size: 0.9rem;
+    color: var(--fifth-color);
 }

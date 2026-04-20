@@ -74,3 +74,15 @@ export function TargetItemMenu({params}){
         </>
     )
 }
+
+
+export function TargetSubItemMenu({params}){
+    return(
+        <>
+            <div className="target-sub-item-menu">
+                {params.icon}
+                <span className="text-sub-item-menu">{params.info}</span>
+            </div>
+        </>
+    )
+}
