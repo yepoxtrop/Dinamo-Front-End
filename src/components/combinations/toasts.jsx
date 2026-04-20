@@ -4,19 +4,31 @@ import '../../styles/toasts.css'
 import { RiCloseLargeLine } from "react-icons/ri";
 { /* Hooks */ }
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 
 export function ToastLogin({params}){
-    const [state, setState] = useState(false);
-    const [time, setTime] = useState(10);
+
+    const [isVisible, setIsVisible] = useState(undefined);
+    const [seconds, setSeconds] = useState(10);
+    
+    const users = useSelector((isVisible)=>{
+        return isVisible.users.logIn;
+    })
     
     useEffect(() => {
-        if (!state) return;
+        if (users == false) {
+            setIsVisible(true);
+            setSeconds(10);
+        }
+    }, [users]);
+
+    useEffect(() => {
+        if (isVisible == false || isVisible == undefined) return;
 
         const interval = setInterval(() => {
-            setTime(prev => {
+            setSeconds(prev => {
                 if (prev <= 1) {
-                    clearInterval(interval);
-                    setState(true);
+                    setIsVisible(false);
                     return 0;
                 }
                 return prev - 1;
@@ -24,15 +36,16 @@ export function ToastLogin({params}){
         }, 1000);
 
         return () => clearInterval(interval);
-    }, [state]);
+    }, [isVisible]);
 
     function handleCloseToast() {
-        setState(true);
+        setIsVisible(false);
+        setSeconds(10);
     }
 
     return(
         <>
-            <div className='container-toast' id={`container-toast${state?'-active':'-inactive'}`}>
+            <div className='container-toast' id={`container-toast${isVisible?'-active':(isVisible==false?'-inactive':'-disable')}`}>
                 <div className='header-toast'>
                     <div className='header-info1'>
                         <div className='header-icon'>{params.icon}</div>
@@ -43,7 +56,7 @@ export function ToastLogin({params}){
 
                     <div className='header-info2'>
                         <div className='header-value'>
-                            <span className='value-toast2'>{time} seg</span>
+                            <span className='value-toast2'>{seconds} seg</span>
                         </div>
                         <div className='header-icon'><RiCloseLargeLine className='icon-close-toast' onClick={handleCloseToast}/></div>
                     </div>

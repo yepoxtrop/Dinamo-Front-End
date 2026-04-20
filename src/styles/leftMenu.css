@@ -1,0 +1,45 @@
+.container-left-menu{
+    width: 20%;
+    height: 100vh;
+
+    position: fixed;
+    padding:  0.5rem 1rem;
+
+    background-color: var(--fourth-color);
+    
+}
+
+.container-logo-left-menu{
+    width: 100%;
+    display: flex;
+}
+
+.logo-left-menu{
+    width: 30%;
+}
+
+.container-title-left-menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.title-left-menu{
+    font-weight: 630;
+    font-size: 30px;
+    color: var(--seventh-color);
+}
+
+.title2-left-menu{
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--nineth-color);
+}
+
+.hr-left-menu{
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.list-left-menu, .sublist-left-menu{
+    list-style: none;
+}

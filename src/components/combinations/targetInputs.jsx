@@ -63,3 +63,14 @@ export function TargetInputCheckbox ({params}){
         </div>
     )
 }
+
+export function TargetItemMenu({params}){
+    return(
+        <>
+            <div className="target-item-menu">
+                {params.icon}
+                <span className="text-item-menu">{params.info}</span>
+            </div>
+        </>
+    )
+}

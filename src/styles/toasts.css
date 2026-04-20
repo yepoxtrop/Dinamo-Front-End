@@ -5,11 +5,10 @@
     display: flex;
     flex-direction: column;
     
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
     z-index: 2;
-    
     
     border-radius: 10px;
     border: solid 2px var(--fourth-color);
@@ -20,9 +19,48 @@
 
 #container-toast-active{
     display: flex;
+    animation-name: animationCardLoginActive;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    pointer-events: auto;
+}
+
+@keyframes animationCardLoginActive {
+    from{
+        opacity: 0;
+        transform: translateY(-100px) translateX(400px) scale(0.8);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) translateX(0) scale(1);
+    }
 }
 
 #container-toast-inactive{
+    display: flex;
+    animation-name: animationCardLoginInactive;
+    animation-duration: 0.4s;
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 0.5);
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+}
+
+@keyframes animationCardLoginInactive {
+    from{
+        opacity: 1;
+        transform: translateY(0) translateX(0) scale(1);
+    }
+    to{
+        opacity: 0;
+        transform: translateY(-100px) translateX(400px) scale(0.8);
+    }
+}
+
+#container-toast-disable{
     display: none;
 }
 
@@ -74,6 +112,14 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.icon-close-toast:hover{
+    transform: rotate(90deg) scale(1.1);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .value-toast1{

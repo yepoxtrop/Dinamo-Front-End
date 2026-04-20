@@ -6,8 +6,15 @@ import { LeftMenu } from "../components/menus/leftMenu.jsx";
 
 export const Index = () => {
     return(
-        <>
+        <>  
+            {/* Menu */}
             <LeftMenu />
+
+            {/* Contenido de la pagina */} 
+            <section>
+
+                
+            </section>
         </>
     )
 }

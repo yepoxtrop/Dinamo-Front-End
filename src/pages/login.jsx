@@ -17,7 +17,7 @@ import { setLogin } from "../services/users/slice.js";
 import { URL_API } from "../settings/variablesEntrono.js";
 {/* Estilos */}
 import '../styles/login.css';
-{/* Imagenes */}
+{/* Media */}
 import logo from "../assets/logo/logo.png";
 import logoTransparente from "../assets/logo/logo_transparente.png";
 import vector from "../assets/circulo.svg";
@@ -82,26 +82,27 @@ export const Login = () =>{
     const url = `${URL_API}/Inicio_Sesion`;
 
     {/* Estado del aplicativo */}
+    {/* Envio de datos con hook personalizado */}
     const users = useSelector((state) => {
-        state.users
+        return state.users.logIn
     });
     const dispatch = store.dispatch;
 
+    console.log(users)
     {/* */}
-    
-
-
     return(
         <>  
 
             {/* Pagina de inicio de sesión */}
             <section className="body-login" id="body-login">
 
-                <ToastLogin params={{
+                {!users?<ToastLogin params={{
                     "icon":< BsExclamationSquareFill className="icon-alert-toast"/>,
                     "title":"Fallo En Inicio De Sesion",
-                    "message":"Credenciales invalidas, reviselas e intente nuevamente"
-                }} />
+                    "message":"Credenciales invalidas, reviselas e intente nuevamente",
+                }} />:<></>}
+
+                
 
                 {/* Panel izquierdo(diseño) */}
                 <section className="left-panel-login" id="left-panel-login">

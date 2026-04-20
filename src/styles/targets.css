@@ -9,3 +9,35 @@
 .target-input-checkbox{
     margin: 0 0 0.5rem 0;
 }
+
+.target-item-menu{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 8px;
+}
+
+.icon-target-menu{
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--third-color);
+}
+
+.text-item-menu{
+    color: var(--first-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+.target-item-menu:hover{
+    background-color: var(--second-color);
+    border-left-color: var(--nineth-color);
+    border-left-width: 0.5rem;
+    border-left-style: solid;
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
