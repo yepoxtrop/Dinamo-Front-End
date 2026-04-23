@@ -9,10 +9,6 @@ import { PiCertificateFill } from "react-icons/pi";
 import { SiReadthedocs } from "react-icons/si";
 {/* Hooks */}
 import { useSelector } from "react-redux";
-{/* Estado */}
-import { store } from "../services/stores/store.js";
-{/* Actions */}
-import { setLogin } from "../services/users/slice.js";
 {/* Constantes */}
 import { URL_API } from "../settings/variablesEntrono.js";
 {/* Estilos */}
@@ -80,15 +76,14 @@ export const Login = () =>{
         }
     }; 
     const url = `${URL_API}/Inicio_Sesion`;
+    const url2 = `${URL_API}/Datos_Sesion`;
+
 
     {/* Estado del aplicativo */}
     {/* Envio de datos con hook personalizado */}
     const users = useSelector((state) => {
         return state.users.logIn
     });
-    const dispatch = store.dispatch;
-
-    console.log(users)
     {/* */}
     return(
         <>  
@@ -174,6 +169,7 @@ export const Login = () =>{
                             <Form 
                                 params={paramsFormn} 
                                 api_url={url}
+                                api_url2={url2}
                             />
                         </div>
 

@@ -3,22 +3,19 @@ import { InputSubmit } from "../../components/inputs/inputSubmit.jsx";
 import { Label } from "../../components/labels/label.jsx";
 import { TargetInputText, TargetInputPassword, TargetInputCheckbox } from "../combinations/targetInputs.jsx";
 {/* Hooks */}
-import { useEffect, useState, useRef, use } from "react";
-import { useSendFormData } from "../../hooks/forms.jsx";
-import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 {/* Estado */}
 import { store } from "../../services/stores/store.js";
 {/* Actions */}
-import { setLogin } from "../../services/users/slice.js";
-import { setWait } from "../../services/buttons/slice.js";
+import { setLogin } from "../../services/stores/slices/users/slice.js";
+import { setWait } from "../../services/stores/slices/buttons/slice.js";
 {/* Paquetes */}
 import axios from "axios";
 {/* Estilos */}
 import '../../styles/forms.css';
 import { Link } from "react-router-dom";
 
-export function Form ({params, api_url}){
+export function Form ({params, api_url, api_url2}){
     
     {/* Componentes de inputs */}
     const fieldComponents = {
@@ -29,12 +26,6 @@ export function Form ({params, api_url}){
     };
 
     {/* Envio de datos con hook personalizado */}
-    const users = useSelector((state) => {
-        return state.users.logIn;
-    });
-    const buttons = useSelector((state)=>{
-        return state.buttons.onWait;
-    })
 
     const dispatch = store.dispatch;
     const navigate = useNavigate();
@@ -54,24 +45,44 @@ export function Form ({params, api_url}){
                 "fecha": new Date()
             }
             
-            dispatch(setLogin(undefined));
+            dispatch(setLogin([undefined, undefined]));
 
-            const peticion = await axios.post(`${api_url}`, data);
+            const peticion = await axios.post(`${api_url}`, data, {
+                withCredentials: true
+            });
+
+            
+
+            
 
             if (peticion.status == 200){
-                dispatch(setLogin(true));
-                navigate("/index");
-                //console.log(users)
+                
+                try {
+                    const peticion2 = await axios.get(`${api_url2}`, {
+                        withCredentials: true
+                    });
+                    
+                    console.log(peticion2.data.Datos)
+                    if (peticion2.data && peticion2.data.Datos) {
+                        dispatch(setLogin([true, true, peticion2.data.Datos]));
+                        navigate("/index");
+                    } else {
+                        dispatch(setLogin([false, undefined, undefined]));
+                    }
+                } catch (error2) {
+                    console.log("Error en segunda petición:", error2);
+                    dispatch(setLogin([false, undefined, undefined]));
+                }
+
             }else{
-                dispatch(setLogin(false));
-                //console.log(users)
+                dispatch(setLogin([false, undefined, undefined]));
             }
 
             dispatch(setWait(false));
 
         } catch (error) {
-            //console.log(users)
-            dispatch(setLogin(false));
+            console.log(error)
+            dispatch(setLogin([false, undefined, undefined]));
             dispatch(setWait(false));
 
         }

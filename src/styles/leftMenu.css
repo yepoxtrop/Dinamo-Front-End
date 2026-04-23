@@ -1,9 +1,21 @@
-.container-left-menu{
+.container-father-menu{
     width: 20%;
     height: 100vh;
 
-    position: fixed;
     padding:  0.5rem 1rem;
+
+    background-color: var(--fourth-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-left-menu{
+    width: 100%;
+    height: auto;
+
 
     background-color: var(--fourth-color);
     

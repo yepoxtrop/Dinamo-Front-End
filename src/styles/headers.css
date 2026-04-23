@@ -1,0 +1,65 @@
+.header-bar-info{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0.5rem 1rem;
+
+    background-color: var(--seventh-color);
+    
+    border-top: 5px solid var(--fourth-color);
+    border-bottom: 1.5px solid var(--fifth-color);
+
+}
+
+.header-name-page{
+    font-size: 1.6rem;
+    color: var(--fourth-color);
+}
+
+.header-date-page{
+    font-size: 0.8rem;
+    color: var(--nineth-color);
+}
+
+.header-bar-info-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar-info-right-notifications{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar-info-right-data1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.bar-info-right-data1_2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+}
+
+.bar-info-right-data2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bar-info-right-data3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

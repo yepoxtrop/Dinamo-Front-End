@@ -19,7 +19,8 @@ import '../../styles/leftMenu.css';
 export function LeftMenu (){
     return(
         <>
-            <div className="container-left-menu">
+            <div className="container-father-menu">
+                <div className="container-left-menu">
                 
                 <div className="container-logo-left-menu">
                     <img src={logo} alt="logo" className="logo-left-menu"/>
@@ -53,15 +54,19 @@ export function LeftMenu (){
                                 <li><TargetSubItemMenu params={{icon:<FaGithub className="icon-target-sub-menu"/>, info:"Neo Dev"}} /></li>
                             </ul>
                     </ul>
-                    <hr className="hr-left-menu"/>
+                    
+                </nav>
+                </div>
 
+                <div className="container-left-menu">
+                    <hr className="hr-left-menu"/>
                     <ul className="list-left-menu">
                         <li><TargetItemMenu params={{icon:<FaCircleInfo className="icon-target-menu"/>, info:"Soporte Técnico"}}/></li>
                     </ul>
                     <span className="description-left-menu">V1.0 &bull; &copy; 2025 Dinamo</span>
-                    
-                </nav>
+                </div>
             </div>
+            
         </>
     )
 }
