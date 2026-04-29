@@ -155,13 +155,13 @@ export function IndexRequerimentsSection(){
                     <span className="title3-index-requeriments-section">Seguridad bancaria aplicada a tus documentos corporativos</span>
                 </div>
                 <div className="cards-container-index-requeriments-section">
-                    <CardHelpProductFunctions params={{icon:<MdOutlineSecurity />, title:"Cifrado AES-256", subTitle:"Datos en reposo y tránsito", info:"Todos tus documentos están cifrados con AES-256, el estándar del sistema bancario internacional.", extras:["AES-256-GCM", "TLS 1.3"], line:false, className:"card-uniform-lite-blue"}}/>
+                    <CardHelpProductFunctions params={{icon:<MdOutlineSecurity className="icon-light-blue"/>, title:"Cifrado AES-256", subTitle:"Datos en reposo y tránsito", info:"Todos tus documentos están cifrados con AES-256, el estándar del sistema bancario internacional.", extras:["AES-256", "TLS 1.3"], line:false, className:"card-uniform-light-blue"}}/>
                     
-                    <CardHelpProductFunctions params={{icon:<FaRegUser />, title:"Autenticación fuerte", subTitle:"MFA · SSO · OAuth2", info:"MFA obligatorio para roles sensibles. SSO con tu proveedor de identidad corporativo ya existente.", extras:["MFA", "SSO", "SSO"], line:false, className:"card-uniform-lite-green"}}/>
+                    <CardHelpProductFunctions params={{icon:<FaRegUser className="icon-light-green"/>, title:"Autenticación fuerte", subTitle:"MFA · SSO · OAuth2", info:"MFA obligatorio para roles sensibles. SSO con tu proveedor de identidad corporativo ya existente.", extras:["MFA", "SSO", "SSO"], line:false, className:"card-uniform-light-green"}}/>
 
-                    <CardHelpProductFunctions params={{icon:<FaBalanceScaleRight />, title:"Cumplimiento legal", subTitle:"Ley 527 · GDPR compatible", info:"Cumple con la Ley 527 de 1999 (comercio electrónico Colombia) y compatible con GDPR y ISO 27001.", extras:["Ley 527", "ISO 27001", "GDPR"], line:false, className:"card-uniform-lite-purple"}}/>
+                    <CardHelpProductFunctions params={{icon:<FaBalanceScaleRight className="icon-light-purple"/>, title:"Cumplimiento legal", subTitle:"Ley 527 · GDPR compatible", info:"Cumple con la Ley 527 de 1999 (comercio electrónico Colombia) y compatible con GDPR y ISO 27001.", extras:["Ley 527", "ISO 27001", "GDPR"], line:false, className:"card-uniform-light-purple"}}/>
 
-                    <CardHelpProductFunctions params={{icon:<IoMdCloudUpload />, title:"On-premise o nube", subTitle:"Tus datos no salen de tu empresa", info:"Dinamo se instala en tus propios servidores (on-prem) o en nube privada. Cero dependencia de terceros.", extras:["On-premise", "Nube privada"], line:false, className:"card-uniform-lite-orange"}}/>
+                    <CardHelpProductFunctions params={{icon:<IoMdCloudUpload className="icon-light-orange"/>, title:"On-premise o nube", subTitle:"Tus datos no salen de tu empresa", info:"Dinamo se instala en tus propios servidores (on-prem) o en nube privada. Cero dependencia de terceros.", extras:["On-premise", "Nube privada"], line:false, className:"card-uniform-light-orange"}}/>
                 </div>
             </section>
         </>

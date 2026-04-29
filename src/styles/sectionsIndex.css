@@ -11,7 +11,7 @@
     align-items: center;
     padding: 2em;
     gap: 1.2rem;
-    background-color: var(--seventh-color);
+    background-color: var(--sixth-color);
     position: relative;
     z-index: 1;
 }

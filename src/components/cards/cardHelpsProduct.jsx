@@ -69,11 +69,16 @@ export function CardHelpProductFlow({params}){
     )
 }
 
+
+/**
+ * 
+ * @param {*} param0 
+ * @returns 
+ */
+
 export function CardHelpProductFunctions({params}){
 
     const [baseClass, setBaseClass] = useState("");
-
-   
 
     useEffect(()=>{
         if(!params?.className){
@@ -108,14 +113,14 @@ export function CardHelpProductFunctions({params}){
                     </div>
                 </div>
                 {params.line?<hr />:<></>}
-                <div>
-                    <span>{params.info}</span>
+                <div className={`help-functions-container-info-${baseClass}`}>
+                    <span className={`help-functions-info-${baseClass}`}>{params.info}</span>
                 </div>
-                <div>
+                <div className={`help-functions-container-card-basics-${baseClass}`}>
                     {params.extras.map((valor, llave)=>{
                         return(
                             <>
-                                <CardSkillBasic params={{content:valor}} key={llave} />
+                                <CardSkillBasic params={{content:valor, className:baseClass}} key={llave} />
                             </>
                         )
                         

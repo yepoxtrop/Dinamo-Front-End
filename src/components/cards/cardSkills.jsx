@@ -12,8 +12,8 @@ export function CardSkill({params}){
 
 export function CardSkillBasic({params}){
     return(
-        <div > 
-            <span>{params.content}</span>
+        <div className={`card-container-${params.className}`}> 
+            <span className={`card-info-${params.className}`}>{params.content}</span>
         </div>
     )
 }
