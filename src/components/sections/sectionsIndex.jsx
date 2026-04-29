@@ -128,13 +128,13 @@ export function IndexProfileSection(){
                     <span>Diseñado para cualquier empresa que mueva documentos y necesite control total</span>
                 </div>
                 <div>
-                    <CardHelpProductFlow params={{velue:"⚖️", title:"Reportes y analytics", subTitle:"Dashboard · Excel · PDF · Tiempo real", info:"KPIs en tiempo real: tiempos, firmas, cuellos de botella. Reportes programados automáticos.", extras:["Tiempo real", "Programado"], line:true}}/>
+                    <CardHelpProductFlow params={{value:"⚖️", title:"Legal y Contratos", subTitle:"Firmas, NDAs, contratos", info:"Gestiona contratos con clientes, proveedores y empleados. Alertas de vencimiento automáticas.", extras:["Contratos & NDAs", "Vencimientos"], line:false}}/>
                     
-                    <CardHelpProductFlow params={{icon:"👥", title:"Reportes y analytics", subTitle:"Dashboard · Excel · PDF · Tiempo real", info:"KPIs en tiempo real: tiempos, firmas, cuellos de botella. Reportes programados automáticos.", extras:["Tiempo real", "Programado"], line:true}}/>
+                    <CardHelpProductFlow params={{value:"👥", title:"Recursos Humanos", subTitle:"Onboarding, nómina, acuerdos", info:"Automatiza la firma de contratos laborales. Guarda acuerdos de confidencialidad y evaluaciones firmadas.", extras:["Onboarding dig.", "Acuerdos RR.HH"], line:false}}/>
 
-                    <CardHelpProductFlow params={{icon:"🏦", title:"Reportes y analytics", subTitle:"Dashboard · Excel · PDF · Tiempo real", info:"KPIs en tiempo real: tiempos, firmas, cuellos de botella. Reportes programados automáticos.", extras:["Tiempo real", "Programado"], line:true}}/>
+                    <CardHelpProductFlow params={{value:"🏦", title:"Financiero y Banca", subTitle:"Pagarés, órdenes, aprobaciones", info:"Digitaliza pagarés, órdenes de pago y aprobaciones de crédito con trazabilidad regulatoria completa.", extras:["Pagarés dig.", "Trazabilidad reg."], line:false}}/>
 
-                    <CardHelpProductFlow params={{icon:"🏗️", title:"Reportes y analytics", subTitle:"Dashboard · Excel · PDF · Tiempo real", info:"KPIs en tiempo real: tiempos, firmas, cuellos de botella. Reportes programados automáticos.", extras:["Tiempo real", "Programado"], line:true}}/>
+                    <CardHelpProductFlow params={{value:"🏗️", title:"Compras y Logística", subTitle:"Órdenes, proveedores, actas", info:"Gestiona órdenes de compra, cotizaciones y actas de entrega con firma digital del proveedor incluida.", extras:["Órds. de compra", "Órds. de compra"], line:false}}/>
                 </div>
             </section>
         </>
