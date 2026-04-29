@@ -11,6 +11,9 @@ import { LuWorkflow } from "react-icons/lu";
 import { AiOutlineAudit } from "react-icons/ai";
 import { BsFiletypeDoc } from "react-icons/bs";
 import { SiDocsdotrs } from "react-icons/si";
+import { MdOutlineSecurity } from "react-icons/md";
+import { FaBalanceScaleRight } from "react-icons/fa";
+import { IoMdCloudUpload } from "react-icons/io";
 
 export function IndexWelcomeSection(){
     return(
@@ -135,6 +138,29 @@ export function IndexProfileSection(){
                     <CardHelpProductFlow params={{value:"🏦", title:"Financiero y Banca", subTitle:"Pagarés, órdenes, aprobaciones", info:"Digitaliza pagarés, órdenes de pago y aprobaciones de crédito con trazabilidad regulatoria completa.", extras:["Pagarés dig.", "Trazabilidad reg."], line:false}}/>
 
                     <CardHelpProductFlow params={{value:"🏗️", title:"Compras y Logística", subTitle:"Órdenes, proveedores, actas", info:"Gestiona órdenes de compra, cotizaciones y actas de entrega con firma digital del proveedor incluida.", extras:["Órds. de compra", "Órds. de compra"], line:false}}/>
+                </div>
+            </section>
+        </>
+    )
+}
+
+export function IndexRequerimentsSection(){
+    return(
+        <>
+            <section>
+                <div>
+                    <span>CONFIANZA Y CUMPLIMIENTO NORMATIVO</span>
+                    <span>Tu información, protegida al máximo nivel</span>
+                    <span>Seguridad bancaria aplicada a tus documentos corporativos</span>
+                </div>
+                <div>
+                    <CardHelpProductFunctions params={{icon:<MdOutlineSecurity />, title:"Cifrado AES-256", subTitle:"Datos en reposo y tránsito", info:"Todos tus documentos están cifrados con AES-256, el estándar del sistema bancario internacional.", extras:["AES-256-GCM", "TLS 1.3"], line:false}}/>
+                    
+                    <CardHelpProductFunctions params={{icon:<FaRegUser />, title:"Autenticación fuerte", subTitle:"MFA · SSO · OAuth2", info:"MFA obligatorio para roles sensibles. SSO con tu proveedor de identidad corporativo ya existente.", extras:["MFA", "SSO", "SSO"], line:false}}/>
+
+                    <CardHelpProductFunctions params={{icon:<FaBalanceScaleRight />, title:"Cumplimiento legal", subTitle:"Ley 527 · GDPR compatible", info:"Cumple con la Ley 527 de 1999 (comercio electrónico Colombia) y compatible con GDPR y ISO 27001.", extras:["Ley 527", "ISO 27001", "GDPR"], line:false}}/>
+
+                    <CardHelpProductFunctions params={{icon:<IoMdCloudUpload />, title:"On-premise o nube", subTitle:"Tus datos no salen de tu empresa", info:"Dinamo se instala en tus propios servidores (on-prem) o en nube privada. Cero dependencia de terceros.", extras:["On-premise", "Nube privada"], line:false}}/>
                 </div>
             </section>
         </>

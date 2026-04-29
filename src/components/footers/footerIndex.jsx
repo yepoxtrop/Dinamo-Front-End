@@ -8,7 +8,8 @@ export function FooterIndex(){
 
                 <div>
                     <table>
-                        <tr>
+                        <tbody>
+                            <tr>
                             <td>
                                 <ul>
                                     <li>Producto</li>
@@ -50,6 +51,8 @@ export function FooterIndex(){
                                 </ul>
                             </td>
                         </tr>
+                        </tbody>
+                        
                     </table>
                 </div>
 

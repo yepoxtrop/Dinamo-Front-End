@@ -1,5 +1,5 @@
 import { HeaderIndex } from "../../components/headers/headerIndex";
-import { IndexWelcomeSection, IndexProblemsSection, IndexHelpsSection, IndexWorkFlowSection, IndexFunctionsSection, IndexProfileSection, IndexExprienceSection, IndexSuscriptionSection, IndexReadySection } from "../../components/sections/sectionsIndex.jsx";
+import { IndexWelcomeSection, IndexProblemsSection, IndexHelpsSection, IndexWorkFlowSection, IndexFunctionsSection, IndexProfileSection, IndexRequerimentsSection, IndexExprienceSection, IndexSuscriptionSection, IndexReadySection } from "../../components/sections/sectionsIndex.jsx";
 import { FooterIndex } from "../../components/footers/footerIndex.jsx";
 
 export const Index = () =>{
@@ -15,9 +15,10 @@ export const Index = () =>{
             <IndexWorkFlowSection />
             <IndexFunctionsSection />
             <IndexProfileSection />
-            <IndexExprienceSection />
+            <IndexRequerimentsSection />
+            {/* <IndexExprienceSection /> */}
             <IndexSuscriptionSection />
-            <IndexReadySection />
+            {/* <IndexReadySection /> */}
 
             {/* Pie de página */}
             <FooterIndex />

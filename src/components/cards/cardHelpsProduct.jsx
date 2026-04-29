@@ -54,7 +54,7 @@ export function CardHelpProductFlow({params}){
                     {params.extras.map((valor, llave)=>{
                         return(
                             <>
-                                <CardSkillBasic params={{content:valor}} />
+                                <CardSkillBasic params={{content:valor}} key={llave}/>
                             </>
                         )
                         
@@ -82,10 +82,10 @@ export function CardHelpProductFunctions({params}){
                     <span>{params.info}</span>
                 </div>
                 <div>
-                    {params.extras.map((valor)=>{
+                    {params.extras.map((valor, llave)=>{
                         return(
                             <>
-                                <CardSkillBasic params={{content:valor}} />
+                                <CardSkillBasic params={{content:valor}} key={llave} />
                             </>
                         )
                         
