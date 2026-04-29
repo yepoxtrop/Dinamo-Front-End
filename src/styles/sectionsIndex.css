@@ -1,13 +1,55 @@
+/**
+ *  Estilos del componente IndexRequerimentsSection
+ *
+ */
+
 .index-requeriments-section{
-    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    gap: 1.2rem;
+    background-color: var(--seventh-color);
     position: relative;
+    z-index: 1;
+}
+
+.title-container-index-requeriments-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title1-index-requeriments-section{
+    color: var(--nineth-color);
+    font-size: 1rem;
+}
+
+.title2-index-requeriments-section{
+    color: var(--fourth-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.title3-index-requeriments-section{
+    color: var(--nineth-color);
+    font-size: 1rem;
+}
+
+.cards-container-index-requeriments-section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
 }
 
 /**
  *  Estilos del componente IndexReadySection
  *
  */
-
 .index-ready-section{
     width: 100%;
     display: flex;
@@ -69,58 +111,104 @@
     padding: 0.75rem 0;
 
     position: relative;
-    isolation: isolate;
 
     border: 2px solid var(--third-color);
     border-radius: 10px;
     
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
-    transition-property: color;
+    transition-property: all;  
+    z-index: 0;
     overflow: hidden;
-    
-}
-
-.button1-index-ready-section span,
-.button1-index-ready-section{
-    z-index: 1;
 }
 
 .button1-index-ready-section:hover{
     color: var(--seventh-color);
+    border-color: var(--seventh-color);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-.button1-index-ready-section::before{    
+.button1-index-ready-section::before{
     content: "";
     position: absolute;
-    width: 0%;
     height: 100%;
+    width: 0%;
 
-    transform: translateX(-100%) skewX(20deg);
-
-    transition: transform 0.5s ease;
-
+    background-color: var(--third-color);
+    
+    top: 0;
+    left: -10%;
     z-index: -1;
 
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-property: all;  
+    transform: skewX(20deg);
 }
 
 
 .button1-index-ready-section:hover::before{
-    transform: 
-        translateX(0)
-        skewX(20deg);
+    width: 120%;
+}
+
+.button1-index-ready-section:active {
+  transform: scale(0.9);
+  box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.button2-index-ready-section{
+    font-size: 1rem;
+    cursor: pointer;
+    
+
+    color: var(--seventh-color);
+    background-color: transparent;
+    padding: 0.75rem 0;
+
+    border: 2px solid var(--seventh-color);
+    border-radius: 10px;
+
+    position: relative;
+    
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-property: all;  
+    z-index: 0;
+    overflow: hidden;
+}
+
+.button2-index-ready-section:hover{
+    color: var(--first-color);
+    border-color: var(--third-color);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.button2-index-ready-section::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+
+    background-color: var(--fifth-color);
+    
+    top: 0;
+    right: -10%;
+    z-index: -1;
+
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-property: all;  
+    transform: skewX(-20deg);
 }
 
 
-.button2-index-ready-section{
-    padding: 0.75rem 0;
-    color: var(--seventh-color);
-    background-color: transparent;
-    border: 2px solid var(--seventh-color);
-    border-radius: 10px;
-    outline: 1px solid transparent;
-    cursor: pointer;
-    font-size: 1rem;
+.button2-index-ready-section:hover::before{
+    width: 120%;
+}
+
+.button2-index-ready-section:active {
+  transform: scale(0.9);
+  box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.4);
 }
 
 .ovalo1-index-ready-section{

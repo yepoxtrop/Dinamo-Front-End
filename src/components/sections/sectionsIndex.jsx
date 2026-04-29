@@ -132,13 +132,13 @@ export function IndexProfileSection(){
                     <span>Diseñado para cualquier empresa que mueva documentos y necesite control total</span>
                 </div>
                 <div>
-                    <CardHelpProductFlow params={{value:"⚖️", title:"Legal y Contratos", subTitle:"Firmas, NDAs, contratos", info:"Gestiona contratos con clientes, proveedores y empleados. Alertas de vencimiento automáticas.", extras:["Contratos & NDAs", "Vencimientos"], line:false}}/>
+                    <CardHelpProductFlow params={{value:"⚖️", title:"Legal y Contratos", subTitle:"Firmas, NDAs, contratos", info:"Gestiona contratos con clientes, proveedores y empleados. Alertas de vencimiento automáticas.", extras:["Contratos & NDAs", "Vencimientos"], line:false, className:""}}/>
                     
-                    <CardHelpProductFlow params={{value:"👥", title:"Recursos Humanos", subTitle:"Onboarding, nómina, acuerdos", info:"Automatiza la firma de contratos laborales. Guarda acuerdos de confidencialidad y evaluaciones firmadas.", extras:["Onboarding dig.", "Acuerdos RR.HH"], line:false}}/>
+                    <CardHelpProductFlow params={{value:"👥", title:"Recursos Humanos", subTitle:"Onboarding, nómina, acuerdos", info:"Automatiza la firma de contratos laborales. Guarda acuerdos de confidencialidad y evaluaciones firmadas.", extras:["Onboarding dig.", "Acuerdos RR.HH"], line:false, className:""}}/>
 
-                    <CardHelpProductFlow params={{value:"🏦", title:"Financiero y Banca", subTitle:"Pagarés, órdenes, aprobaciones", info:"Digitaliza pagarés, órdenes de pago y aprobaciones de crédito con trazabilidad regulatoria completa.", extras:["Pagarés dig.", "Trazabilidad reg."], line:false}}/>
+                    <CardHelpProductFlow params={{value:"🏦", title:"Financiero y Banca", subTitle:"Pagarés, órdenes, aprobaciones", info:"Digitaliza pagarés, órdenes de pago y aprobaciones de crédito con trazabilidad regulatoria completa.", extras:["Pagarés dig.", "Trazabilidad reg."], line:false, className:""}}/>
 
-                    <CardHelpProductFlow params={{value:"🏗️", title:"Compras y Logística", subTitle:"Órdenes, proveedores, actas", info:"Gestiona órdenes de compra, cotizaciones y actas de entrega con firma digital del proveedor incluida.", extras:["Órds. de compra", "Órds. de compra"], line:false}}/>
+                    <CardHelpProductFlow params={{value:"🏗️", title:"Compras y Logística", subTitle:"Órdenes, proveedores, actas", info:"Gestiona órdenes de compra, cotizaciones y actas de entrega con firma digital del proveedor incluida.", extras:["Órds. de compra", "Órds. de compra"], line:false, className:""}}/>
                 </div>
             </section>
         </>
@@ -149,19 +149,19 @@ export function IndexRequerimentsSection(){
     return(
         <>
             <section className="index-requeriments-section">
-                <div>
-                    <span>CONFIANZA Y CUMPLIMIENTO NORMATIVO</span>
-                    <span>Tu información, protegida al máximo nivel</span>
-                    <span>Seguridad bancaria aplicada a tus documentos corporativos</span>
+                <div className="title-container-index-requeriments-section"> 
+                    <span className="title1-index-requeriments-section">CONFIANZA Y CUMPLIMIENTO NORMATIVO</span>
+                    <span className="title2-index-requeriments-section">Tu información, protegida al máximo nivel</span>
+                    <span className="title3-index-requeriments-section">Seguridad bancaria aplicada a tus documentos corporativos</span>
                 </div>
-                <div>
-                    <CardHelpProductFunctions params={{icon:<MdOutlineSecurity />, title:"Cifrado AES-256", subTitle:"Datos en reposo y tránsito", info:"Todos tus documentos están cifrados con AES-256, el estándar del sistema bancario internacional.", extras:["AES-256-GCM", "TLS 1.3"], line:false}}/>
+                <div className="cards-container-index-requeriments-section">
+                    <CardHelpProductFunctions params={{icon:<MdOutlineSecurity />, title:"Cifrado AES-256", subTitle:"Datos en reposo y tránsito", info:"Todos tus documentos están cifrados con AES-256, el estándar del sistema bancario internacional.", extras:["AES-256-GCM", "TLS 1.3"], line:false, className:"card-uniform-lite-blue"}}/>
                     
-                    <CardHelpProductFunctions params={{icon:<FaRegUser />, title:"Autenticación fuerte", subTitle:"MFA · SSO · OAuth2", info:"MFA obligatorio para roles sensibles. SSO con tu proveedor de identidad corporativo ya existente.", extras:["MFA", "SSO", "SSO"], line:false}}/>
+                    <CardHelpProductFunctions params={{icon:<FaRegUser />, title:"Autenticación fuerte", subTitle:"MFA · SSO · OAuth2", info:"MFA obligatorio para roles sensibles. SSO con tu proveedor de identidad corporativo ya existente.", extras:["MFA", "SSO", "SSO"], line:false, className:"card-uniform-lite-green"}}/>
 
-                    <CardHelpProductFunctions params={{icon:<FaBalanceScaleRight />, title:"Cumplimiento legal", subTitle:"Ley 527 · GDPR compatible", info:"Cumple con la Ley 527 de 1999 (comercio electrónico Colombia) y compatible con GDPR y ISO 27001.", extras:["Ley 527", "ISO 27001", "GDPR"], line:false}}/>
+                    <CardHelpProductFunctions params={{icon:<FaBalanceScaleRight />, title:"Cumplimiento legal", subTitle:"Ley 527 · GDPR compatible", info:"Cumple con la Ley 527 de 1999 (comercio electrónico Colombia) y compatible con GDPR y ISO 27001.", extras:["Ley 527", "ISO 27001", "GDPR"], line:false, className:"card-uniform-lite-purple"}}/>
 
-                    <CardHelpProductFunctions params={{icon:<IoMdCloudUpload />, title:"On-premise o nube", subTitle:"Tus datos no salen de tu empresa", info:"Dinamo se instala en tus propios servidores (on-prem) o en nube privada. Cero dependencia de terceros.", extras:["On-premise", "Nube privada"], line:false}}/>
+                    <CardHelpProductFunctions params={{icon:<IoMdCloudUpload />, title:"On-premise o nube", subTitle:"Tus datos no salen de tu empresa", info:"Dinamo se instala en tus propios servidores (on-prem) o en nube privada. Cero dependencia de terceros.", extras:["On-premise", "Nube privada"], line:false, className:"card-uniform-lite-orange"}}/>
                 </div>
             </section>
         </>
