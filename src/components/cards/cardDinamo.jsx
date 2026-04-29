@@ -1,15 +1,16 @@
-import logoTransparente from "../../assets/logo/logo_transparente.png"
+{/* Estilos */}
+import '../../styles/cards.css';
 
-export function CardDianmoo(){
+export function CardDianmoo({params}){
     return(
         <>
-            <div className="container-header-skills-login">
-                <div className="container-logo-header-panel-left">
-                    <img src={logoTransparente} alt="logo-empresa" className="logo-png-empresa-panel-left"/> {/* Cambiar logo de la empresa */}
+            <div className={`${params.fatherClass}-card-dinamo-container`}>
+                <div className={`${params.fatherClass}-card-dinamo-container-logo`}>
+                    <img src={params.img} alt="logo-empresa" className={`${params.fatherClass}-card-dinamo-logo`}/> {/* Cambiar logo de la empresa */}
                 </div>
-                <div className="container-title-header-panel-left" >
-                    <span className="title-login-panel-left">Dinamo</span> {/* Cambiar el nombre de la empresa */}
-                    <span className="title2-login-panel-left">Gestión Documental</span>
+                <div className={`${params.fatherClass}-card-dinamo-container-container-title`} >
+                    <span className={`${params.fatherClass}-card-dinamo-title`}>Dinamo</span> {/* Cambiar el nombre de la empresa */}
+                    <span className={`${params.fatherClass}-card-dinamo-title2`}>Gestión Documental</span>
                 </div>
             </div>
         </>

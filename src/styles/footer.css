@@ -1,0 +1,90 @@
+.footer-index{
+    /* Anchura y altura*/
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    /* Orientacion */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+
+    background-color: var(--fourth-color);
+    background-image: linear-gradient(to right, var(--fourth-color), var(--third-color));
+
+    z-index: 1;
+    position: relative;
+}
+
+.footer-table-container{
+    display: flex;
+    flex: 1;
+    justify-content: end;
+    align-items: start;
+}
+
+.footer-table{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.footer-table ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.footer-list{
+    list-style: none;
+}
+
+.footer-title{
+    font-size: 1rem;
+    color: var(--nineth-color);
+}
+
+.footer-subTitle{
+    font-size: 1rem;
+    color: var(--fifth-color);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-subTitle:hover,
+.footer-subTitle a:hover{
+    color: var(--second-color);
+    transform: translateX(4px);
+}
+
+.footer-subTitle a{
+    font-size: 1rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-subTitle3{
+    font-size: 1rem;
+    color: var(--fifth-color);
+}
+
+.footer-subTitle2{
+    font-size: 1rem;
+    color: var(--second-color);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-table a:hover {
+  color: var(--second-color);
+}
+
+.container-last-item-footer-table{
+    padding-right: 1.5rem;
+    border-right: 2px solid var(--second-color);
+    
+}
+
+/* Falta el responsive */

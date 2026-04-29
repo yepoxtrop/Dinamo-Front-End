@@ -23,3 +23,66 @@
     color: var(--seventh-color);
     font-size: 14px;
 }
+
+
+
+/* -------------------------- */
+.footer-card-dinamo-container{
+    /* Anchura */
+    width: 30%;
+
+    /* Orientacion */
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    
+}
+
+.footer-card-dinamo-container-logo{
+    /* Anchura */
+    min-width: 5%;
+    width: 15%;
+
+    /* Altura */
+    height: auto;
+
+    /* Orientación */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.footer-card-dinamo-logo{
+    width: 100%;
+}
+
+.footer-card-dinamo-container-container-title{
+    /* Anchura */
+    max-width: 70%;
+    min-width: auto;
+    width: auto;
+
+    /* Altura */
+    min-height: auto;
+    max-height: auto;
+    height: auto;
+
+    /* Orientación */
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.footer-card-dinamo-title{
+    font-weight:600;
+    font-size: 1.5rem;
+    color: var(--seventh-color);
+}
+
+.footer-card-dinamo-title2{
+    font-weight:500;
+    font-size: 1rem;
+    color: var(--fifth-color);
+}

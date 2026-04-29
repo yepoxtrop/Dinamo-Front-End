@@ -1,10 +1,12 @@
 import { CardDianmoo } from "../cards/cardDinamo.jsx"
+{/* Media */}
+import logoTransparente from "../../assets/logo/logo_transparente.png"
 
 export function HeaderIndex(){
     return(
         <>
             <header>
-                <CardDianmoo />
+                <CardDianmoo params={{img:logoTransparente}}/>
 
                 <div>
                     <ul>

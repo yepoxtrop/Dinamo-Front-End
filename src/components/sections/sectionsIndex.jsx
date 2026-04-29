@@ -2,18 +2,19 @@
 import { CardInfoBasic } from "../cards/cardInfoBasico.jsx"
 import { CardHelpProduct, CardHelpProductFlow, CardHelpProductFunctions } from "../cards/cardHelpsProduct.jsx";
 import { IoCloseOutline, IoCheckboxOutline } from "react-icons/io5";
-import { MdOutlineMoreTime } from "react-icons/md";
-import { LuSquareArrowRight } from "react-icons/lu";
+import { MdOutlineMoreTime, MdOutlineSecurity } from "react-icons/md";
+import { LuSquareArrowRight, LuWorkflow } from "react-icons/lu";
 import { PiCubeFocus } from "react-icons/pi";
-import { BsPlusSquareDotted } from "react-icons/bs";
-import { FaRegUser } from "react-icons/fa";
-import { LuWorkflow } from "react-icons/lu";
+import { BsPlusSquareDotted, BsFiletypeDoc } from "react-icons/bs";
+import { FaRegUser, FaBalanceScaleRight } from "react-icons/fa";
 import { AiOutlineAudit } from "react-icons/ai";
-import { BsFiletypeDoc } from "react-icons/bs";
 import { SiDocsdotrs } from "react-icons/si";
-import { MdOutlineSecurity } from "react-icons/md";
-import { FaBalanceScaleRight } from "react-icons/fa";
 import { IoMdCloudUpload } from "react-icons/io";
+{/* Estilos */}
+import "../../styles/sectionsIndex.css";
+{/* Media */}
+import ovalo1 from "../../assets/svg/ovalo.svg";
+import ovalo2 from "../../assets/svg/ovalo2.svg";
 
 export function IndexWelcomeSection(){
     return(
@@ -147,7 +148,7 @@ export function IndexProfileSection(){
 export function IndexRequerimentsSection(){
     return(
         <>
-            <section>
+            <section className="index-requeriments-section">
                 <div>
                     <span>CONFIANZA Y CUMPLIMIENTO NORMATIVO</span>
                     <span>Tu información, protegida al máximo nivel</span>
@@ -190,17 +191,19 @@ export function IndexSuscriptionSection(){
 export function IndexReadySection(){
     return(
         <>
-            <section>
-                <div>
-                    <span>¿Listo para digitalizar</span>
-                    <span>tu gestión documental?</span>
+            <section className="index-ready-section">
+                <img src={ovalo1} alt="ovalo1--svg" className="ovalo1-index-ready-section"/>
+                <img src={ovalo2} alt="ovalo2-svg" className="ovalo2-index-ready-section"/>
+                <div className="title-container-index-ready-section">
+                    <span className="title1-index-ready-section">¿Listo para digitalizar</span>
+                    <span className="title2-index-ready-section">tu gestión documental?</span>
                 </div>
-                <div>
-                    <span>Sin instalación compleja. Sin contratos largos. Empieza ahora mismo</span>
+                <div className="subTitle-container-index-ready-section">
+                    <span className="subTitle1-index-ready-section">Sin instalación compleja. Sin contratos largos. Empieza ahora mismo</span>
                 </div>
-                <div>
-                    <button>Iniciar Sesión</button>
-                    <button>Registrarse</button>
+                <div className="buttons-container-index-ready-section">
+                    <button className="button1-index-ready-section">Iniciar Sesión</button>
+                    <button className="button2-index-ready-section">Registrarse</button>
                 </div>
             </section>
         </>

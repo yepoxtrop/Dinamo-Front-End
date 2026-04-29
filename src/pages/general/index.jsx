@@ -1,12 +1,14 @@
+{/* Componentes */}
 import { HeaderIndex } from "../../components/headers/headerIndex";
 import { IndexWelcomeSection, IndexProblemsSection, IndexHelpsSection, IndexWorkFlowSection, IndexFunctionsSection, IndexProfileSection, IndexRequerimentsSection, IndexExprienceSection, IndexSuscriptionSection, IndexReadySection } from "../../components/sections/sectionsIndex.jsx";
 import { FooterIndex } from "../../components/footers/footerIndex.jsx";
+
 
 export const Index = () =>{
     return(
         <>
             {/* Encabezado */}
-            <HeaderIndex />
+            <HeaderIndex/>
 
             {/* Secciones de la pagina */}
             <ndexWelcomeSection />
@@ -17,8 +19,8 @@ export const Index = () =>{
             <IndexProfileSection />
             <IndexRequerimentsSection />
             {/* <IndexExprienceSection /> */}
-            <IndexSuscriptionSection />
-            {/* <IndexReadySection /> */}
+            {/* <IndexSuscriptionSection /> */}
+            <IndexReadySection />
 
             {/* Pie de página */}
             <FooterIndex />

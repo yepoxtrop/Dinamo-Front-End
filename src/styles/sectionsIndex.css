@@ -1,0 +1,138 @@
+.index-requeriments-section{
+    z-index: 1;
+    position: relative;
+}
+
+/**
+ *  Estilos del componente IndexReadySection
+ *
+ */
+
+.index-ready-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    gap: 1.2rem;
+    background-color: var(--second-color);
+    position: relative;
+}
+
+.title-container-index-ready-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title1-index-ready-section, 
+.title2-index-ready-section{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.title1-index-ready-section{
+    color: var(--eighth-color);
+}
+
+.title2-index-ready-section{
+    color: var(--first-color);
+}
+
+.subTitle-container-index-ready-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subTitle1-index-ready-section{
+    color: var(--first-color);
+    font-size: 1rem;
+}
+
+.buttons-container-index-ready-section{
+    width: 40%;
+    padding: 0 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.button1-index-ready-section{
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: var(--seventh-color);
+    color: var(--second-color);
+    padding: 0.75rem 0;
+
+    position: relative;
+    isolation: isolate;
+
+    border: 2px solid var(--third-color);
+    border-radius: 10px;
+    
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-property: color;
+    overflow: hidden;
+    
+}
+
+.button1-index-ready-section span,
+.button1-index-ready-section{
+    z-index: 1;
+}
+
+.button1-index-ready-section:hover{
+    color: var(--seventh-color);
+}
+
+.button1-index-ready-section::before{    
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+
+    transform: translateX(-100%) skewX(20deg);
+
+    transition: transform 0.5s ease;
+
+    z-index: -1;
+
+}
+
+
+.button1-index-ready-section:hover::before{
+    transform: 
+        translateX(0)
+        skewX(20deg);
+}
+
+
+.button2-index-ready-section{
+    padding: 0.75rem 0;
+    color: var(--seventh-color);
+    background-color: transparent;
+    border: 2px solid var(--seventh-color);
+    border-radius: 10px;
+    outline: 1px solid transparent;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.ovalo1-index-ready-section{
+    position: absolute;
+    right: 0px;
+    bottom: -100px;
+    z-index: 0;
+}
+
+.ovalo2-index-ready-section{
+    position: absolute;
+    left: 30px;
+    top: -105px;
+    z-index: 0;
+}
