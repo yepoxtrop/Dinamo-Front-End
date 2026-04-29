@@ -9,3 +9,11 @@ export function CardSkill({params}){
         </div>
     )
 }
+
+export function CardSkillBasic({params}){
+    return(
+        <div > 
+            <span>{params.content}</span>
+        </div>
+    )
+}
