@@ -4,12 +4,47 @@ import { CardSkillBasic } from "./cardSkills.jsx";
 {/* Estilos */}
 import '../../styles/cards/cardHelpsProduct.css';
 {/* Hooks */}
-import { useEffect, useState } from "react";
+import { useClassCards } from "../../hooks/clases/useClassCards.jsx";
 
-export function CardHelpProduct({params}){
+export function CardInfoBasic({params}){
+
+    const clase = useClassCards(params.className);
+    
     return(
         <>
-            <div>
+            <div className={params.className}>
+
+                <div className={`info-basic-container-icon-${clase}`}>
+                    <div className={`info-basic-icon-${clase}`}>
+                        {params.icon}
+                    </div>
+                    <div className={`info-basic-container-title-${clase}`}>
+                        <span className={`info-basic-title-${clase}`}>{params.title}</span>
+                    </div>
+                </div>
+                <div className={`info-basic-container-info-${clase}`}>
+                    <span className={`info-basic-info-${clase}`}>{params.info}</span>
+                </div>
+                <div className={`info-basic-container-time-${clase}`}>
+                    <span className={`info-basic-time-${clase}`}>Promedio {params.time}</span>
+                </div>
+                <div className={`info-basic-container-percentage-${clase}`}>
+                    <div className={`info-basic-percentage-line-${clase}`} id={`percentage`}>
+
+                    </div>
+                    <span className={`info-basic-percentage-${clase}`}>{params.percentage}% {params.percentageAlert}</span>
+                </div>
+            </div>
+        </>
+    )
+}
+
+
+export function CardHelpProduct({params}){
+    const clase = useClassCards(params.className);
+    return(
+        <>
+            <div className={params.className}>
 
                 <div>
                     <div>{params.icon}</div>
@@ -38,27 +73,30 @@ export function CardHelpProduct({params}){
 }
 
 export function CardHelpProductFlow({params}){
+
+    const clase = useClassCards(params.className);
+
     return(
         <>
-            <div>
+            <div className={params.className}>
 
-                <div>
-                    <div>
+                <div className={`help-flow-container-icon-${clase}`}>
+                    <div className={`help-flow-icon-${clase}`}>
                         <span>{params.value}</span>
                     </div>
-                    <div>
-                        <span>{params.title}</span>
-                        <span>{params.subTitle}</span>
+                    <div className={`help-flow-container-title-${clase}`}>
+                        <span className={`help-flow-title-${clase}`}>{params.title}</span>
+                        <span className={`help-flow-subTitle-${clase}`}>{params.subTitle}</span>
                     </div>
                 </div>
-                <div>
-                    <span>{params.info}</span>
+                <div className={`help-flow-container-info-${clase}`}>
+                    <span className={`help-flow-info-${clase}`}>{params.info}</span>
                 </div>
-                <div>
+                <div className={`help-flow-container-card-basics-${clase}`}>
                     {params.extras.map((valor, llave)=>{
                         return(
                             <>
-                                <CardSkillBasic params={{content:valor}} key={llave}/>
+                                <CardSkillBasic params={{content:valor, className:clase}} key={llave}/>
                             </>
                         )
                         
@@ -78,49 +116,28 @@ export function CardHelpProductFlow({params}){
 
 export function CardHelpProductFunctions({params}){
 
-    const [baseClass, setBaseClass] = useState("");
-
-    useEffect(()=>{
-        if(!params?.className){
-            const sufijo = "lite-gray"
-            setBaseClass(sufijo);
-            return;
-        }
-        
-        const arrayList = params.className.split("-");
-
-        if (arrayList.length < 2) {
-            setBaseClass("lite-gray");
-            return;
-        }
-
-        const sufijo = `${arrayList[arrayList.length -2]}-${arrayList[arrayList.length -1]}`;
-        setBaseClass(sufijo);
-        
-    }, [params?.className])
+    const clase = useClassCards(params.className);
     
-
-
     return(
         <>
             <div className={params.className}>
 
-                <div className={`help-functions-container-icon-${baseClass}`}>
-                    <div className={`help-functions-icon-${baseClass}`}>{params.icon}</div>
-                    <div className={`help-functions-container-title-${baseClass}`}>
-                        <span className={`help-functions-title-${baseClass}`}>{params.title}</span>
-                        <span className={`help-functions-subTitle-${baseClass}`}>{params.subTitle}</span>
+                <div className={`help-functions-container-icon-${clase}`}>
+                    <div className={`help-functions-icon-${clase}`}>{params.icon}</div>
+                    <div className={`help-functions-container-title-${clase}`}>
+                        <span className={`help-functions-title-${clase}`}>{params.title}</span>
+                        <span className={`help-functions-subTitle-${clase}`}>{params.subTitle}</span>
                     </div>
                 </div>
-                {params.line?<hr />:<></>}
-                <div className={`help-functions-container-info-${baseClass}`}>
-                    <span className={`help-functions-info-${baseClass}`}>{params.info}</span>
+                {params.line?<hr className={`help-functions-line-${clase}`}/>:<></>}
+                <div className={`help-functions-container-info-${clase}`}>
+                    <span className={`help-functions-info-${clase}`}>{params.info}</span>
                 </div>
-                <div className={`help-functions-container-card-basics-${baseClass}`}>
+                <div className={`help-functions-container-card-basics-${clase}`}>
                     {params.extras.map((valor, llave)=>{
                         return(
                             <>
-                                <CardSkillBasic params={{content:valor, className:baseClass}} key={llave} />
+                                <CardSkillBasic params={{content:valor, className:clase}} key={llave} />
                             </>
                         )
                         

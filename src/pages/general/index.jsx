@@ -18,8 +18,8 @@ export const Index = () =>{
             <IndexFunctionsSection />
             <IndexProfileSection />
             <IndexRequerimentsSection />
-            {/* <IndexExprienceSection /> */}
-            {/* <IndexSuscriptionSection /> */}
+            <IndexExprienceSection /> 
+            <IndexSuscriptionSection />
             <IndexReadySection />
 
             {/* Pie de página */}

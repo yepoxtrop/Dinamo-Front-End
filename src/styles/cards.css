@@ -92,7 +92,13 @@
 .card-container-light-blue,
 .card-container-light-green,
 .card-container-light-orange,
-.card-container-light-purple{
+.card-container-light-purple,
+.card-container-dark-blue,
+.card-container-dark-green,
+.card-container-dark-purple,
+.card-container-dark-orange,
+.card-container-dark-red,
+.card-container-dark-cian{
     text-align: center;
     padding: 1px;
     border-radius: 10px;
@@ -125,3 +131,52 @@
 .card-info-light-purple{
     color: #534AB7;
 }
+
+.card-container-dark-blue{
+    background-color: rgba(24, 95, 165,0.4);
+}
+
+.card-container-dark-green{
+    background-color: rgba(15, 110, 86,0.4);
+}
+
+.card-container-dark-purple{
+    background-color: rgba(83, 74, 183, 0.4);
+}
+
+.card-container-dark-orange{
+    background-color: rgb(133, 79, 11, 0.4);
+}
+
+.card-container-dark-red{
+    background-color: rgba(153, 60, 29, 0.4);
+}
+
+.card-container-dark-cian{
+    background-color: rgb(55, 138, 221, 0.4);
+}
+
+.card-info-dark-blue{
+    color: #B5D4F4;
+}
+
+.card-info-dark-green{
+    color: #9FE1CB;
+}
+
+.card-info-dark-orange{
+    color: #FAC775;
+}
+
+.card-info-dark-purple{
+    color: #CECBF6;
+}
+
+.card-info-dark-red{
+    color: #F5C4B3;
+}
+
+.card-info-dark-cian{
+    color: #B5D4F4;
+}
+

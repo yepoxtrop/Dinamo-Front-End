@@ -1,226 +1,297 @@
-/**
- *  Estilos del componente IndexRequerimentsSection
- *
- */
-
-.index-requeriments-section{
+/* ==============================
+   Base sections
+   ============================== */
+.index-problems-section,
+.index-help-section,
+.index-workflow-section,
+.index-functions-section,
+.index-profile-section,
+.index-requeriments-section,
+.index-experience-section,
+.index-suscription-section,
+.index-ready-section {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2em;
     gap: 1.2rem;
-    background-color: var(--sixth-color);
+    padding: 2em;
+}
+
+.index-problems-section,
+.index-help-section,
+.index-workflow-section,
+.index-functions-section,
+.index-profile-section,
+.index-requeriments-section,
+.index-experience-section,
+.index-suscription-section {
     position: relative;
     z-index: 1;
 }
 
-.title-container-index-requeriments-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.index-problems-section,
+.index-profile-section {
+    background-color: var(--sixth-color);
 }
 
-.title1-index-requeriments-section{
-    color: var(--nineth-color);
-    font-size: 1rem;
+.index-help-section,
+.index-requeriments-section {
+    background-color: var(--fourth-color);
 }
 
-.title2-index-requeriments-section{
-    color: var(--fourth-color);
-    font-size: 2rem;
-    font-weight: bold;
+.index-workflow-section,
+.index-experience-section {
+    background-color: var(--seventh-color);
 }
 
-.title3-index-requeriments-section{
-    color: var(--nineth-color);
-    font-size: 1rem;
+.index-functions-section,
+.index-suscription-section {
+    background-color: var(--third-color);
 }
 
-.cards-container-index-requeriments-section{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
-}
-
-/**
- *  Estilos del componente IndexReadySection
- *
- */
-.index-ready-section{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2em;
-    gap: 1.2rem;
-    background-color: var(--second-color);
+.index-ready-section {
     position: relative;
+    background-color: var(--second-color);
 }
 
-.title-container-index-ready-section{
+/* ==============================
+   Title containers
+   ============================== */
+.title-container-index-problems-section,
+.title-container-index-help-section,
+.title-container-index-workflow-section,
+.title-container-index-functions-section,
+.title-container-index-profile-section,
+.title-container-index-requeriments-section,
+.title-container-index-experience-section,
+.title-container-index-suscription-section,
+.title-container-index-ready-section,
+.subTitle-container-index-ready-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.title1-index-ready-section, 
-.title2-index-ready-section{
+/* ==============================
+   Section titles
+   ============================== */
+.title1-index-problems-section,
+.title1-index-help-section,
+.title1-index-workflow-section,
+.title1-index-functions-section,
+.title1-index-profile-section,
+.title1-index-requeriments-section,
+.title1-index-experience-section,
+.title1-index-suscription-section,
+.title3-index-workflow-section,
+.title3-index-functions-section,
+.title3-index-profile-section,
+.title3-index-requeriments-section,
+.title3-index-experience-section,
+.title3-index-suscription-section {
+    color: var(--nineth-color);
+    font-size: 1rem;
+}
+
+.title2-index-problems-section,
+.title2-index-help-section,
+.title2-index-workflow-section,
+.title2-index-functions-section,
+.title2-index-profile-section,
+.title2-index-requeriments-section,
+.title2-index-experience-section,
+.title2-index-suscription-section,
+.title1-index-ready-section,
+.title2-index-ready-section {
     font-size: 2rem;
     font-weight: bold;
 }
 
-.title1-index-ready-section{
+.title2-index-problems-section,
+.title2-index-experience-section {
+    color: var(--third-color);
+}
+
+.title2-index-workflow-section,
+.title2-index-profile-section {
+    color: var(--fourth-color);
+}
+
+.title2-index-help-section,
+.title2-index-functions-section {
+    color: var(--seventh-color);
+}
+
+.title2-index-requeriments-section,
+.title2-index-suscription-section,
+.title1-index-ready-section {
     color: var(--eighth-color);
 }
 
-.title2-index-ready-section{
+.title2-index-ready-section {
     color: var(--first-color);
 }
 
-.subTitle-container-index-ready-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.title3-index-problems-section {
+    color: var(--second-color);
+    font-size: 1rem;
 }
 
-.subTitle1-index-ready-section{
+.subTitle1-index-ready-section {
     color: var(--first-color);
     font-size: 1rem;
 }
 
-.buttons-container-index-ready-section{
-    width: 40%;
-    padding: 0 1rem;
+/* ==============================
+   Cards grids
+   ============================== */
+.cards-container-index-problems-section,
+.cards-container-index-help-section,
+.cards-container-index-workflow-section,
+.cards-container-index-functions-section,
+.cards-container-index-profile-section,
+.cards-container-index-requeriments-section,
+.cards-container-index-experience-section,
+.cards-container-index-suscription-section {
+    width: 100%;
     display: grid;
     gap: 1rem;
-    grid-template-columns: 1fr 1fr;
 }
 
-.button1-index-ready-section{
-    font-size: 1rem;
-    cursor: pointer;
-    background-color: var(--seventh-color);
-    color: var(--second-color);
-    padding: 0.75rem 0;
-
+.cards-container-index-problems-section,
+.cards-container-index-help-section,
+.cards-container-index-workflow-section,
+.cards-container-index-functions-section {
     position: relative;
+}
 
-    border: 2px solid var(--third-color);
-    border-radius: 10px;
-    
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
-    transition-property: all;  
+.cards-container-index-problems-section,
+.cards-container-index-workflow-section,
+.cards-container-index-functions-section,
+.cards-container-index-experience-section,
+.cards-container-index-suscription-section {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cards-container-index-help-section,
+.cards-container-index-profile-section,
+.cards-container-index-requeriments-section {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.hr-index-workflow-section {
+    position: absolute;
+    align-self: center;
+    z-index: 0;
+}
+
+/* ==============================
+   Ready section buttons
+   ============================== */
+.buttons-container-index-ready-section {
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.button1-index-ready-section,
+.button2-index-ready-section {
+    position: relative;
     z-index: 0;
     overflow: hidden;
+    padding: 0.75rem 0;
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-property: all;
 }
 
-.button1-index-ready-section:hover{
+.button1-index-ready-section {
+    color: var(--second-color);
+    background-color: var(--seventh-color);
+    border-color: var(--third-color);
+}
+
+.button2-index-ready-section {
     color: var(--seventh-color);
+    background-color: transparent;
     border-color: var(--seventh-color);
+}
+
+.button1-index-ready-section:hover,
+.button2-index-ready-section:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-.button1-index-ready-section::before{
+.button1-index-ready-section:hover {
+    color: var(--seventh-color);
+    border-color: var(--seventh-color);
+}
+
+.button2-index-ready-section:hover {
+    color: var(--first-color);
+    border-color: var(--third-color);
+}
+
+.button1-index-ready-section::before,
+.button2-index-ready-section::before {
     content: "";
     position: absolute;
-    height: 100%;
-    width: 0%;
-
-    background-color: var(--third-color);
-    
     top: 0;
-    left: -10%;
     z-index: -1;
-
+    width: 0%;
+    height: 100%;
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
-    transition-property: all;  
+    transition-property: all;
+}
+
+.button1-index-ready-section::before {
+    left: -10%;
+    background-color: var(--third-color);
     transform: skewX(20deg);
 }
 
-
-.button1-index-ready-section:hover::before{
-    width: 120%;
-}
-
-.button1-index-ready-section:active {
-  transform: scale(0.9);
-  box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.4);
-}
-
-.button2-index-ready-section{
-    font-size: 1rem;
-    cursor: pointer;
-    
-
-    color: var(--seventh-color);
-    background-color: transparent;
-    padding: 0.75rem 0;
-
-    border: 2px solid var(--seventh-color);
-    border-radius: 10px;
-
-    position: relative;
-    
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
-    transition-property: all;  
-    z-index: 0;
-    overflow: hidden;
-}
-
-.button2-index-ready-section:hover{
-    color: var(--first-color);
-    border-color: var(--third-color);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-.button2-index-ready-section::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 0%;
-
-    background-color: var(--fifth-color);
-    
-    top: 0;
+.button2-index-ready-section::before {
     right: -10%;
-    z-index: -1;
-
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
-    transition-property: all;  
+    background-color: var(--fifth-color);
     transform: skewX(-20deg);
 }
 
-
-.button2-index-ready-section:hover::before{
+.button1-index-ready-section:hover::before,
+.button2-index-ready-section:hover::before {
     width: 120%;
 }
 
+.button1-index-ready-section:active,
 .button2-index-ready-section:active {
-  transform: scale(0.9);
-  box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(0.9);
+    box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.4);
 }
 
-.ovalo1-index-ready-section{
+/* ==============================
+   Ready section decoration
+   ============================== */
+.ovalo1-index-ready-section,
+.ovalo2-index-ready-section {
     position: absolute;
+    z-index: 0;
+}
+
+.ovalo1-index-ready-section {
     right: 0px;
     bottom: -100px;
-    z-index: 0;
 }
 
-.ovalo2-index-ready-section{
-    position: absolute;
+.ovalo2-index-ready-section {
     left: 30px;
     top: -105px;
-    z-index: 0;
 }

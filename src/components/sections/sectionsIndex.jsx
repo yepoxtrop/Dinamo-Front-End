@@ -1,6 +1,5 @@
 {/* Componentes */}
-import { CardInfoBasic } from "../cards/cardInfoBasico.jsx"
-import { CardHelpProduct, CardHelpProductFlow, CardHelpProductFunctions } from "../cards/cardHelpsProduct.jsx";
+import { CardHelpProduct, CardHelpProductFlow, CardHelpProductFunctions, CardInfoBasic } from "../cards/cardHelpsProduct.jsx";
 import { IoCloseOutline, IoCheckboxOutline } from "react-icons/io5";
 import { MdOutlineMoreTime, MdOutlineSecurity } from "react-icons/md";
 import { LuSquareArrowRight, LuWorkflow } from "react-icons/lu";
@@ -29,19 +28,21 @@ export function IndexWelcomeSection(){
 export function IndexProblemsSection(){
     return(
         <>
-            <section>
-                <div>
-                    <span>¿TE SUENA FAMILIAR ALGUNO DE ESTOS PROBLEMNAS?</span>
-                    <span>El caos documental cuesta tiempo y dinero</span>
+            <section className="index-problems-section">
+                <div className="title-container-index-problems-section">
+                    <span className="title1-index-problems-section">¿TE SUENA FAMILIAR ALGUNO DE ESTOS PROBLEMNAS?</span>
+                    <span className="title2-index-problems-section">El caos documental cuesta tiempo y dinero</span>
+                </div>
+                <div className="cards-container-index-problems-section">
+                    <CardInfoBasic params={{icon:<IoCloseOutline className="icon-circle-light-red"/>, title:"Documentos perdidos", info:"¿Dónde quedó la versión final del contrato que firmamos el mes pasado?Horas buscando emails.", time:"18 min por búsqueda · 6 veces/semana", percentage:"81" , percentageAlert:"del tiempo perdido", className:"card-circle-light-red"}}/>
+
+                    <CardInfoBasic params={{icon:<IoCloseOutline className="icon-circle-light-orange"/>, title:"Aprobaciones Externas", info:"Necesito que 3 personas firmen esto, pero cada una está en una ciudad distinta. Días en espera.", time:"4.2 días por aprobación multi-firma", percentage:"66", percentageAlert:"tiempo en espera",  className:"card-circle-light-orange"}}/>
+
+                    <CardInfoBasic params={{icon:<IoCloseOutline className="icon-circle-light-purple"/>, title:"Sin trazabilidad ni auditoría", info:"¿Quién cambió este contrato y cuándo? No hay forma de saberlo. Registros legalales latentes", time:"7.8 horas en busqueda de logs transcacionales", percentage:"73", percentageAlert:"en riesgo",  className:"card-circle-light-purple"}}/>
                 </div>
                 <div>
-                    <CardInfoBasic params={{icon:<IoCloseOutline />, title:"Documentos perdidos", info:"¿Dónde quedó la versión final del contrato que firmamos el mes pasado?Horas buscando emails.", time:"18 min por búsqueda · 6 veces/semana", percentage:"81" , percentageAlert:"del tiempo perdido"}}/>
-
-                    <CardInfoBasic params={{icon:<IoCloseOutline />, title:"Aprobaciones Externas", info:"Necesito que 3 personas firmen esto, pero cada una está en una ciudad distinta. Días en espera.", time:"4.2 días por aprobación multi-firma", percentage:"66", percentageAlert:"tiempo en espera"}}/>
-
-                    <CardInfoBasic params={{icon:<IoCloseOutline />, title:"Sin trazabilidad ni auditoría", info:"¿Quién cambió este contrato y cuándo? No hay forma de saberlo. Registros legalales latentes", time:"Indefinido falta de lof de cambios documentales", percentage:"73", percentageAlert:"en riesgo"}}/>
+                    <span className="title3-index-problems-section">Dinamo resuelve los tres. Desde el primer día</span>
                 </div>
-                <div>Dinamo resuelve los tres. Desde el primer día</div>
             </section>
         </>
     )
@@ -51,19 +52,19 @@ export function IndexProblemsSection(){
 export function IndexHelpsSection(){
     return(
         <>
-            <section>
-                <div>
-                    <span>LO QUE DINAMO TE OFRECE</span>
-                    <span>Beneficios reales desde el día uno</span>
+            <section className="index-help-section">
+                <div className="title-container-index-help-section">
+                    <span className="title1-index-help-section">LO QUE DINAMO TE OFRECE</span>
+                    <span className="title2-index-help-section">Beneficios reales desde el día uno</span>
                 </div>
-                <div>
-                    <CardHelpProduct params={{icon:< MdOutlineMoreTime />, title:"Ahorra tiempo", subTitle:"72% menos gestión", info:"De días a horas. Firma y aprueba desde donde estés, en minutos.", extras:["4.2 días", "1.2 días"] }}/>
+                <div className="cards-container-index-help-section">
+                    <CardHelpProduct params={{icon:< MdOutlineMoreTime />, title:"Ahorra tiempo", subTitle:"72% menos gestión", info:"De días a horas. Firma y aprueba desde donde estés, en minutos.", extras:["4.2 días", "1.2 días"] , className:""}}/>
                     
-                    <CardHelpProduct params={{icon:< IoCheckboxOutline />, title:"Validez legal total", subTitle:"Ley 527 · X.509 · RFC 3161", info:"Cada firma tiene validez jurídica. Certificados verificables ante terceros.", extras:["100% admisible en juicio"] }}/>
+                    <CardHelpProduct params={{icon:< IoCheckboxOutline />, title:"Validez legal total", subTitle:"Ley 527 · X.509 · RFC 3161", info:"Cada firma tiene validez jurídica. Certificados verificables ante terceros.", extras:["100% admisible en juicio"] , className:""}}/>
                     
-                    <CardHelpProduct params={{icon:< PiCubeFocus />, title:"Todo centralizado", subTitle:"Un solo repositorio seguro", info:"Encuentra cualquier documento en segundos con búsqueda inteligente.", extras:["Búsqueda en menos de 3 seg"] }}/>
+                    <CardHelpProduct params={{icon:< PiCubeFocus />, title:"Todo centralizado", subTitle:"Un solo repositorio seguro", info:"Encuentra cualquier documento en segundos con búsqueda inteligente.", extras:["Búsqueda en menos de 3 seg"] , className:""}}/>
                     
-                    <CardHelpProduct params={{icon:< LuSquareArrowRight />, title:"Sin papel ni impresión", subTitle:"100% digital · Sostenible", info:"Elimina costos de papel, impresión, mensajería y almacenamiento físico.", extras:["Ahorro $18M/año aprox."] }}/>
+                    <CardHelpProduct params={{icon:< LuSquareArrowRight />, title:"Sin papel ni impresión", subTitle:"100% digital · Sostenible", info:"Elimina costos de papel, impresión, mensajería y almacenamiento físico.", extras:["Ahorro $18M/año aprox."] , className:""}}/>
                 </div>
             </section>
         </>
@@ -74,18 +75,19 @@ export function IndexHelpsSection(){
 export function IndexWorkFlowSection(){
     return(
         <>
-            <section>
-                <div>
-                    <span>ASÍ DE SENCILLO</span>
-                    <span>¿Cómo funciona Dinamo?</span>
-                    <span>Tres pasos para digitalizar tu gestión documental completamente</span>
+            <section className="index-workflow-section">
+                <div className="title-container-index-workflow-section">
+                    <span className="title1-index-workflow-section">ASÍ DE SENCILLO</span>
+                    <span className="title2-index-workflow-section">¿Cómo funciona Dinamo?</span>
+                    <span className="title3-index-workflow-section">Tres pasos para digitalizar tu gestión documental completamente</span>
                 </div>
-                <div>
-                    <CardHelpProductFlow params={{value:"1", title:"Sube o crea", subTitle:"tu documento", info:"Arrastra un PDF, Word o Excel. O usa una plantilla prediseñada para generar el documento con tus datos en segundos.", extras:["PDF/DOCX", "Plntaillas", "Drag&Drop"]}}/>
+                <div className="cards-container-index-functions-section">
+                    <hr className="hr-index-workflow-section"/>
+                    <CardHelpProductFlow params={{value:"1", title:"Sube o crea", subTitle:"tu documento", info:"Arrastra un PDF, Word o Excel. O usa una plantilla prediseñada para generar el documento con tus datos en segundos.", extras:["PDF/DOCX", "Plntaillas", "Drag&Drop"], className:""}}/>
 
-                    <CardHelpProductFlow params={{value:"2", title:"Define el flujo", subTitle:"y envía a firmar", info:"Selecciona quiénes deben revisar, aprobar o firmar. En qué orden. Cada persona recibe un email con enlace directo. Sin instalar nada.", extras:["Multi-firma", "Recordatorio", "Por email&Drop"]}}/>
+                    <CardHelpProductFlow params={{value:"2", title:"Define el flujo", subTitle:"y envía a firmar", info:"Selecciona quiénes deben revisar, aprobar o firmar. En qué orden. Cada persona recibe un email con enlace directo. Sin instalar nada.", extras:["Multi-firma", "Recordatorio", "Por email&Drop"], className:""}}/>
                 
-                    <CardHelpProductFlow params={{value:"3", title:"Archivado y listo", subTitle:"automáticamente", info:"Cuando todos firman, el documento queda archivado con sello de tiempo, hash de integridad y certificado digital verificable. Para siempre.", extras:["Certificado", "Inmutable", "Auditable"]}}/>
+                    <CardHelpProductFlow params={{value:"3", title:"Archivado y listo", subTitle:"automáticamente", info:"Cuando todos firman, el documento queda archivado con sello de tiempo, hash de integridad y certificado digital verificable. Para siempre.", extras:["Certificado", "Inmutable", "Auditable"], className:""}}/>
                 </div>
             </section>
         </>
@@ -96,24 +98,24 @@ export function IndexWorkFlowSection(){
 export function IndexFunctionsSection(){
     return(
         <>
-            <section>
-                <div>
-                    <span>TODO EN UN SOLO PRODUCTO</span>
-                    <span>Funcionalidades diseñadas para tu equipo</span>
-                    <span>Cada módulo resuelve un dolor específico de tu operación</span>
+            <section className="index-functions-section">
+                <div className="title-container-index-functions-section">
+                    <span className="title1-index-functions-section">TODO EN UN SOLO PRODUCTO</span>
+                    <span className="title2-index-functions-section">Funcionalidades diseñadas para tu equipo</span>
+                    <span className="title3-index-functions-section">Cada módulo resuelve un dolor específico de tu operación</span>
                 </div>
-                <div>
-                    <CardHelpProductFunctions params={{icon:<BsPlusSquareDotted />, title:"Firma digital certificada", subTitle:"X.509 · PKI · RFC 3161 · OCSP", info:"Firma con validez legal plena. Sello de tiempo, verificación OCSP en tiempo real y soporte para múltiples firmantes.", extras:["Firma avanzada", "Co-firma", "Timestamp"], line:true}}/>
+                <div className="cards-container-index-functions-section">
+                    <CardHelpProductFunctions params={{icon:<BsPlusSquareDotted className="icon-dark-blue" />, title:"Firma digital certificada", subTitle:"X.509 · PKI · RFC 3161 · OCSP", info:"Firma con validez legal plena. Sello de tiempo, verificación OCSP en tiempo real y soporte para múltiples firmantes.", extras:["Firma avanzada", "Co-firma", "Timestamp"], line:true, className:"card-uniform-dark-blue"}}/>
 
-                    <CardHelpProductFunctions params={{icon:<LuWorkflow />, title:"Flujos de aprobación", subTitle:"BPMN · Secuencial · Paralelo", info:"Define quién aprueba qué y en qué orden. Con condiciones, SLAs y escalamiento automático.", extras:["Editor visual", "BPMN 2.0", "Recordatorio auto"], line:true}}/>
+                    <CardHelpProductFunctions params={{icon:<LuWorkflow className="icon-dark-green" />, title:"Flujos de aprobación", subTitle:"BPMN · Secuencial · Paralelo", info:"Define quién aprueba qué y en qué orden. Con condiciones, SLAs y escalamiento automático.", extras:["Editor visual", "BPMN 2.0", "Recordatorio auto"], line:true, className:"card-uniform-dark-green"}}/>
 
-                    <CardHelpProductFunctions params={{icon:<AiOutlineAudit />, title:"Auditoría e historial", subTitle:"Inmutable · Exportable · Blockchain-hash", info:"Cada acción queda registrada: quién, cuándo y qué cambió. Hash encadenado por documento.", extras:["Log inmutable", "Export PDF/Excel"], line:true}}/>
+                    <CardHelpProductFunctions params={{icon:<AiOutlineAudit className="icon-dark-purple" />, title:"Auditoría e historial", subTitle:"Inmutable · Exportable · Blockchain-hash", info:"Cada acción queda registrada: quién, cuándo y qué cambió. Hash encadenado por documento.", extras:["Log inmutable", "Export PDF/Excel"], line:true, className:"card-uniform-dark-purple"}}/>
 
-                    <CardHelpProductFunctions params={{icon:<BsFiletypeDoc />, title:"Plantillas inteligentes", subTitle:"DOCX · PDF · Variables dinámicas", info:"Crea plantillas con campos variables. Genera 100 contratos iguales en segundos, con datos distintos.", extras:["Campo {{variable}}", "Versionado"], line:true}}/>
+                    <CardHelpProductFunctions params={{icon:<BsFiletypeDoc className="icon-dark-orange"/>, title:"Plantillas inteligentes", subTitle:"DOCX · PDF · Variables dinámicas", info:"Crea plantillas con campos variables. Genera 100 contratos iguales en segundos, con datos distintos.", extras:["Campos", "Versionado"], line:true, className:"card-uniform-dark-orange"}}/>
 
-                    <CardHelpProductFunctions params={{icon:<FaRegUser />, title:"Gestión de usuarios", subTitle:"LDAP · AD · SSO · MFA · Roles", info:"Integración con Active Directory. SSO corporativo. Permisos por área, rol y tipo de documento.", extras:["LDAP / AD", "MFA"], line:true}}/>
+                    <CardHelpProductFunctions params={{icon:<FaRegUser className="icon-dark-red"/>, title:"Gestión de usuarios", subTitle:"LDAP · AD · SSO · MFA · Roles", info:"Integración con Active Directory. SSO corporativo. Permisos por área, rol y tipo de documento.", extras:["LDAP / AD", "MFA"], line:true, className:"card-uniform-dark-red"}}/>
 
-                    <CardHelpProductFunctions params={{icon:<SiDocsdotrs />, title:"Reportes y analytics", subTitle:"Dashboard · Excel · PDF · Tiempo real", info:"KPIs en tiempo real: tiempos, firmas, cuellos de botella. Reportes programados automáticos.", extras:["Tiempo real", "Programado"], line:true}}/>
+                    <CardHelpProductFunctions params={{icon:<SiDocsdotrs className="icon-dark-cian"/>, title:"Reportes y analytics", subTitle:"Dashboard · Excel · PDF · Tiempo real", info:"KPIs en tiempo real: tiempos, firmas, cuellos de botella. Reportes programados automáticos.", extras:["Tiempo real", "Programado"], line:true, className:"card-uniform-dark-cian"}}/>
 
                 </div>
             </section>
@@ -125,20 +127,20 @@ export function IndexFunctionsSection(){
 export function IndexProfileSection(){
     return(
         <>
-            <section>
-                <div>
-                    <span>SECTORES Y EQUIPOS</span>
-                    <span>¿Para quién es Dinamo?</span>
-                    <span>Diseñado para cualquier empresa que mueva documentos y necesite control total</span>
+            <section className="index-profile-section">
+                <div className="title-container-index-profile-section">
+                    <span className="title1-index-profile-section">SECTORES Y EQUIPOS</span>
+                    <span className="title2-index-profile-section">¿Para quién es Dinamo?</span>
+                    <span className="title3-index-profile-section">Diseñado para cualquier empresa que mueva documentos y necesite control total</span>
                 </div>
-                <div>
-                    <CardHelpProductFlow params={{value:"⚖️", title:"Legal y Contratos", subTitle:"Firmas, NDAs, contratos", info:"Gestiona contratos con clientes, proveedores y empleados. Alertas de vencimiento automáticas.", extras:["Contratos & NDAs", "Vencimientos"], line:false, className:""}}/>
+                <div className="cards-container-index-profile-section">
+                    <CardHelpProductFlow params={{value:"⚖️", title:"Legal y Contratos", subTitle:"Firmas, NDAs, contratos", info:"Gestiona contratos con clientes, proveedores y empleados. Alertas de vencimiento automáticas.", extras:["Contratos", "Vencimientos"], line:false, className:"card-uniform-light-blue"}}/>
                     
-                    <CardHelpProductFlow params={{value:"👥", title:"Recursos Humanos", subTitle:"Onboarding, nómina, acuerdos", info:"Automatiza la firma de contratos laborales. Guarda acuerdos de confidencialidad y evaluaciones firmadas.", extras:["Onboarding dig.", "Acuerdos RR.HH"], line:false, className:""}}/>
+                    <CardHelpProductFlow params={{value:"👥", title:"Recursos Humanos", subTitle:"Onboarding, nómina, acuerdos", info:"Automatiza la firma de contratos laborales. Guarda acuerdos de confidencialidad y evaluaciones firmadas.", extras:["Onboarding dig.", "Acuerdos RR.HH"], line:false, className:"card-uniform-light-green"}}/>
 
-                    <CardHelpProductFlow params={{value:"🏦", title:"Financiero y Banca", subTitle:"Pagarés, órdenes, aprobaciones", info:"Digitaliza pagarés, órdenes de pago y aprobaciones de crédito con trazabilidad regulatoria completa.", extras:["Pagarés dig.", "Trazabilidad reg."], line:false, className:""}}/>
+                    <CardHelpProductFlow params={{value:"🏦", title:"Financiero y Banca", subTitle:"Pagarés, órdenes, aprobaciones", info:"Digitaliza pagarés, órdenes de pago y aprobaciones de crédito con trazabilidad regulatoria completa.", extras:["Pagarés dig.", "Trazabilidad reg."], line:false, className:"card-uniform-light-purple"}}/>
 
-                    <CardHelpProductFlow params={{value:"🏗️", title:"Compras y Logística", subTitle:"Órdenes, proveedores, actas", info:"Gestiona órdenes de compra, cotizaciones y actas de entrega con firma digital del proveedor incluida.", extras:["Órds. de compra", "Órds. de compra"], line:false, className:""}}/>
+                    <CardHelpProductFlow params={{value:"🏗️", title:"Compras y Logística", subTitle:"Órdenes, proveedores, actas", info:"Gestiona órdenes de compra, cotizaciones y actas de entrega con firma digital del proveedor incluida.", extras:["Órds. de compra", "Órds. de compra"], line:false, className:"card-uniform-light-orange"}}/>
                 </div>
             </section>
         </>
@@ -171,8 +173,19 @@ export function IndexRequerimentsSection(){
 export function IndexExprienceSection(){
     return(
         <>
-            <section>
+            <section className="index-experience-section">
+                <div className="title-container-index-experience-section">
+                    <span className="title1-index-experience-section">ASÍ DE SENCILLO</span>
+                    <span className="title2-index-experience-section">¿Cómo funciona Dinamo?</span>
+                    <span className="title3-index-experience-section">Tres pasos para digitalizar tu gestión documental completamente</span>
+                </div>
+                <div className="cards-container-index-experience-section">
+                    <CardHelpProductFlow params={{value:"1", title:"Sube o crea", subTitle:"tu documento", info:"Arrastra un PDF, Word o Excel. O usa una plantilla prediseñada para generar el documento con tus datos en segundos.", extras:["PDF/DOCX", "Plntaillas", "Drag&Drop"], className:""}}/>
+
+                    <CardHelpProductFlow params={{value:"2", title:"Define el flujo", subTitle:"y envía a firmar", info:"Selecciona quiénes deben revisar, aprobar o firmar. En qué orden. Cada persona recibe un email con enlace directo. Sin instalar nada.", extras:["Multi-firma", "Recordatorio", "Por email&Drop"], className:""}}/>
                 
+                    <CardHelpProductFlow params={{value:"3", title:"Archivado y listo", subTitle:"automáticamente", info:"Cuando todos firman, el documento queda archivado con sello de tiempo, hash de integridad y certificado digital verificable. Para siempre.", extras:["Certificado", "Inmutable", "Auditable"], className:""}}/>
+                </div>
             </section>
         </>
     )
@@ -181,8 +194,19 @@ export function IndexExprienceSection(){
 export function IndexSuscriptionSection(){
     return(
         <>
-            <section>
+            <section className="index-suscription-section">
+                <div className="title-container-index-suscription-section">
+                    <span className="title1-index-suscription-section">PLANES Y PRECIOS</span>
+                    <span className="title2-index-suscription-section">Elige el plan que se adapta a tu empresa</span>
+                    <span className="title3-index-suscription-section">Todos incluyen soporte, actualizaciones y 30 días de prueba gratis</span>
+                </div>
+                <div className="cards-container-index-suscription-section">
+                    <CardHelpProductFlow params={{value:"1", title:"Sube o crea", subTitle:"tu documento", info:"Arrastra un PDF, Word o Excel. O usa una plantilla prediseñada para generar el documento con tus datos en segundos.", extras:["PDF/DOCX", "Plntaillas", "Drag&Drop"], className:""}}/>
+
+                    <CardHelpProductFlow params={{value:"2", title:"Define el flujo", subTitle:"y envía a firmar", info:"Selecciona quiénes deben revisar, aprobar o firmar. En qué orden. Cada persona recibe un email con enlace directo. Sin instalar nada.", extras:["Multi-firma", "Recordatorio", "Por email&Drop"], className:""}}/>
                 
+                    <CardHelpProductFlow params={{value:"3", title:"Archivado y listo", subTitle:"automáticamente", info:"Cuando todos firman, el documento queda archivado con sello de tiempo, hash de integridad y certificado digital verificable. Para siempre.", extras:["Certificado", "Inmutable", "Auditable"], className:""}}/>
+                </div>
             </section>
         </>
     )
