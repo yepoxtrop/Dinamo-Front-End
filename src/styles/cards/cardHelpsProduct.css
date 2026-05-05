@@ -5,6 +5,10 @@
 .card-uniform-light-green,
 .card-uniform-light-purple,
 .card-uniform-light-orange,
+.card-uniform-light-blueEmoji,
+.card-uniform-light-greenEmoji,
+.card-uniform-light-purpleEmoji,
+.card-uniform-light-orangeEmoji,
 .card-uniform-dark-blue,
 .card-uniform-dark-green,
 .card-uniform-dark-purple,
@@ -13,7 +17,14 @@
 .card-uniform-dark-cian,
 .card-circle-light-red,
 .card-circle-light-orange,
-.card-circle-light-purple {
+.card-circle-light-purple,
+.card-circle-dark-blue,
+.card-circle-dark-green,
+.card-circle-dark-purple,
+.card-circle-dark-orange,
+.card-circle-dark-blueNumber,
+.card-circle-dark-greenNumber,
+.card-circle-dark-purpleNumber {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -24,9 +35,36 @@
 .card-uniform-light-blue,
 .card-uniform-light-green,
 .card-uniform-light-purple,
-.card-uniform-light-orange {
+.card-uniform-light-orange{
+    background-color: var(--third-color);
+    border: solid 2px var(--second-color);
+}
+
+.card-uniform-light-blueEmoji,
+.card-uniform-light-greenEmoji,
+.card-uniform-light-purpleEmoji,
+.card-uniform-light-orangeEmoji,
+.card-circle-dark-blueNumber,
+.card-circle-dark-greenNumber,
+.card-circle-dark-purpleNumber {
     background-color: var(--seventh-color);
     border: solid 2px var(--first-color);
+}
+
+.card-uniform-light-blueEmoji {
+    border-color: #D7EAFB;
+}
+
+.card-uniform-light-greenEmoji {
+    border-color: #D2EFE5;
+}
+
+.card-uniform-light-purpleEmoji {
+    border-color: #DEDDFB;
+}
+
+.card-uniform-light-orangeEmoji {
+    border-color: #F6DFB8;
 }
 
 .card-uniform-dark-blue,
@@ -37,7 +75,10 @@
 .card-uniform-dark-cian,
 .card-circle-light-red,
 .card-circle-light-orange,
-.card-circle-light-purple {
+.card-circle-light-purple,
+.card-circle-dark-blueNumber,
+.card-circle-dark-greenNumber,
+.card-circle-dark-purpleNumber {
     position: relative;
     overflow: hidden;
 }
@@ -47,15 +88,32 @@
 .card-uniform-dark-purple,
 .card-uniform-dark-orange,
 .card-uniform-dark-red,
-.card-uniform-dark-cian {
+.card-uniform-dark-cian,
+.card-circle-dark-blue,
+.card-circle-dark-green,
+.card-circle-dark-purple,
+.card-circle-dark-orange {
     background-color: var(--fourth-color);
     border: solid 2px var(--second-color);
+}
+
+.card-circle-dark-blue,
+.card-circle-dark-green,
+.card-circle-dark-purple,
+.card-circle-dark-orange {
+    border-radius: 10px;
 }
 
 .card-circle-light-red,
 .card-circle-light-orange,
 .card-circle-light-purple {
     background-color: var(--seventh-color);
+}
+
+.card-circle-dark-blueNumber,
+.card-circle-dark-greenNumber,
+.card-circle-dark-purpleNumber {
+    z-index: 2;
 }
 
 .card-uniform-dark-blue::before,
@@ -66,7 +124,10 @@
 .card-uniform-dark-cian::before,
 .card-circle-light-red::before,
 .card-circle-light-orange::before,
-.card-circle-light-purple::before {
+.card-circle-light-purple::before,
+.card-circle-dark-blueNumber::before,
+.card-circle-dark-greenNumber::before,
+.card-circle-dark-purpleNumber::before {
     content: "";
     position: absolute;
     top: 0;
@@ -82,16 +143,27 @@
 .help-functions-container-icon-light-green,
 .help-functions-container-icon-light-purple,
 .help-functions-container-icon-light-orange,
-.help-flow-container-icon-light-blue,
-.help-flow-container-icon-light-green,
-.help-flow-container-icon-light-purple,
-.help-flow-container-icon-light-orange,
 .help-functions-container-icon-dark-blue,
 .help-functions-container-icon-dark-green,
 .help-functions-container-icon-dark-purple,
 .help-functions-container-icon-dark-orange,
 .help-functions-container-icon-dark-red,
 .help-functions-container-icon-dark-cian,
+.help-flow-container-icon-light-blue,
+.help-flow-container-icon-light-green,
+.help-flow-container-icon-light-purple,
+.help-flow-container-icon-light-orange,
+.help-flow-container-icon-light-blueEmoji,
+.help-flow-container-icon-light-greenEmoji,
+.help-flow-container-icon-light-purpleEmoji,
+.help-flow-container-icon-light-orangeEmoji,
+.help-flow-container-icon-circle-dark-blueNumber,
+.help-flow-container-icon-circle-dark-greenNumber,
+.help-flow-container-icon-circle-dark-purpleNumber,
+.help-container-icon-circle-dark-blue,
+.help-container-icon-circle-dark-green,
+.help-container-icon-circle-dark-purple,
+.help-container-icon-circle-dark-orange,
 .info-basic-container-icon-circle-light-red,
 .info-basic-container-icon-circle-light-orange,
 .info-basic-container-icon-circle-light-purple {
@@ -103,10 +175,6 @@
     gap: 1rem;
 }
 
-.help-flow-container-title-light-blue,
-.help-flow-container-title-light-green,
-.help-flow-container-title-light-purple,
-.help-flow-container-title-light-orange,
 .help-functions-container-title-light-blue,
 .help-functions-container-title-light-green,
 .help-functions-container-title-light-purple,
@@ -116,7 +184,22 @@
 .help-functions-container-title-dark-purple,
 .help-functions-container-title-dark-orange,
 .help-functions-container-title-dark-red,
-.help-functions-container-title-dark-cian {
+.help-functions-container-title-dark-cian,
+.help-flow-container-title-light-blue,
+.help-flow-container-title-light-green,
+.help-flow-container-title-light-purple,
+.help-flow-container-title-light-orange,
+.help-flow-container-title-light-blueEmoji,
+.help-flow-container-title-light-greenEmoji,
+.help-flow-container-title-light-purpleEmoji,
+.help-flow-container-title-light-orangeEmoji,
+.help-flow-container-title-circle-dark-blueNumber,
+.help-flow-container-title-circle-dark-greenNumber,
+.help-flow-container-title-circle-dark-purpleNumber,
+.help-container-title-circle-dark-blue,
+.help-container-title-circle-dark-green,
+.help-container-title-circle-dark-purple,
+.help-container-title-circle-dark-orange {
     display: flex;
     flex-direction: column;
 }
@@ -125,6 +208,13 @@
 .help-flow-container-card-basics-light-green,
 .help-flow-container-card-basics-light-purple,
 .help-flow-container-card-basics-light-orange,
+.help-flow-container-card-basics-light-blueEmoji,
+.help-flow-container-card-basics-light-greenEmoji,
+.help-flow-container-card-basics-light-purpleEmoji,
+.help-flow-container-card-basics-light-orangeEmoji,
+.help-flow-container-card-basics-circle-dark-blueNumber,
+.help-flow-container-card-basics-circle-dark-greenNumber,
+.help-flow-container-card-basics-circle-dark-purpleNumber,
 .help-functions-container-card-basics-light-blue,
 .help-functions-container-card-basics-light-green,
 .help-functions-container-card-basics-light-purple,
@@ -140,8 +230,33 @@
     gap: 10px;
 }
 
+.help-flow-container-card-basics-light-blueEmoji,
+.help-flow-container-card-basics-light-greenEmoji,
+.help-flow-container-card-basics-light-purpleEmoji,
+.help-flow-container-card-basics-light-orangeEmoji {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.help-container-extra-rows-circle-dark-blue,
+.help-container-extra-rows-circle-dark-green,
+.help-container-extra-rows-circle-dark-purple,
+.help-container-extra-rows-circle-dark-orange {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-infor-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    color: #1D9E75;
+}
+
 /* ==============================
-   Circle cards
+   Light circle info cards
    ============================== */
 .card-circle-light-red {
     border: solid 2px #F7C1C1;
@@ -158,15 +273,18 @@
     border-top-color: #534AB7;
 }
 
-.card-circle-light-red::before {
+.card-circle-light-red::before,
+.info-basic-percentage-line-circle-light-red::before {
     background-color: #E24B4A;
 }
 
-.card-circle-light-orange::before {
+.card-circle-light-orange::before,
+.info-basic-percentage-line-circle-light-orange::before {
     background-color: #EF9F27;
 }
 
-.card-circle-light-purple::before {
+.card-circle-light-purple::before,
+.info-basic-percentage-line-circle-light-purple::before {
     background-color: #534AB7;
 }
 
@@ -196,7 +314,8 @@
     height: 1.5rem;
 }
 
-.icon-circle-light-red {
+.icon-circle-light-red,
+.info-basic-percentage-circle-light-red {
     color: #E24B4A;
 }
 
@@ -204,139 +323,253 @@
     color: #EF9F27;
 }
 
-.icon-circle-light-purple {
+.icon-circle-light-purple,
+.info-basic-percentage-circle-light-purple {
     color: #534AB7;
 }
 
 .info-basic-title-circle-light-red {
-    font-size: 1.2rem;
     color: #791F1F;
-    font-weight: 500;
 }
 
 .info-basic-title-circle-light-orange {
-    font-size: 1.2rem;
     color: #412402;
-    font-weight: 500;
 }
 
 .info-basic-title-circle-light-purple {
-    font-size: 1.2rem;
     color: #26215C;
+}
+
+.info-basic-title-circle-light-red,
+.info-basic-title-circle-light-orange,
+.info-basic-title-circle-light-purple {
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
-.info-basic-container-info-circle-light-red{
+.info-basic-container-info-circle-light-red {
     color: #A32D2D;
 }
 
-.info-basic-container-info-circle-light-orange{
+.info-basic-container-info-circle-light-orange {
     color: #633806;
 }
 
-.info-basic-container-info-circle-light-purple{
+.info-basic-container-info-circle-light-purple {
     color: #3C3489;
 }
 
-.info-basic-container-time-circle-light-purple,
 .info-basic-container-time-circle-light-red,
-.info-basic-container-time-circle-light-orange{
+.info-basic-container-time-circle-light-orange,
+.info-basic-container-time-circle-light-purple {
     color: var(--nineth-color);
 }
 
 .info-basic-container-percentage-circle-light-red,
 .info-basic-container-percentage-circle-light-orange,
-.info-basic-container-percentage-circle-light-purple{
+.info-basic-container-percentage-circle-light-purple {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 15px;
-    width: 100%;
 }
-
 
 .info-basic-percentage-line-circle-light-red,
 .info-basic-percentage-line-circle-light-orange,
-.info-basic-percentage-line-circle-light-purple{
+.info-basic-percentage-line-circle-light-purple {
     width: 55%;
     height: 11px;
-    overflow: hidden;
     position: relative;
-}
-
-.info-basic-percentage-line-circle-light-red::before{
-    content: "";
-    left: 0;
-    height: 11px;
-    width: 81%;
-    position: absolute;
-    background-color: #E24B4A;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-.info-basic-percentage-line-circle-light-orange::before{
-    content: "";
-    left: 0;
-    height: 11px;
-    width: 66%;
-    position: absolute;
-    background-color: #EF9F27;
-    border-bottom-right-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.info-basic-percentage-line-circle-light-purple::before{
-    content: "";
-    left: 0;
-    height: 11px;
-    width: 73%;
-    position: absolute;
-    background-color: #534AB7;
-    border-bottom-right-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.info-basic-percentage-line-circle-light-red,
-.info-basic-percentage-line-circle-light-orange,
-.info-basic-percentage-line-circle-light-purple{
+    overflow: hidden;
     border-radius: 15px;
 }
 
-.info-basic-percentage-line-circle-light-red{
+.info-basic-percentage-line-circle-light-red {
     background-color: #FCEBEB;
 }
 
-.info-basic-percentage-line-circle-light-orange{
+.info-basic-percentage-line-circle-light-orange {
     background-color: #FAEEDA;
 }
 
-.info-basic-percentage-line-circle-light-purple{
+.info-basic-percentage-line-circle-light-purple {
     background-color: #DAE1FA;
 }
 
+.info-basic-percentage-line-circle-light-red::before,
+.info-basic-percentage-line-circle-light-orange::before,
+.info-basic-percentage-line-circle-light-purple::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 11px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.info-basic-percentage-line-circle-light-red::before {
+    width: 81%;
+}
+
+.info-basic-percentage-line-circle-light-orange::before {
+    width: 66%;
+}
+
+.info-basic-percentage-line-circle-light-purple::before {
+    width: 73%;
+}
 
 .info-basic-percentage-circle-light-red,
 .info-basic-percentage-circle-light-orange,
-.info-basic-percentage-circle-light-purple{
+.info-basic-percentage-circle-light-purple {
     width: 45%;
 }
 
-.info-basic-percentage-circle-light-red{
-    color: #E24B4A;
-}
-
-.info-basic-percentage-circle-light-orange{
+.info-basic-percentage-circle-light-orange {
     color: #854F0B;
 }
 
-.info-basic-percentage-circle-light-purple{
-    color: #534AB7;
+/* ==============================
+   Dark circle help cards
+   ============================== */
+.help-icon-circle-dark-blue,
+.help-icon-circle-dark-green,
+.help-icon-circle-dark-purple,
+.help-icon-circle-dark-orange {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 300px;
+}
+
+.help-icon-circle-dark-blue {
+    background-color: var(--second-color);
+}
+
+.help-icon-circle-dark-green {
+    background-color: #0F6E56;
+}
+
+.help-icon-circle-dark-purple {
+    background-color: #534AB7;
+}
+
+.help-icon-circle-dark-orange {
+    background-color: #854F0B;
+}
+
+.icon-circle-dark-blue,
+.icon-circle-dark-green,
+.icon-circle-dark-purple,
+.icon-circle-dark-orange {
+    width: 1.8rem;
+    height: 1.8rem;
+    color: var(--seventh-color);
+}
+
+.help-container-title-circle-dark-blue,
+.help-container-title-circle-dark-green,
+.help-container-title-circle-dark-purple,
+.help-container-title-circle-dark-orange {
+    font-size: 1rem;
+    color: var(--seventh-color);
+    font-weight: 500;
+}
+
+.help-subTitle-circle-dark-blue,
+.help-subTitle-circle-dark-green,
+.help-subTitle-circle-dark-purple,
+.help-subTitle-circle-dark-orange {
+    font-size: 0.9rem;
+    color: var(--nineth-color);
+    font-weight: 500;
+}
+
+.help-container-info-circle-dark-blue,
+.help-container-info-circle-dark-green,
+.help-container-info-circle-dark-purple,
+.help-container-info-circle-dark-orange {
+    color: var(--first-color);
 }
 
 /* ==============================
-   Dark uniform cards
+   Number flow cards
+   ============================== */
+.card-circle-dark-blueNumber {
+    border-top-color: var(--second-color);
+}
+
+.card-circle-dark-greenNumber {
+    border-top-color: #0F6E56;
+}
+
+.card-circle-dark-purpleNumber {
+    border-top-color: #534AB7;
+}
+
+.card-circle-dark-blueNumber::before {
+    background-color: var(--second-color);
+}
+
+.card-circle-dark-greenNumber::before {
+    background-color: #0F6E56;
+}
+
+.card-circle-dark-purpleNumber::before {
+    background-color: #534AB7;
+}
+
+.help-flow-icon-circle-dark-blueNumber,
+.help-flow-icon-circle-dark-greenNumber,
+.help-flow-icon-circle-dark-purpleNumber {
+    padding: 0.6rem 1.2rem;
+    border-radius: 300px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.help-flow-icon-circle-dark-blueNumber {
+    background-color: var(--eighth-color);
+    color: var(--second-color);
+}
+
+.help-flow-icon-circle-dark-greenNumber {
+    background-color: #E1F5EE;
+    color: #0F6E56;
+}
+
+.help-flow-icon-circle-dark-purpleNumber {
+    background-color: #EEEDFE;
+    color: #534AB7;
+}
+
+.help-flow-title-circle-dark-blueNumber,
+.help-flow-title-circle-dark-greenNumber,
+.help-flow-title-circle-dark-purpleNumber {
+    font-size: 1.2rem;
+    color: var(--fourth-color);
+    font-weight: 700;
+}
+
+.help-flow-subTitle-circle-dark-blueNumber,
+.help-flow-subTitle-circle-dark-greenNumber,
+.help-flow-subTitle-circle-dark-purpleNumber {
+    font-size: 1rem;
+    color: var(--nineth-color);
+    font-weight: 500;
+}
+
+.help-flow-container-info-circle-dark-blueNumber,
+.help-flow-container-info-circle-dark-greenNumber,
+.help-flow-container-info-circle-dark-purpleNumber {
+    color: var(--fifth-color);
+}
+
+/* ==============================
+   Dark uniform function cards
    ============================== */
 .card-uniform-dark-blue {
     border-top-color: var(--second-color);
@@ -462,11 +695,14 @@
 }
 
 /* ==============================
-   Light flow cards
+   Light flow and function cards
    ============================== */
 .help-flow-icon-light-blue,
 .help-flow-icon-light-green,
 .help-flow-icon-light-purple,
+.help-flow-icon-light-blueEmoji,
+.help-flow-icon-light-greenEmoji,
+.help-flow-icon-light-purpleEmoji,
 .help-functions-icon-light-blue,
 .help-functions-icon-light-green,
 .help-functions-icon-light-purple {
@@ -475,35 +711,69 @@
 }
 
 .help-flow-icon-light-orange,
+.help-flow-icon-light-orangeEmoji,
 .help-functions-icon-light-orange {
     padding: 0.6rem;
     border-radius: 10px;
 }
 
+.help-flow-icon-light-blueEmoji,
+.help-flow-icon-light-greenEmoji,
+.help-flow-icon-light-purpleEmoji,
+.help-flow-icon-light-orangeEmoji {
+    min-width: 3rem;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    line-height: 1;
+}
+
 .help-flow-icon-light-blue,
-.help-functions-icon-light-blue {
+.help-flow-icon-light-blueEmoji {
     background-color: #E6F1FB;
 }
 
+.help-functions-icon-light-blue{
+    background-color: var(--second-color);
+}
+
 .help-flow-icon-light-green,
-.help-functions-icon-light-green {
+.help-flow-icon-light-greenEmoji {
     background-color: #E1F5EE;
 }
 
+.help-functions-icon-light-green{
+    background-color: #0F6E56;
+}
+
 .help-flow-icon-light-orange,
-.help-functions-icon-light-orange {
+.help-flow-icon-light-orangeEmoji {
     background-color: #FAEEDA;
 }
 
+.help-functions-icon-light-orange{
+    background-color: #854F0B;
+}
+
 .help-flow-icon-light-purple,
-.help-functions-icon-light-purple {
+.help-flow-icon-light-purpleEmoji {
     background-color: #EEEDFE;
+}
+
+.help-functions-icon-light-purple{
+    background-color: #534AB7;
 }
 
 .icon-flow-blue,
 .icon-flow-green,
 .icon-flow-orange,
 .icon-flow-purple,
+.icon-flow-blueEmoji,
+.icon-flow-greenEmoji,
+.icon-flow-orangeEmoji,
+.icon-flow-purpleEmoji,
 .icon-light-blue,
 .icon-light-green,
 .icon-light-orange,
@@ -512,23 +782,30 @@
     height: 2rem;
 }
 
+.icon-light-blue,
+.icon-light-green,
+.icon-light-orange,
+.icon-light-purple{
+    color: var(--seventh-color);
+}
+
 .icon-flow-blue,
-.icon-light-blue {
+.icon-flow-blueEmoji {
     color: #2d99fd;
 }
 
 .icon-flow-green,
-.icon-light-green {
+.icon-flow-greenEmoji {
     color: #5FC2A3;
 }
 
 .icon-flow-orange,
-.icon-light-orange {
+.icon-flow-orangeEmoji {
     color: #ffb73b;
 }
 
 .icon-flow-purple,
-.icon-light-purple {
+.icon-flow-purpleEmoji {
     color: #7d74ff;
 }
 
@@ -536,12 +813,21 @@
 .help-flow-title-light-green,
 .help-flow-title-light-purple,
 .help-flow-title-light-orange,
+.help-flow-title-light-blueEmoji,
+.help-flow-title-light-greenEmoji,
+.help-flow-title-light-purpleEmoji,
+.help-flow-title-light-orangeEmoji {
+    font-size: 1rem;
+    color: var(--fourth-color);
+    font-weight: 700;
+}
+
 .help-functions-title-light-blue,
 .help-functions-title-light-green,
 .help-functions-title-light-purple,
-.help-functions-title-light-orange {
+.help-functions-title-light-orange{
     font-size: 1rem;
-    color: var(--fourth-color);
+    color: var(--eighth-color);
     font-weight: 700;
 }
 
@@ -549,6 +835,10 @@
 .help-flow-subTitle-light-green,
 .help-flow-subTitle-light-purple,
 .help-flow-subTitle-light-orange,
+.help-flow-subTitle-light-blueEmoji,
+.help-flow-subTitle-light-greenEmoji,
+.help-flow-subTitle-light-purpleEmoji,
+.help-flow-subTitle-light-orangeEmoji,
 .help-functions-subTitle-light-blue,
 .help-functions-subTitle-light-green,
 .help-functions-subTitle-light-purple,
@@ -562,9 +852,16 @@
 .help-flow-container-info-light-green,
 .help-flow-container-info-light-purple,
 .help-flow-container-info-light-orange,
+.help-flow-container-info-light-blueEmoji,
+.help-flow-container-info-light-greenEmoji,
+.help-flow-container-info-light-purpleEmoji,
+.help-flow-container-info-light-orangeEmoji{
+    color: var(--fifth-color);
+}
+
 .help-functions-container-info-light-blue,
 .help-functions-container-info-light-green,
 .help-functions-container-info-light-purple,
 .help-functions-container-info-light-orange {
-    color: var(--fifth-color);
+    color: var(--first-color);
 }

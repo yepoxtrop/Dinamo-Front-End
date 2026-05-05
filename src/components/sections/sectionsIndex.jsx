@@ -58,13 +58,13 @@ export function IndexHelpsSection(){
                     <span className="title2-index-help-section">Beneficios reales desde el día uno</span>
                 </div>
                 <div className="cards-container-index-help-section">
-                    <CardHelpProduct params={{icon:< MdOutlineMoreTime />, title:"Ahorra tiempo", subTitle:"72% menos gestión", info:"De días a horas. Firma y aprueba desde donde estés, en minutos.", extras:["4.2 días", "1.2 días"] , className:""}}/>
+                    <CardHelpProduct params={{icon:< MdOutlineMoreTime className="icon-circle-dark-blue"/>, title:"Ahorra tiempo", subTitle:"72% menos gestión", info:"De días a horas. Firma y aprueba desde donde estés, en minutos.", extras:["4.2 días", "1.2 días"] , className:"card-circle-dark-blue"}}/>
                     
-                    <CardHelpProduct params={{icon:< IoCheckboxOutline />, title:"Validez legal total", subTitle:"Ley 527 · X.509 · RFC 3161", info:"Cada firma tiene validez jurídica. Certificados verificables ante terceros.", extras:["100% admisible en juicio"] , className:""}}/>
+                    <CardHelpProduct params={{icon:< IoCheckboxOutline className="icon-circle-dark-green"/>, title:"Validez legal total", subTitle:"Ley 527 · X.509 · RFC 3161", info:"Cada firma tiene validez jurídica. Certificados verificables ante terceros.", extras:["100% admisible en juicio"] , className:"card-circle-dark-green"}}/>
                     
-                    <CardHelpProduct params={{icon:< PiCubeFocus />, title:"Todo centralizado", subTitle:"Un solo repositorio seguro", info:"Encuentra cualquier documento en segundos con búsqueda inteligente.", extras:["Búsqueda en menos de 3 seg"] , className:""}}/>
+                    <CardHelpProduct params={{icon:< PiCubeFocus className="icon-circle-dark-purple"/>, title:"Todo centralizado", subTitle:"Un solo repositorio seguro", info:"Encuentra cualquier documento en segundos con búsqueda inteligente.", extras:["Búsqueda en menos de 3 seg"] , className:"card-circle-dark-purple"}}/>
                     
-                    <CardHelpProduct params={{icon:< LuSquareArrowRight />, title:"Sin papel ni impresión", subTitle:"100% digital · Sostenible", info:"Elimina costos de papel, impresión, mensajería y almacenamiento físico.", extras:["Ahorro $18M/año aprox."] , className:""}}/>
+                    <CardHelpProduct params={{icon:< LuSquareArrowRight className="icon-circle-dark-orange"/>, title:"Sin papel ni impresión", subTitle:"100% digital · Sostenible", info:"Elimina costos de papel, impresión, mensajería y almacenamiento físico.", extras:["Ahorro $18M/año aprox."] , className:"card-circle-dark-orange"}}/>
                 </div>
             </section>
         </>
@@ -83,11 +83,11 @@ export function IndexWorkFlowSection(){
                 </div>
                 <div className="cards-container-index-functions-section">
                     <hr className="hr-index-workflow-section"/>
-                    <CardHelpProductFlow params={{value:"1", title:"Sube o crea", subTitle:"tu documento", info:"Arrastra un PDF, Word o Excel. O usa una plantilla prediseñada para generar el documento con tus datos en segundos.", extras:["PDF/DOCX", "Plntaillas", "Drag&Drop"], className:""}}/>
+                    <CardHelpProductFlow params={{value:"1", title:"Sube o crea", subTitle:"tu documento", info:"Arrastra un PDF, Word o Excel. O usa una plantilla prediseñada para generar el documento con tus datos en segundos.", extras:["PDF/DOCX", "Plntaillas", "Drag&Drop"], className:"card-circle-dark-blueNumber"}}/>
 
-                    <CardHelpProductFlow params={{value:"2", title:"Define el flujo", subTitle:"y envía a firmar", info:"Selecciona quiénes deben revisar, aprobar o firmar. En qué orden. Cada persona recibe un email con enlace directo. Sin instalar nada.", extras:["Multi-firma", "Recordatorio", "Por email&Drop"], className:""}}/>
+                    <CardHelpProductFlow params={{value:"2", title:"Define el flujo", subTitle:"y envía a firmar", info:"Selecciona quiénes deben revisar, aprobar o firmar. En qué orden. Cada persona recibe un email con enlace directo. Sin instalar nada.", extras:["Multi-firma", "Recordatorio", "Por email&Drop"], className:"card-circle-dark-greenNumber"}}/>
                 
-                    <CardHelpProductFlow params={{value:"3", title:"Archivado y listo", subTitle:"automáticamente", info:"Cuando todos firman, el documento queda archivado con sello de tiempo, hash de integridad y certificado digital verificable. Para siempre.", extras:["Certificado", "Inmutable", "Auditable"], className:""}}/>
+                    <CardHelpProductFlow params={{value:"3", title:"Archivado y listo", subTitle:"automáticamente", info:"Cuando todos firman, el documento queda archivado con sello de tiempo, hash de integridad y certificado digital verificable. Para siempre.", extras:["Certificado", "Inmutable", "Auditable"], className:"card-circle-dark-purpleNumber"}}/>
                 </div>
             </section>
         </>
@@ -134,13 +134,13 @@ export function IndexProfileSection(){
                     <span className="title3-index-profile-section">Diseñado para cualquier empresa que mueva documentos y necesite control total</span>
                 </div>
                 <div className="cards-container-index-profile-section">
-                    <CardHelpProductFlow params={{value:"⚖️", title:"Legal y Contratos", subTitle:"Firmas, NDAs, contratos", info:"Gestiona contratos con clientes, proveedores y empleados. Alertas de vencimiento automáticas.", extras:["Contratos", "Vencimientos"], line:false, className:"card-uniform-light-blue"}}/>
+                    <CardHelpProductFlow params={{value:"⚖️", title:"Legal y Contratos", subTitle:"Firmas, NDAs, contratos", info:"Gestiona contratos con clientes, proveedores y empleados. Alertas de vencimiento automáticas.", extras:["Contratos", "Vencimientos"], line:false, className:"card-uniform-light-blueEmoji"}}/>
                     
-                    <CardHelpProductFlow params={{value:"👥", title:"Recursos Humanos", subTitle:"Onboarding, nómina, acuerdos", info:"Automatiza la firma de contratos laborales. Guarda acuerdos de confidencialidad y evaluaciones firmadas.", extras:["Onboarding dig.", "Acuerdos RR.HH"], line:false, className:"card-uniform-light-green"}}/>
+                    <CardHelpProductFlow params={{value:"👥", title:"Recursos Humanos", subTitle:"Onboarding, nómina, acuerdos", info:"Automatiza la firma de contratos laborales. Guarda acuerdos de confidencialidad y evaluaciones firmadas.", extras:["Onboarding dig.", "Acuerdos RR.HH"], line:false, className:"card-uniform-light-greenEmoji"}}/>
 
-                    <CardHelpProductFlow params={{value:"🏦", title:"Financiero y Banca", subTitle:"Pagarés, órdenes, aprobaciones", info:"Digitaliza pagarés, órdenes de pago y aprobaciones de crédito con trazabilidad regulatoria completa.", extras:["Pagarés dig.", "Trazabilidad reg."], line:false, className:"card-uniform-light-purple"}}/>
+                    <CardHelpProductFlow params={{value:"🏦", title:"Financiero y Banca", subTitle:"Pagarés, órdenes, aprobaciones", info:"Digitaliza pagarés, órdenes de pago y aprobaciones de crédito con trazabilidad regulatoria completa.", extras:["Pagarés dig.", "Trazabilidad reg."], line:false, className:"card-uniform-light-purpleEmoji"}}/>
 
-                    <CardHelpProductFlow params={{value:"🏗️", title:"Compras y Logística", subTitle:"Órdenes, proveedores, actas", info:"Gestiona órdenes de compra, cotizaciones y actas de entrega con firma digital del proveedor incluida.", extras:["Órds. de compra", "Órds. de compra"], line:false, className:"card-uniform-light-orange"}}/>
+                    <CardHelpProductFlow params={{value:"🏗️", title:"Compras y Logística", subTitle:"Órdenes, proveedores, actas", info:"Gestiona órdenes de compra, cotizaciones y actas de entrega con firma digital del proveedor incluida.", extras:["Órds. de compra", "Órds. de compra"], line:false, className:"card-uniform-light-orangeEmoji"}}/>
                 </div>
             </section>
         </>

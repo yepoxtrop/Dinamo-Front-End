@@ -11,15 +11,15 @@ export const Index = () =>{
             <HeaderIndex/>
 
             {/* Secciones de la pagina */}
-            <ndexWelcomeSection />
+            <IndexWelcomeSection />
             <IndexProblemsSection />
             <IndexHelpsSection />
             <IndexWorkFlowSection />
             <IndexFunctionsSection />
             <IndexProfileSection />
             <IndexRequerimentsSection />
-            <IndexExprienceSection /> 
-            <IndexSuscriptionSection />
+            {/* <IndexExprienceSection /> 
+            <IndexSuscriptionSection /> */}
             <IndexReadySection />
 
             {/* Pie de página */}

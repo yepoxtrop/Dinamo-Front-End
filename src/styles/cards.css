@@ -1,182 +1,230 @@
-.card-skills{
+/* ==============================
+   Skill cards
+   ============================== */
+.card-skills {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    justify-content: left;
-    align-items: center;
     flex: 1;
-
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 10px 40px 10px 20px;
     border: solid 2px var(--fifth-color);
     border-radius: 60px;
-    padding: 10px 40px 10px 20px;
-
     background-color: var(--third-color);
 }
 
-.icon-card-skills{
+.icon-card-skills {
     width: 20px;
     height: 20px;
     color: var(--fifth-color);
 }
 
-.title-card-skills{
+.title-card-skills {
     color: var(--seventh-color);
     font-size: 14px;
 }
 
-
-
-/* -------------------------- */
-.footer-card-dinamo-container{
-    /* Anchura */
+/* ==============================
+   Dinamo footer card
+   ============================== */
+.footer-card-dinamo-container {
     width: 30%;
-
-    /* Orientacion */
     display: flex;
     flex-direction: row;
     gap: 1rem;
-
-    
 }
 
-.footer-card-dinamo-container-logo{
-    /* Anchura */
-    min-width: 5%;
+.footer-card-dinamo-container-logo {
     width: 15%;
-
-    /* Altura */
+    min-width: 5%;
     height: auto;
-
-    /* Orientación */
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
 }
 
-.footer-card-dinamo-logo{
+.footer-card-dinamo-logo {
     width: 100%;
 }
 
-.footer-card-dinamo-container-container-title{
-    /* Anchura */
+.footer-card-dinamo-container-container-title {
+    width: auto;
     max-width: 70%;
     min-width: auto;
-    width: auto;
-
-    /* Altura */
+    height: auto;
     min-height: auto;
     max-height: auto;
-    height: auto;
-
-    /* Orientación */
     display: flex;
-    justify-content: center;
-    align-items: left;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.footer-card-dinamo-title{
-    font-weight:600;
-    font-size: 1.5rem;
+.footer-card-dinamo-title {
     color: var(--seventh-color);
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
-.footer-card-dinamo-title2{
-    font-weight:500;
-    font-size: 1rem;
+.footer-card-dinamo-title2 {
     color: var(--fifth-color);
+    font-size: 1rem;
+    font-weight: 500;
 }
 
-
-/*-------------------------*/
+/* ==============================
+   Basic info chips
+   ============================== */
 .card-container-light-blue,
 .card-container-light-green,
 .card-container-light-orange,
 .card-container-light-purple,
+.card-container-light-blueEmoji,
+.card-container-light-greenEmoji,
+.card-container-light-orangeEmoji,
+.card-container-light-purpleEmoji,
 .card-container-dark-blue,
 .card-container-dark-green,
 .card-container-dark-purple,
 .card-container-dark-orange,
 .card-container-dark-red,
-.card-container-dark-cian{
-    text-align: center;
-    padding: 1px;
+.card-container-dark-cian,
+.card-container-circle-dark-blueNumber,
+.card-container-circle-dark-greenNumber,
+.card-container-circle-dark-purpleNumber {
+    padding: 0.25rem 0.5rem;
     border-radius: 10px;
+    text-align: center;
 }
 
+/* Light variants */
 .card-container-light-blue{
+    background-color: rgba(24, 95, 165, 0.4);
+}
+.card-container-light-blueEmoji {
     background-color: #e6f1fb;
 }
+
 .card-info-light-blue{
+    color: #B5D4F4;
+}
+.card-info-light-blueEmoji {
     color: #185FA5;
 }
 
 .card-container-light-green{
-    background-color: #e1f5ee
+    background-color: rgba(15, 110, 86, 0.4);
 }
+.card-container-light-greenEmoji {
+    background-color: #e1f5ee;
+}
+
 .card-info-light-green{
+    color: #9FE1CB;
+}
+.card-info-light-greenEmoji {
     color: #0F6E56;
 }
 
 .card-container-light-orange{
+    background-color: rgba(133, 79, 11, 0.4);
+}
+.card-container-light-orangeEmoji {
     background-color: #faeeda;
 }
+
 .card-info-light-orange{
+    color: #FAC775;
+}
+.card-info-light-orangeEmoji {
     color: #854F0B;
 }
 
 .card-container-light-purple{
+    background-color: rgba(83, 74, 183, 0.4);
+}
+.card-container-light-purpleEmoji {
     background-color: #eeedfe;
 }
+
 .card-info-light-purple{
+    color: #CECBF6;
+}
+.card-info-light-purpleEmoji {
     color: #534AB7;
 }
 
-.card-container-dark-blue{
-    background-color: rgba(24, 95, 165,0.4);
+/* Dark variants */
+.card-container-dark-blue {
+    background-color: rgba(24, 95, 165, 0.4);
 }
 
-.card-container-dark-green{
-    background-color: rgba(15, 110, 86,0.4);
-}
-
-.card-container-dark-purple{
-    background-color: rgba(83, 74, 183, 0.4);
-}
-
-.card-container-dark-orange{
-    background-color: rgb(133, 79, 11, 0.4);
-}
-
-.card-container-dark-red{
-    background-color: rgba(153, 60, 29, 0.4);
-}
-
-.card-container-dark-cian{
-    background-color: rgb(55, 138, 221, 0.4);
-}
-
-.card-info-dark-blue{
+.card-info-dark-blue {
     color: #B5D4F4;
 }
 
-.card-info-dark-green{
+.card-container-dark-green {
+    background-color: rgba(15, 110, 86, 0.4);
+}
+
+.card-info-dark-green {
     color: #9FE1CB;
 }
 
-.card-info-dark-orange{
-    color: #FAC775;
+.card-container-dark-purple {
+    background-color: rgba(83, 74, 183, 0.4);
 }
 
-.card-info-dark-purple{
+.card-info-dark-purple {
     color: #CECBF6;
 }
 
-.card-info-dark-red{
+.card-container-dark-orange {
+    background-color: rgba(133, 79, 11, 0.4);
+}
+
+.card-info-dark-orange {
+    color: #FAC775;
+}
+
+.card-container-dark-red {
+    background-color: rgba(153, 60, 29, 0.4);
+}
+
+.card-info-dark-red {
     color: #F5C4B3;
 }
 
-.card-info-dark-cian{
+.card-container-dark-cian {
+    background-color: rgba(55, 138, 221, 0.4);
+}
+
+.card-info-dark-cian {
     color: #B5D4F4;
 }
 
+/* Number circle variants */
+.card-container-circle-dark-blueNumber {
+    background-color: var(--eighth-color);
+}
+
+.card-info-circle-dark-blueNumber {
+    color: var(--second-color);
+}
+
+.card-container-circle-dark-greenNumber {
+    background-color: #E1F5EE;
+}
+
+.card-info-circle-dark-greenNumber {
+    color: #0F6E56;
+}
+
+.card-container-circle-dark-purpleNumber {
+    background-color: #EEEDFE;
+}
+
+.card-info-circle-dark-purpleNumber {
+    color: #534AB7;
+}

@@ -161,6 +161,10 @@
     gap: 1rem;
 }
 
+.cards-container-index-functions-section{
+    gap: 3rem;
+}
+
 .cards-container-index-problems-section,
 .cards-container-index-help-section,
 .cards-container-index-workflow-section,

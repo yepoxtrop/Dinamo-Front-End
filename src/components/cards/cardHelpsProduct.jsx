@@ -46,22 +46,27 @@ export function CardHelpProduct({params}){
         <>
             <div className={params.className}>
 
-                <div>
-                    <div>{params.icon}</div>
-                    <div>
-                        <span>{params.title}</span>
-                        <span>{params.subTitle}</span>
+                <div className={`help-container-icon-${clase}`}>
+                    <div className={`help-icon-${clase}`}>
+                        {params.icon}
+                    </div>
+                    <div className={`help-container-title-${clase}`}>
+                        <span className={`help-title-${clase}`}>{params.title}</span>
+                        <span className={`help-subTitle-${clase}`}>{params.subTitle}</span>
                     </div>
                 </div>
                 <hr />
-                <div>
-                    <span>{params.info}</span>
+                <div className={`help-container-info-${clase}`}>
+                    <span className={`help-info-${clase}`}>{params.info}</span>
                 </div>
-                <div>
+                <div className={`help-container-extra-rows-${clase}`}>
                     {params.extras.map((valor, indice)=>{
                         return(
                             <>
-                                <FaArrowRightLong /><span key={indice}>{valor}</span>
+                                <div className="container-infor-row">
+                                    <FaArrowRightLong /><span key={indice}>{valor}</span>
+                                </div>
+                                
                             </>
                         )
                         
