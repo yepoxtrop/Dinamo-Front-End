@@ -28,11 +28,24 @@
 /* ==============================
    Dinamo footer card
    ============================== */
+.header-card-dinamo-container{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+}
 .footer-card-dinamo-container {
     width: 30%;
     display: flex;
     flex-direction: row;
     gap: 1rem;
+}
+.header-card-dinamo-container-logo{
+    width: 15%;
+    min-width: 5%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .footer-card-dinamo-container-logo {
@@ -44,10 +57,14 @@
     align-items: flex-start;
 }
 
+.header-card-dinamo-logo{
+    width: 100%;
+}
 .footer-card-dinamo-logo {
     width: 100%;
 }
 
+.header-card-dinamo-container-container-title,
 .footer-card-dinamo-container-container-title {
     width: auto;
     max-width: 70%;
@@ -61,12 +78,14 @@
     align-items: flex-start;
 }
 
+.header-card-dinamo-title,
 .footer-card-dinamo-title {
     color: var(--seventh-color);
     font-size: 1.5rem;
     font-weight: 600;
 }
 
+.header-card-dinamo-title2,
 .footer-card-dinamo-title2 {
     color: var(--fifth-color);
     font-size: 1rem;
@@ -96,6 +115,30 @@
     padding: 0.25rem 0.5rem;
     border-radius: 10px;
     text-align: center;
+}
+
+.card-container-versionDinamo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #0c4074;
+    border-radius: 30px;
+    border: 1px solid var(--fifth-color);
+    padding: 0.5rem ;
+    width: 100%;
+}
+
+.container-versionDinamo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.point-icon{
+    color: #1D9E75;
+    width: 10%;
+    height: 10%;
 }
 
 /* Light variants */

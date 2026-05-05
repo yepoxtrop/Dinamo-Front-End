@@ -1,6 +1,7 @@
 {/* Componentes */}
 import { CardHelpProduct, CardHelpProductFlow, CardHelpProductFunctions, CardInfoBasic } from "../cards/cardHelpsProduct.jsx";
-import { IoCloseOutline, IoCheckboxOutline } from "react-icons/io5";
+import {CardSkillSimple, CardSkillBasic, CardSkillDetail} from "../cards/cardSkills.jsx";
+import { IoCloseOutline, IoCheckboxOutline, IoCheckmarkCircle } from "react-icons/io5";
 import { MdOutlineMoreTime, MdOutlineSecurity } from "react-icons/md";
 import { LuSquareArrowRight, LuWorkflow } from "react-icons/lu";
 import { PiCubeFocus } from "react-icons/pi";
@@ -9,17 +10,56 @@ import { FaRegUser, FaBalanceScaleRight } from "react-icons/fa";
 import { AiOutlineAudit } from "react-icons/ai";
 import { SiDocsdotrs } from "react-icons/si";
 import { IoMdCloudUpload } from "react-icons/io";
+import { TbPointFilled } from "react-icons/tb";
+import { FaGithub } from "react-icons/fa6";
 {/* Estilos */}
 import "../../styles/sectionsIndex.css";
 {/* Media */}
 import ovalo1 from "../../assets/svg/ovalo.svg";
 import ovalo2 from "../../assets/svg/ovalo2.svg";
+import pageViwe from "../../assets/svg/pagina.svg";
 
 export function IndexWelcomeSection(){
+
+    
     return(
         <>
-            <section>
-
+            <section className="idex-welcome-section">
+                <div className="info-container-idex-welcome-section">
+                    <div className="index-welcome-info-version">
+                        <CardSkillBasic params={{className:"versionDinamo",content:<>
+                            <div className="container-versionDinamo">
+                                <TbPointFilled className="point-icon"/><span>Nuevo &bull; Versión 2.4 disponible</span>
+                            </div></>}}/>
+                    </div>
+                    <div className="index-welcome-info-text">
+                        <span className="index-welcome-title1">Gestiona tus documentos</span>
+                        <span className="index-welcome-title2">sin papel, sin demoras.</span>
+                    </div>
+                    <div className="index-welcome-info-description">
+                        <span>¿Cuánto tiempo pierde tu empresa buscando contratos, aprobando documentos por correo o imprimiendo para firmar? Dinamo lo resuelve todo en un solo lugar.</span>
+                    </div>
+                    <div className="index-welcome-info">
+                        <CardSkillDetail params={{icon:<IoCheckmarkCircle />, title:"De 4 días a 2 horas.", content:"Ese es el tiempo promedio que nuestros clientes ahorran por documento."}} />
+                    </div>
+                    <div className="index-welcome-info">
+                        <CardSkillSimple params={{icon:<FaGithub />, title:"Github Repocitory", className:""}}/>
+                    </div>
+                    <hr />
+                    <div className="index-welcome-info-customers">
+                        <span className="title-index-welcome-info-customers">USADO POR EQUIPOS EN</span>
+                        <div className="container-customers">
+                            <CardSkillBasic params={{className:"", content:"Bancolombia"}}/>
+                           <CardSkillBasic params={{className:"", content:"ACS - Aciel"}}/>
+                           <CardSkillBasic params={{className:"", content:"EMP"}}/>
+                           <CardSkillBasic params={{className:"", content:"AVIANCA"}}/>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div className="info-img-idex-welcome-section">
+                    <img src={pageViwe} alt="svg-page" className="img-idex-welcome-section"/>
+                </div>
             </section>
         </>
     )

@@ -1,65 +1,100 @@
-.header-bar-info{
+/* ==============================
+   Info header
+   ============================== */
+.header-bar-info {
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:  0.5rem 1rem;
-
+    padding: 0.5rem 1rem;
     background-color: var(--seventh-color);
-    
     border-top: 5px solid var(--fourth-color);
     border-bottom: 1.5px solid var(--fifth-color);
-
 }
 
-.header-name-page{
-    font-size: 1.6rem;
+.header-name-page {
     color: var(--fourth-color);
+    font-size: 1.6rem;
 }
 
-.header-date-page{
-    font-size: 0.8rem;
+.header-date-page {
     color: var(--nineth-color);
+    font-size: 0.8rem;
 }
 
-.header-bar-info-right{
+/* ==============================
+   Info header right area
+   ============================== */
+.header-bar-info-right,
+.bar-info-right-notifications,
+.bar-info-right-data1,
+.bar-info-right-data1_2,
+.bar-info-right-data2,
+.bar-info-right-data3 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.bar-info-right-notifications{
-    display: flex;
+.bar-info-right-notifications {
     flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
 }
 
-.bar-info-right-data1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.bar-info-right-data1 {
     flex-direction: row;
 }
 
-.bar-info-right-data1_2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column ;
-}
-
-.bar-info-right-data2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.bar-info-right-data1_2,
+.bar-info-right-data2,
+.bar-info-right-data3 {
     flex-direction: column;
 }
 
-.bar-info-right-data3{
+/* ==============================
+   Index header
+   ============================== */
+.header-index {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    background-image: linear-gradient(to right, var(--fourth-color), var(--third-color));
+    border-bottom: 1.5px solid var(--fifth-color);
+}
+
+/* ==============================
+   Index navigation
+   ============================== */
+.header-index-container-list {
+    display: flex;
+}
+
+.header-index-list {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+}
+
+.header-index-list-info a {
+    color: var(--first-color);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+/* ==============================
+   Index buttons
+   ============================== */
+.header-index-button1,
+.header-index-button2 {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
 }
