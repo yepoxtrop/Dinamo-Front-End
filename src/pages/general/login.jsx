@@ -1,7 +1,7 @@
 {/* Componentes */}
-import { Form } from "../components/forms/form.jsx";
-import { ToastLogin } from "../components/combinations/toasts.jsx";
-import { CardSkill } from "../components/cards/cardSkills.jsx";
+import { Form } from "../../components/forms/form.jsx";
+import { ToastLogin } from "../../components/combinations/toasts.jsx";
+import { CardSkill } from "../../components/cards/cardSkills.jsx";
 import {  User4Outlined,   Locked2Outlined, XmarkSolid} from "@lineiconshq/free-icons";
 import { BsExclamationSquareFill } from "react-icons/bs";
 import { IoIosCheckmarkCircle } from "react-icons/io";
@@ -10,16 +10,16 @@ import { SiReadthedocs } from "react-icons/si";
 {/* Hooks */}
 import { useSelector } from "react-redux";
 {/* Constantes */}
-import { URL_API } from "../settings/variablesEntrono.js";
+import { URL_API } from "../../settings/variablesEntrono.js";
 {/* Estilos */}
-import '../styles/login.css';
+import '../../styles/login.css';
 {/* Media */}
-import logo from "../assets/logo/logo.png";
-import logoTransparente from "../assets/logo/logo_transparente.png";
-import vector from "../assets/circulo.svg";
-import vector2 from "../assets/circulo2.svg";
-import vector3 from "../assets/circulo3.svg";   
-import vector4 from "../assets/documentos.svg";
+import logo from "../../assets/logo/logo.png";
+import logoTransparente from "../../assets/logo/logo_transparente.png";
+import vector from "../../assets/circulo.svg";
+import vector2 from "../../assets/circulo2.svg";
+import vector3 from "../../assets/circulo3.svg";   
+import vector4 from "../../assets/documentos.svg";
 
 export const Login = () =>{
 
@@ -97,8 +97,6 @@ export const Login = () =>{
                     "message":"Credenciales invalidas, reviselas e intente nuevamente",
                 }} />:<></>}
 
-                
-
                 {/* Panel izquierdo(diseño) */}
                 <section className="left-panel-login" id="left-panel-login">
 
@@ -120,7 +118,10 @@ export const Login = () =>{
                         <div className="container-vector-panel-left">
                             <img src={vector4} alt="vector" className="vector-panel-left"/>
                         </div>
-                        <div className="container-skills-login">
+
+                        
+                        <div className="skill-description-login">
+                            <div className="container-skills-login">
                             <div className="skills-login1">
                                 <CardSkill params={{icon: < IoIosCheckmarkCircle className="icon-card-skills"/>, title: "Firma Electrónica"}} />
                                 <CardSkill params={{icon: < BsExclamationSquareFill className="icon-card-skills"/>, title: "Trazabilidad PKI"}} />
@@ -130,11 +131,14 @@ export const Login = () =>{
                                 <CardSkill params={{icon: < PiCertificateFill className="icon-card-skills"/>, title: "Certificado X.509"}} />
                                 <CardSkill params={{icon: < SiReadthedocs className="icon-card-skills"/>, title: "Reportes Digitales"}} />
                             </div>
+
+                            </div>
+
+                            <div>
+                                <span className="skill-description1">Documentos con Validez legal.</span>
+                                <span className="skill-description2">Firma, gestiona y audita desde un solo lugar.</span>
+                            </div>
                             
-                        </div>
-                        <div className="skill-description-login">
-                            <span className="skill-description1">Documentos con Validez legal.</span>
-                            <span className="skill-description2">Firma, gestiona y audita desde un solo lugar.</span>
                         </div>
                     </div>
                 </section>
@@ -142,7 +146,8 @@ export const Login = () =>{
                 {/* Panel derecho(formulario de inicio de sesión) */}
                 <section className="right-panel-login" id="right-panel-login">
 
-                    <img src={vector} alt="" className="vector-login"/>
+                    {/* <img src={vector} alt="" className="vector-login"/> */}
+
                     {/* Contedor padre del formulario */}
                     <div className="container-father-form-login" id="container-father-form-login">
 

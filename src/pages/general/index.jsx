@@ -4,6 +4,16 @@ import { IndexWelcomeSection, IndexProblemsSection, IndexHelpsSection, IndexWork
 import { FooterIndex } from "../../components/footers/footerIndex.jsx";
 
 
+/**
+ * Renderiza la pagina principal del sitio.
+ *
+ * Compone el encabezado, las secciones informativas del index y el pie
+ * de pagina para presentar la experiencia general de Dinamo.
+ *
+ * @returns {JSX.Element} Pagina principal del sitio.
+ *
+ * @author Luis Angel Sarmiento Diaz
+ */
 export const Index = () =>{
     return(
         <>
@@ -11,16 +21,19 @@ export const Index = () =>{
             <HeaderIndex/>
 
             {/* Secciones de la pagina */}
-            <IndexWelcomeSection />
-            <IndexProblemsSection />
-            <IndexHelpsSection />
-            <IndexWorkFlowSection />
-            <IndexFunctionsSection />
-            <IndexProfileSection />
-            <IndexRequerimentsSection />
-            {/* <IndexExprienceSection /> 
-            <IndexSuscriptionSection /> */}
-            <IndexReadySection />
+            <main>
+                <IndexWelcomeSection />
+                <IndexProblemsSection />
+                <IndexHelpsSection />
+                <IndexWorkFlowSection />
+                <IndexFunctionsSection />
+                <IndexProfileSection />
+                <IndexRequerimentsSection />
+                {/* <IndexExprienceSection /> 
+                <IndexSuscriptionSection /> */}
+                <IndexReadySection />
+            </main>
+            
 
             {/* Pie de página */}
             <FooterIndex />

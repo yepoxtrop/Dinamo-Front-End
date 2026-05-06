@@ -1,6 +1,6 @@
 {/* Componentes */}
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Login } from "./pages/login.jsx";
+import { Login } from "./pages/general/login.jsx";
 import { Index } from "./pages/general/index.jsx";
 
 export const App = () => {

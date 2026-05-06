@@ -19,6 +19,16 @@ import ovalo1 from "../../assets/svg/ovalo.svg";
 import ovalo2 from "../../assets/svg/ovalo2.svg";
 import pageViwe from "../../assets/svg/pagina.svg";
 
+/**
+ * Renderiza la seccion principal de bienvenida del index.
+ *
+ * Muestra el mensaje inicial del producto, la version disponible,
+ * enlaces sociales, clientes destacados y la imagen principal.
+ *
+ * @returns {JSX.Element} Seccion de bienvenida del index.
+ *
+ * @author Luis Angel Sarmiento Diaz
+ */
 export function IndexWelcomeSection(){
 
     
@@ -67,6 +77,17 @@ export function IndexWelcomeSection(){
     )
 }
 
+/**
+ * Renderiza la seccion de problemas frecuentes.
+ *
+ * Presenta tarjetas con dolores comunes de la gestion documental,
+ * incluyendo perdida de documentos, aprobaciones externas y falta
+ * de trazabilidad.
+ *
+ * @returns {JSX.Element} Seccion de problemas del index.
+ *
+ * @author Luis Angel Sarmiento Diaz
+ */
 export function IndexProblemsSection(){
     return(
         <>
@@ -91,6 +112,16 @@ export function IndexProblemsSection(){
 }
 
 
+/**
+ * Renderiza la seccion de beneficios del producto.
+ *
+ * Expone los principales aportes de Dinamo: ahorro de tiempo,
+ * validez legal, centralizacion documental y eliminacion de papel.
+ *
+ * @returns {JSX.Element} Seccion de beneficios del index.
+ *
+ * @author Luis Angel Sarmiento Diaz
+ */
 export function IndexHelpsSection(){
     return(
         <>
@@ -114,6 +145,16 @@ export function IndexHelpsSection(){
 }
 
 
+/**
+ * Renderiza la seccion de flujo de trabajo.
+ *
+ * Describe en tres pasos el proceso para cargar documentos,
+ * definir aprobaciones y archivar el resultado firmado.
+ *
+ * @returns {JSX.Element} Seccion de flujo de trabajo del index.
+ *
+ * @author Luis Angel Sarmiento Diaz
+ */
 export function IndexWorkFlowSection(){
     return(
         <>
@@ -137,6 +178,16 @@ export function IndexWorkFlowSection(){
 }
 
 
+/**
+ * Renderiza la seccion de funcionalidades del producto.
+ *
+ * Lista los modulos principales de Dinamo, como firma digital,
+ * flujos de aprobacion, auditoria, plantillas, usuarios y reportes.
+ *
+ * @returns {JSX.Element} Seccion de funcionalidades del index.
+ *
+ * @author Luis Angel Sarmiento Diaz
+ */
 export function IndexFunctionsSection(){
     return(
         <>
@@ -166,6 +217,16 @@ export function IndexFunctionsSection(){
 }
 
 
+/**
+ * Renderiza la seccion de perfiles o sectores objetivo.
+ *
+ * Muestra los equipos y areas que pueden beneficiarse del producto,
+ * como legal, recursos humanos, financiero, compras y logistica.
+ *
+ * @returns {JSX.Element} Seccion de perfiles del index.
+ *
+ * @author Luis Angel Sarmiento Diaz
+ */
 export function IndexProfileSection(){
     return(
         <>
@@ -189,6 +250,16 @@ export function IndexProfileSection(){
     )
 }
 
+/**
+ * Renderiza la seccion de seguridad y cumplimiento.
+ *
+ * Presenta las capacidades relacionadas con cifrado, autenticacion,
+ * cumplimiento legal y despliegue en nube privada u on-premise.
+ *
+ * @returns {JSX.Element} Seccion de requisitos y confianza del index.
+ *
+ * @author Luis Angel Sarmiento Diaz
+ */
 export function IndexRequerimentsSection(){
     return(
         <>
@@ -212,6 +283,16 @@ export function IndexRequerimentsSection(){
     )
 }
 
+/**
+ * Renderiza la seccion de experiencia del usuario.
+ *
+ * Explica nuevamente el proceso operativo en pasos, orientado a la
+ * experiencia de uso dentro del flujo documental.
+ *
+ * @returns {JSX.Element} Seccion de experiencia del index.
+ *
+ * @author Luis Angel Sarmiento Diaz
+ */
 export function IndexExprienceSection(){
     return(
         <>
@@ -233,6 +314,16 @@ export function IndexExprienceSection(){
     )
 }
 
+/**
+ * Renderiza la seccion de suscripcion y planes.
+ *
+ * Presenta el bloque de planes y precios, reutilizando tarjetas de flujo
+ * para organizar la informacion comercial del producto.
+ *
+ * @returns {JSX.Element} Seccion de suscripcion del index.
+ *
+ * @author Luis Angel Sarmiento Diaz
+ */
 export function IndexSuscriptionSection(){
     return(
         <>
@@ -254,6 +345,16 @@ export function IndexSuscriptionSection(){
     )
 }
 
+/**
+ * Renderiza la seccion final de llamado a la accion.
+ *
+ * Incluye elementos decorativos, mensaje final y botones para iniciar
+ * sesion o registrarse.
+ *
+ * @returns {JSX.Element} Seccion final del index.
+ *
+ * @author Luis Angel Sarmiento Diaz
+ */
 export function IndexReadySection(){
     return(
         <>
