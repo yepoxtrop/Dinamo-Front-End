@@ -1,12 +1,128 @@
-/* ==============================
-   Skill cards
-   ============================== */
+.card-container-customers-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--nineth-color);
+    background-color: var(--fourth-color);
+    border: 1px solid var(--second-color);
+    border-radius: 10px;
+    padding: 0.2rem;
+}
+
+/* ==========================================================
+   Tarjeta destacada de version Dinamo
+   ========================================================== */
+.card-container-versionDinamo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--fifth-color);
+    border-radius: 30px;
+    background-color: #0c4074;
+}
+
+.container-versionDinamo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.point-icon {
+    width: 10%;
+    height: 10%;
+    color: #1D9E75;
+}
+
+.card-info-versionDinamo {
+    color: #9FE1CB;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================
+   Tarjeta de detalle de version Dinamo
+   ========================================================== */
+.card-detail-versionDinamo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 0.54rem;
+    border: 1px solid var(--second-color);
+    border-radius: 10px;
+    background-color: var(--fourth-color);
+}
+
+.card-detail-icon-containerversionDinamo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-detail-info-containerversionDinamo {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-detail-info-versionDinamo {
+    color: var(--eighth-color);
+    font-size: 1rem;
+}
+
+.card-detail-info2-versionDinamo {
+    color: var(--nineth-color);
+    font-size: 1rem;
+}
+
+.check-icon-version {
+    width: 2rem;
+    height: 2rem;
+    color: #1D9E75;
+}
+
+/* ==========================================================
+   Tarjetas de enlaces sociales
+   ========================================================== */
+.card-detail-githubRepository,
+.card-detail-facebookProfile,
+.card-detail-linkedinProfile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 0.5rem;
+    border: 1px solid var(--fifth-color);
+    border-radius: 10px;
+    background-color: var(--second-color);
+}
+
+.card-detail-title-,
+.card-detail-info-facebookProfile,
+.card-detail-info-linkedinProfile {
+    color: var(--seventh-color);
+    font-size: 1.2rem;
+}
+
+.icon-github-repository {
+    width: 2rem;
+    height: 2.2rem;
+    color: var(--seventh-color);
+}
+
+/* ==========================================================
+   Tarjetas de habilidades
+   ========================================================== */
 .card-skills {
     display: flex;
     flex: 1;
     flex-direction: row;
-    align-items: center;
     justify-content: flex-start;
+    align-items: center;
     gap: 1rem;
     padding: 10px 40px 10px 20px;
     border: solid 2px var(--fifth-color);
@@ -14,7 +130,8 @@
     background-color: var(--third-color);
 }
 
-.icon-card-skills {
+.icon-card-skills,
+.icon-card-skills-box {
     width: 20px;
     height: 20px;
     color: var(--fifth-color);
@@ -25,57 +142,47 @@
     font-size: 14px;
 }
 
-/* ==============================
-   Dinamo footer card
-   ============================== */
-.header-card-dinamo-container{
-    width: 30%;
-    display: flex;
-    flex-direction: row;
-}
+/* ==========================================================
+   Encabezado y pie de tarjeta Dinamo
+   ========================================================== */
+.header-card-dinamo-container,
 .footer-card-dinamo-container {
-    width: 30%;
     display: flex;
     flex-direction: row;
+    width: 30%;
+}
+
+.footer-card-dinamo-container {
     gap: 1rem;
 }
-.header-card-dinamo-container-logo{
-    width: 15%;
-    min-width: 5%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
 
+.header-card-dinamo-container-logo,
 .footer-card-dinamo-container-logo {
-    width: 15%;
-    min-width: 5%;
-    height: auto;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    width: 15%;
+    min-width: 5%;
+    height: auto;
 }
 
-.header-card-dinamo-logo{
-    width: 100%;
-}
+.header-card-dinamo-logo,
 .footer-card-dinamo-logo {
     width: 100%;
 }
 
 .header-card-dinamo-container-container-title,
 .footer-card-dinamo-container-container-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     width: auto;
     max-width: 70%;
     min-width: auto;
     height: auto;
     min-height: auto;
     max-height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
 }
 
 .header-card-dinamo-title,
@@ -92,9 +199,9 @@
     font-weight: 500;
 }
 
-/* ==============================
-   Basic info chips
-   ============================== */
+/* ==========================================================
+   Base comun para chips informativos
+   ========================================================== */
 .card-container-light-blue,
 .card-container-light-green,
 .card-container-light-orange,
@@ -117,88 +224,76 @@
     text-align: center;
 }
 
-.card-container-versionDinamo{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #0c4074;
-    border-radius: 30px;
-    border: 1px solid var(--fifth-color);
-    padding: 0.5rem ;
-    width: 100%;
-}
-
-.container-versionDinamo{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
-
-.point-icon{
-    color: #1D9E75;
-    width: 10%;
-    height: 10%;
-}
-
-/* Light variants */
-.card-container-light-blue{
+/* ==========================================================
+   Variantes claras de chips
+   ========================================================== */
+.card-container-light-blue {
     background-color: rgba(24, 95, 165, 0.4);
 }
+
+.card-info-light-blue {
+    color: #B5D4F4;
+}
+
 .card-container-light-blueEmoji {
     background-color: #e6f1fb;
 }
 
-.card-info-light-blue{
-    color: #B5D4F4;
-}
 .card-info-light-blueEmoji {
     color: #185FA5;
 }
 
-.card-container-light-green{
+.card-container-light-green {
     background-color: rgba(15, 110, 86, 0.4);
 }
+
+.card-info-light-green {
+    color: #9FE1CB;
+}
+
 .card-container-light-greenEmoji {
     background-color: #e1f5ee;
 }
 
-.card-info-light-green{
-    color: #9FE1CB;
-}
 .card-info-light-greenEmoji {
     color: #0F6E56;
 }
 
-.card-container-light-orange{
+.card-container-light-orange {
     background-color: rgba(133, 79, 11, 0.4);
 }
+
+.card-info-light-orange {
+    color: #FAC775;
+}
+
 .card-container-light-orangeEmoji {
     background-color: #faeeda;
 }
 
-.card-info-light-orange{
-    color: #FAC775;
-}
 .card-info-light-orangeEmoji {
     color: #854F0B;
 }
 
-.card-container-light-purple{
+.card-container-light-purple {
     background-color: rgba(83, 74, 183, 0.4);
 }
+
+.card-info-light-purple {
+    color: #CECBF6;
+}
+
 .card-container-light-purpleEmoji {
     background-color: #eeedfe;
 }
 
-.card-info-light-purple{
-    color: #CECBF6;
-}
 .card-info-light-purpleEmoji {
     color: #534AB7;
 }
 
-/* Dark variants */
+/* ==========================================================
+   Variantes oscuras de chips
+   ========================================================== */
 .card-container-dark-blue {
     background-color: rgba(24, 95, 165, 0.4);
 }
@@ -247,7 +342,9 @@
     color: #B5D4F4;
 }
 
-/* Number circle variants */
+/* ==========================================================
+   Variantes numericas circulares
+   ========================================================== */
 .card-container-circle-dark-blueNumber {
     background-color: var(--eighth-color);
 }

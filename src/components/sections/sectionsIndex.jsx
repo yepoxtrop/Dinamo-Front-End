@@ -6,7 +6,7 @@ import { MdOutlineMoreTime, MdOutlineSecurity } from "react-icons/md";
 import { LuSquareArrowRight, LuWorkflow } from "react-icons/lu";
 import { PiCubeFocus } from "react-icons/pi";
 import { BsPlusSquareDotted, BsFiletypeDoc } from "react-icons/bs";
-import { FaRegUser, FaBalanceScaleRight } from "react-icons/fa";
+import { FaRegUser, FaBalanceScaleRight, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { AiOutlineAudit } from "react-icons/ai";
 import { SiDocsdotrs } from "react-icons/si";
 import { IoMdCloudUpload } from "react-icons/io";
@@ -27,10 +27,7 @@ export function IndexWelcomeSection(){
             <section className="idex-welcome-section">
                 <div className="info-container-idex-welcome-section">
                     <div className="index-welcome-info-version">
-                        <CardSkillBasic params={{className:"versionDinamo",content:<>
-                            <div className="container-versionDinamo">
-                                <TbPointFilled className="point-icon"/><span>Nuevo &bull; Versión 2.4 disponible</span>
-                            </div></>}}/>
+                        <CardSkillBasic params={{className:"versionDinamo", icon:<TbPointFilled className="point-icon"/>,content:"Nuevo &bull; Versión 2.4 disponible"}}/>
                     </div>
                     <div className="index-welcome-info-text">
                         <span className="index-welcome-title1">Gestiona tus documentos</span>
@@ -40,19 +37,24 @@ export function IndexWelcomeSection(){
                         <span>¿Cuánto tiempo pierde tu empresa buscando contratos, aprobando documentos por correo o imprimiendo para firmar? Dinamo lo resuelve todo en un solo lugar.</span>
                     </div>
                     <div className="index-welcome-info">
-                        <CardSkillDetail params={{icon:<IoCheckmarkCircle />, title:"De 4 días a 2 horas.", content:"Ese es el tiempo promedio que nuestros clientes ahorran por documento."}} />
+                        <CardSkillDetail params={{icon:<IoCheckmarkCircle className="check-icon-version"/>, title:"De 4 días a 2 horas.", content:"Ese es el tiempo promedio que nuestros clientes ahorran por documento.", className:"versionDinamo"}} />
                     </div>
-                    <div className="index-welcome-info">
-                        <CardSkillSimple params={{icon:<FaGithub />, title:"Github Repocitory", className:""}}/>
+                    <div className="index-welcome-info-addres">
+                        <CardSkillSimple params={{icon:<FaGithub className="icon-github-repository"/>, title:"Github Repocitory", 
+                        className:"githubRepository", content:""}}/>
+                        <CardSkillSimple params={{icon:<FaFacebook className="icon-github-repository"/>, title:"Facebook Profile", 
+                        className:"facebookProfile", content:""}}/>
+                        <CardSkillSimple params={{icon:<FaLinkedin className="icon-github-repository"/>, title:"Linkedin Profile", 
+                        className:"linkedinProfile", content:""}}/>
                     </div>
-                    <hr />
+                    <hr className="line-index-welcome-section"/>
                     <div className="index-welcome-info-customers">
                         <span className="title-index-welcome-info-customers">USADO POR EQUIPOS EN</span>
                         <div className="container-customers">
-                            <CardSkillBasic params={{className:"", content:"Bancolombia"}}/>
-                           <CardSkillBasic params={{className:"", content:"ACS - Aciel"}}/>
-                           <CardSkillBasic params={{className:"", content:"EMP"}}/>
-                           <CardSkillBasic params={{className:"", content:"AVIANCA"}}/>
+                            <CardSkillBasic params={{className:"customers-card", content:"Bancolombia"}}/>
+                            <CardSkillBasic params={{className:"customers-card", content:"ACS - Aciel"}}/>
+                            <CardSkillBasic params={{className:"customers-card", content:"EMP"}}/>
+                            <CardSkillBasic params={{className:"customers-card", content:"AVIANCA"}}/>
                         </div>
                         
                     </div>
