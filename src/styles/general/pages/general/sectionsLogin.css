@@ -1,7 +1,7 @@
 /* ==========================================================
    Panel izquierdo
    ========================================================== */
-.left-panel-login{
+.left-panel-login {
     /* Anchura */
     max-width: 70%;
     min-width: 0%;
@@ -12,23 +12,23 @@
     max-height: 100vh;
     height: 100vh;
 
-    /* OrientaciÃ³n */
+    /* Orientacion */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
 
     background-color: var(--fourth-color);
-    background-image: linear-gradient(var(--second-color) 1px, transparent 1px), 
-                      linear-gradient(90deg, var(--second-color) 1px, transparent 1px); 
-    background-size: 40px 40px;  
+    background-image: linear-gradient(var(--second-color) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--second-color) 1px, transparent 1px);
+    background-size: 40px 40px;
     background-position: 0px 20px, 11px 0px;
 
     position: relative;
     overflow: hidden;
 }
 
-.container-father-info-left-panel{
+.container-father-info-left-panel {
     /* Anchura */
     max-width: 100%;
     min-width: 0%;
@@ -39,28 +39,28 @@
     max-height: 100%;
     height: 100%;
 
-    /* OrientaciÃ³n */
+    /* Orientacion */
     display: flex;
     justify-content: flex-start;
     align-items: start;
     flex-direction: column;
     gap: 1rem;
 
-    /* Marge */
+    /* Margen */
     z-index: 1;
 }
 
 /* ==========================================================
    Vectores decorativos del login
    ========================================================== */
-.vector-login{
+.vector-login {
     position: absolute;
     top: -50px;
     right: -50px;
     z-index: 0;
 }
 
-.vector2-login{
+.vector2-login {
     position: absolute;
     top: -50px;
     right: -100px;
@@ -68,7 +68,7 @@
     width: 500px;
 }
 
-.vector3-login{
+.vector3-login {
     position: absolute;
     bottom: -60px;
     left: -80px;
@@ -76,23 +76,23 @@
     width: 400px;
 }
 
-.container-vector-panel-left{
+.container-vector-panel-left {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem ;
-    margin-bottom: 3rem ;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 
-.vector-panel-left{
+.vector-panel-left {
     width: 50%;
 }
 
 /* ==========================================================
    Habilidades del panel izquierdo
    ========================================================== */
-.container-skills-login{
+.container-skills-login {
     /* Anchura */
     max-width: auto;
     min-width: auto;
@@ -103,14 +103,15 @@
     max-height: auto;
     height: auto;
 
-    /* OrientaciÃ³n */
+    /* Orientacion */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     padding-right: 50%;
 }
 
-.skills-login1, .skills-login2{
+.skills-login1,
+.skills-login2 {
     /* Anchura */
     max-width: auto;
     min-width: auto;
@@ -122,7 +123,7 @@
     max-height: auto;
     height: auto;
 
-    /* OrientaciÃ³n */
+    /* Orientacion */
     display: flex;
     justify-content: center;
     align-items: start;
@@ -130,7 +131,7 @@
     gap: 3rem;
 }
 
-.skill-description-login{
+.skill-description-login {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -139,18 +140,18 @@
     gap: 1rem;
 }
 
-.container-description-login{
+.container-description-login {
     display: flex;
     flex-direction: column;
 }
 
-.skill-description1{
+.skill-description1 {
     font-weight:500;
     font-size: 1.8rem;
     color: var(--seventh-color);
 }
 
-.skill-description2{
+.skill-description2 {
     font-weight:500;
     font-size: 1.3rem;
     color: var(--nineth-color);
@@ -159,7 +160,7 @@
 /* ==========================================================
    Panel derecho
    ========================================================== */
-#right-panel-login{
+.right-panel-login {
     /* Anchura */
     max-width: 1000%;
     min-width: 30%;
@@ -170,7 +171,7 @@
     max-height: 100vh;
     height: 100vh;
 
-    /* OrientaciÃ³n */
+    /* Orientacion */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,7 +190,7 @@
 /* ==========================================================
    Contenedor principal del formulario
    ========================================================== */
-#container-father-form-login{
+.container-father-form-login {
     /* Anchura */
     max-width: 1000%;
     min-width: 100%;
@@ -201,7 +202,7 @@
     height: auto;
     z-index: 1;
 
-    /* OrientaciÃ³n */
+    /* Orientacion */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,13 +216,13 @@
     border-top: 10px solid var(--fifth-color);
 
     /* Margen */
-    padding: 1rem 1rem ;
+    padding: 1rem 1rem;
 
     /* Fondo */
     background-color: var(--seventh-color);
 }
 
-#container-title-form-login{
+#container-title-form-login {
     /* Anchura */
     max-width: 1000%;
     min-width: 100%;
@@ -232,14 +233,14 @@
     max-height: auto;
     height: auto;
 
-    /* OrientaciÃ³n */
+    /* Orientacion */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
 }
 
-#container-title-header{
+#container-title-header {
     /* Anchura */
     max-width: auto;
     min-width: auto;
@@ -250,14 +251,14 @@
     max-height: auto;
     height: auto;
 
-    /* OrientaciÃ³n */
+    /* Orientacion */
     display: flex;
     justify-content: center;
     align-items: left;
     flex-direction: column;
 }
 
-#container-logo-header{
+#container-logo-header {
     /* Anchura */
     max-width: auto;
     min-width: 30%;
@@ -266,23 +267,23 @@
     /* Altura */
     height: auto;
 
-    /* OrientaciÃ³n */
+    /* Orientacion */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#logo-png-empresa{
+#logo-png-empresa {
     width: 100%;
 }
 
-.title-login{
+.title-login {
     font-weight:bold;
     font-size: 30px;
     color: var(--fourth-color);
 }
 
-.title2-login{
+.title2-login {
     font-weight:500;
     font-size: 20px;
     color: var(--fifth-color);
@@ -291,7 +292,7 @@
 /* ==========================================================
    Descripcion y formulario de login
    ========================================================== */
-#container-description-form-login{
+#container-description-form-login {
     /* Anchura */
     max-width: auto;
     min-width: auto;
@@ -305,37 +306,37 @@
     /* Margen */
     margin: 1rem 0 0.5rem 0;
 
-    /* OrientaciÃ³n */
+    /* Orientacion */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.description-login{
+.description-login {
     font-weight:600;
     font-size: 23px;
     color: var(--fourth-color);
 }
 
-.description2-login{
+.description2-login {
     font-weight:500;
     font-size: 18px;
     color: var(--fifth-color);
 }
 
-.container-form-login{
+.container-form-login {
     width: 100%;
 }
 
-hr{
+hr {
     width: 100%;
     height: 1px;
     border: none;
     background-color: var(--nineth-color);
 }
 
-#line-form-login2{
+#line-form-login2 {
     width: 100%;
     margin: 1rem 0;
 }
@@ -343,7 +344,7 @@ hr{
 /* ==========================================================
    Pie del formulario
    ========================================================== */
-.container-footer-form-login{
+.container-footer-form-login {
     /* Anchura */
     max-width: auto;
     min-width: 100%;
@@ -357,13 +358,13 @@ hr{
     /* Margen */
     margin: 3rem 0 0 0;
 
-    /* OrientaciÃ³n */
+    /* Orientacion */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.info-footer-form-login{
+.info-footer-form-login {
     font-size: 14px;
     font-weight: 600;
     color: var(--first-color);

@@ -10,13 +10,11 @@ import { SiReadthedocs } from "react-icons/si";
 import { LeftPanelLogin, RightPanelLogin } from "../../components/sections/sectionsLogin.jsx";
 {/* Hooks */}
 import { useSelector } from "react-redux";
+import { useRenamePage } from "../../hooks/renamePage.jsx";
 {/* Constantes */}
 import { URL_API } from "../../settings/variablesEntrono.js";
 {/* Estilos */}
-{/* Media */}
-import "../../styles/general/pages/general/login.css"
-import logo from "../../assets/logo/logo.png";
-
+import "../../styles/general/pages/general/login.css";
 
 export const Login = () =>{
 
@@ -81,7 +79,11 @@ export const Login = () =>{
     const users = useSelector((state) => {
         return state.users.logIn
     });
-    {/* */}
+
+
+    {/* Renombrar Pagin */}
+    useRenamePage("Incia Sesión");
+    
     return(
         <>  
 

@@ -148,6 +148,7 @@
 /* ==========================================================
    Tarjeta Dinamo en panel de login
    ========================================================== */
+.loginRight-card-dinamo-container,
 .loginLeft-card-dinamo-container {
     width: 100%;
     display: flex;
@@ -155,8 +156,63 @@
     gap: 1rem;
 }
 
+/* Login derecho */
+.loginRight-card-dinamo-container {
+    justify-content: center;
+}
+
+.loginRight-card-dinamo-container-logo {
+    /* Anchura */
+    max-width: auto;
+    min-width: 30%;
+    width: 30%;
+
+    /* Altura */
+    height: auto;
+
+    /* Orientacion */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginRight-card-dinamo-container-container-title {
+    /* Anchura */
+    max-width: auto;
+    min-width: auto;
+    width: auto;
+
+    /* Altura */
+    min-height: auto;
+    max-height: auto;
+    height: auto;
+
+    /* Orientacion */
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.loginRight-card-dinamo-logo {
+    width: 100%;
+}
+
+.loginRight-card-dinamo-title {
+    font-weight:bold;
+    font-size: 2rem;
+    color: var(--fourth-color);
+}
+
+.loginRight-card-dinamo-title2 {
+    font-weight:500;
+    font-size: 1.3rem;
+    color: var(--fifth-color);
+}
+
+/* Login izquierdo */
 .loginLeft-card-dinamo-container-logo {
-     /* Anchura */
+    /* Anchura */
     max-width: auto;
     min-width: 5%;
     width: 10%;
@@ -164,7 +220,7 @@
     /* Altura */
     height: auto;
 
-    /* Orientación */
+    /* Orientacion */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,11 +237,15 @@
     max-height: auto;
     height: auto;
 
-    /* Orientación */
+    /* Orientacion */
     display: flex;
     justify-content: center;
     align-items: left;
     flex-direction: column;
+}
+
+.loginLeft-card-dinamo-logo {
+    width: 100%;
 }
 
 .loginLeft-card-dinamo-title {
@@ -198,10 +258,6 @@
     font-weight:500;
     font-size: 25px;
     color: var(--nineth-color);
-}
-
-.loginLeft-card-dinamo-logo {
-    width: 100%;
 }
 
 /* ==========================================================

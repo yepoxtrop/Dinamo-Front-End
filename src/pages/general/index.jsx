@@ -2,7 +2,8 @@
 import { HeaderIndex } from "../../components/headers/headerIndex";
 import { IndexWelcomeSection, IndexProblemsSection, IndexHelpsSection, IndexWorkFlowSection, IndexFunctionsSection, IndexProfileSection, IndexRequerimentsSection, IndexExprienceSection, IndexSuscriptionSection, IndexReadySection } from "../../components/sections/sectionsIndex.jsx";
 import { FooterIndex } from "../../components/footers/footerIndex.jsx";
-
+{/* Hooks */}
+import { useRenamePage } from "../../hooks/renamePage.jsx";
 
 /**
  * Renderiza la pagina principal del sitio.
@@ -15,6 +16,9 @@ import { FooterIndex } from "../../components/footers/footerIndex.jsx";
  * @author Luis Angel Sarmiento Diaz
  */
 export const Index = () =>{
+    {/* Renombrar Pagin */}
+    useRenamePage("Dinamo - Firmas Digitales")
+
     return(
         <>
             {/* Encabezado */}

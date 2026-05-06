@@ -16,47 +16,60 @@ import { URL_API } from "../../settings/variablesEntrono.js";
 import "../../styles/general/pages/general/sectionsLogin.css";
 {/* Media */}
 import logoTransparente from "../../assets/logo/logo_transparente.png";
+import logoV2 from "../../assets/logo/logo_v2.png"
 import vector from "../../assets/circulo.svg";
 import vector2 from "../../assets/circulo2.svg";
 import vector3 from "../../assets/circulo3.svg";   
 import vector4 from "../../assets/documentos.svg";
 import logo from "../../assets/logo/logo.png";
 
+/**
+ * Renderiza el panel izquierdo de la pantalla de inicio de sesion.
+ *
+ * Este componente muestra la identidad visual de Dinamo, los vectores
+ * decorativos, la imagen central del panel y las tarjetas con las
+ * caracteristicas principales del producto.
+ *
+ * @returns {JSX.Element} Panel izquierdo informativo del login.
+ *
+ * @author Luis Angel Sarmiento Diaz
+ */
 export function LeftPanelLogin(){
     return(
         <>
             <section className="left-panel-login">
 
-                    {/* Vectores circulares */}
-                    <img src={vector2} alt="" className="vector2-login"/>
-                    <img src={vector3} alt="" className="vector3-login"/>
+                {/* Vectores circulares */}
+                <img src={vector2} alt="" className="vector2-login"/>
+                <img src={vector3} alt="" className="vector3-login"/>
 
-                    {/* Contendo del panel */}
-                    <div className="container-father-info-left-panel">
-                        
-                        <CardDianmoo params={{fatherClass:"loginLeft", img:logoTransparente, }} />
+                {/* Contendo del panel izquierdo */}
+                <div className="container-father-info-left-panel">
+                    
+                    {/* Tarjeta de encabezado */}
+                    <CardDianmoo params={{fatherClass:"loginLeft", img:logoV2, }} />
 
-                        <div className="container-vector-panel-left">
-                            <img src={vector4} alt="vector" className="vector-panel-left"/>
-                        </div>
-
-                        
-                        <div className="skill-description-login">
-                            <div className="container-skills-login">
-                                <CardSkill params={{icon: < IoIosCheckmarkCircle className="icon-card-skills"/>, title: "Firma Electrónica"}} />
-                                <CardSkill params={{icon: < BsExclamationSquareFill className="icon-card-skills"/>, title: "Trazabilidad PKI"}} />
-                                <CardSkill params={{icon: < PiCertificateFill className="icon-card-skills"/>, title: "Certificado X.509"}} />
-                                <CardSkill params={{icon: < SiReadthedocs className="icon-card-skills"/>, title: "Reportes Digitales"}} />
-                            </div>
-
-                            <div className="container-description-login">
-                                <span className="skill-description1">Documentos con Validez legal.</span>
-                                <span className="skill-description2">Firma, gestiona y audita desde un solo lugar.</span>
-                            </div>
-                            
-                        </div>
+                    {/* Vecotr del medio */}
+                    <div className="container-vector-panel-left">
+                        <img src={vector4} alt="vector" className="vector-panel-left"/>
                     </div>
-                </section>
+                    
+                    {/* Caracteristicas finales */}
+                    <div className="skill-description-login">
+                        <div className="container-skills-login">
+                            <CardSkill params={{icon: < IoIosCheckmarkCircle className="icon-card-skills"/>, title: "Firma Electrónica"}} />
+                            <CardSkill params={{icon: < BsExclamationSquareFill className="icon-card-skills"/>, title: "Trazabilidad PKI"}} />
+                            <CardSkill params={{icon: < PiCertificateFill className="icon-card-skills"/>, title: "Certificado X.509"}} />
+                            <CardSkill params={{icon: < SiReadthedocs className="icon-card-skills"/>, title: "Reportes Digitales"}} />
+                        </div>
+                        <div className="container-description-login">
+                            <span className="skill-description1">Documentos con Validez legal.</span>
+                            <span className="skill-description2">Firma, gestiona y audita desde un solo lugar.</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
@@ -127,23 +140,16 @@ export function RightPanelLogin(){
     {/* */}
     return(
         <>
-            <section className="right-panel-login" id="right-panel-login">
+            <section className="right-panel-login">
 
                     {/* <img src={vector} alt="" className="vector-login"/> */}
 
                     {/* Contedor padre del formulario */}
-                    <div className="container-father-form-login" id="container-father-form-login">
-
-                        <div className="container-title-form-login" id="container-title-form-login">
-                            <div className="container-logo-header" id="container-logo-header">
-                                <img src={logo} alt="logo-empresa" id="logo-png-empresa"/> {/* Cambiar logo de la empresa */}
-                            </div>
-                            <div className="container-title-header" id="container-title-header">
-                                <span className="title-login">Dinamo</span> {/* Cambiar el nombre de la empresa */}
-                                <span className="title2-login">Gestión Documental</span>
-                            </div>
-                        </div>
-
+                    <div className="container-father-form-login">
+                        
+                        
+                        <CardDianmoo params={{fatherClass:"loginRight", img:logoTransparente, }} />
+                        
                         <hr className="line-form-login" />
 
                         <div className="container-description-form-login" id="container-description-form-login">
