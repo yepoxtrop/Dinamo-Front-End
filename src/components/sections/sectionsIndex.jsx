@@ -13,7 +13,7 @@ import { IoMdCloudUpload } from "react-icons/io";
 import { TbPointFilled } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa6";
 {/* Estilos */}
-import "../../styles/sectionsIndex.css";
+import "../../styles/general/pages/general/sectionsIndex.css";
 {/* Media */}
 import ovalo1 from "../../assets/svg/ovalo.svg";
 import ovalo2 from "../../assets/svg/ovalo2.svg";

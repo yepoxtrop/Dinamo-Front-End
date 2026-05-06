@@ -1,0 +1,17 @@
+.body-login{
+    /* Anchura */
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+
+    /* Altura */
+    min-height: 100vh;
+    max-height: 100vh;
+    height: 100vh;
+
+    /* Orientación */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
