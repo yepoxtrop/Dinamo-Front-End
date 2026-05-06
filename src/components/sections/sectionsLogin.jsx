@@ -147,16 +147,16 @@ export function RightPanelLogin(){
                     {/* Contedor padre del formulario */}
                     <div className="container-father-form-login">
                         
-                        
+                        {/* Tarjeta de Dinamo */}
                         <CardDianmoo params={{fatherClass:"loginRight", img:logoTransparente, }} />
                         
                         <hr className="line-form-login" />
-
+                        
+                        {/* Titulo del formulario */}
                         <div className="container-description-form-login" id="container-description-form-login">
                             <span className="description-login">Bienvenido</span>
                             <span className="description2-login">Ingresa tus credenciales</span>
                         </div>
-
 
                         {/* Contendor del formulario de inicio de sesión */}
                         <div className="container-form-login">
@@ -167,7 +167,7 @@ export function RightPanelLogin(){
                             />
                         </div>
 
-
+                        {/* Footer del formulario */}
                         <div className="container-footer-form-login">
                             <span className="info-footer-form-login">ACS Soluciones Integrales S.A.S</span>
                         </div>
