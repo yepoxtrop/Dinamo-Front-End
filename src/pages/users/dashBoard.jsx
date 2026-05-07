@@ -1,13 +1,13 @@
 {/* Componentes */}
-import { LeftMenu } from "../components/menus/leftMenu.jsx";
-import { Header } from "../components/headers/header.jsx";
+import { LeftMenu } from "../../components/menus/leftMenu.jsx";
+import { Header } from "../../components/headers/header.jsx";
 {/* Constantes */}
-import { URL_API } from "../settings/variablesEntrono.js";
+import { URL_API } from "../../settings/variablesEntrono.js";
 {/* Estilos */}
-import '../styles/index.css';
+import '../../styles/general/pages/general/sectionsIndex.css'
 {/* Imagenes */}
 {/* Estado */}
-import {store} from "../services/stores/store.js";
+import {store} from "../../services/stores/store.js";
 {/* Actions */}
 {/* Hooks */}
 import { useState, useEffect } from "react";
@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 
-export const Index = () => {
+export const DashBoard = () => {
     const [dataUser, setDataUser] = useState({}); 
     const [timeActive, setTimeActive] = useState(new Date()); 
     const url = `${URL_API}/Datos_Sesion`;
