@@ -100,3 +100,29 @@ export function Form ({params, api_url, api_url2}){
         </>
     )
 }
+
+
+
+export function FormSignature({params}){
+    return(
+        <>
+            <form > 
+                <div>
+                    <TargetInputText />
+                    <TargetInputText />
+                </div>
+                <div>
+                    <TargetInputText />
+                    <TargetInputText />
+                </div>
+                <div>
+                    <TargetInputText />
+                    <TargetInputText />
+                </div>
+                <div>
+
+                </div>
+            </form>
+        </>
+    )
+}

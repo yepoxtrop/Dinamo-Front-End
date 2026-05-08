@@ -1,68 +1,76 @@
-.container-father-menu{
-    width: 20%;
-    height: 100vh;
-
-    padding:  0.5rem 1rem;
-
-    background-color: var(--fourth-color);
+/* Contenedor principal */
+.container-father-menu {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10000;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+
+    width: 20%;
+    height: 100vh;
+    padding: 0.5rem 1rem;
+
+    background-color: var(--fourth-color);
 }
 
-.container-left-menu{
+.container-left-menu {
     width: 100%;
     height: auto;
 
-
     background-color: var(--fourth-color);
-    
 }
 
-.container-logo-left-menu{
-    width: 100%;
+/* Logo y titulos */
+.container-logo-left-menu {
     display: flex;
+    width: 100%;
 }
 
-.logo-left-menu{
+.logo-left-menu {
     width: 30%;
 }
 
-.container-title-left-menu{
+.container-title-left-menu {
     display: flex;
     flex-direction: column;
 }
 
-.title-left-menu{
-    font-weight: 630;
-    font-size: 30px;
+.title-left-menu {
     color: var(--seventh-color);
+    font-size: 30px;
+    font-weight: 630;
 }
 
-.title2-left-menu{
-    font-weight: 500;
-    font-size: 18px;
+.title2-left-menu {
     color: var(--nineth-color);
+    font-size: 18px;
+    font-weight: 500;
 }
 
-.hr-left-menu{
+/* Listas del menu */
+.list-left-menu,
+.sublist-left-menu {
+    width: 100%;
+    list-style: none;
+}
+
+.sublist-left-menu {
+    padding: 0 2rem;
+}
+
+/* Elementos auxiliares */
+.hr-left-menu {
     margin-top: 10px;
     margin-bottom: 12px;
 }
 
-.list-left-menu, .sublist-left-menu{
-    list-style: none;
-    width: 100%;
-}
-
-.sublist-left-menu{
-    padding:  0rem 2rem;
-}
-
-.description-left-menu{
+.description-left-menu {
     padding-left: 5px;
-    font-size: 0.9rem;
+
     color: var(--fifth-color);
+    font-size: 0.9rem;
 }

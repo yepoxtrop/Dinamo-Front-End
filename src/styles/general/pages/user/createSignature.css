@@ -1,0 +1,16 @@
+.section-container-index{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-menu-index{
+    width: 20%;
+}
+
+.container-data-index{
+    width: 80%;
+    height: 100%;
+    background-color: var(--sixth-color);
+}
