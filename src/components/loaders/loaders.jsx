@@ -1,19 +1,47 @@
+{/* Componentes */}
+import { IoWifi } from "react-icons/io5";
+import { CardDinamo } from "../cards/cardDinamo.jsx";
+import { GoShieldCheck } from "react-icons/go";
+import { CardSkillBasic } from "../cards/cardSkills.jsx";
+import { TbLockPassword } from "react-icons/tb";
 {/* Estilos */}
 import "../../styles/loaders.css";
-import { IoWifi } from "react-icons/io5";
+import "../../styles/animations/loader.css";
+{/* Media */}
+import logoTransparente from "../../assets/logo/logo_transparente.png";
+
 export default function PrincipalLoader(){
     return(
         <>
             <section className="section-loader">
-                <div>
-                    <svg width="91" height="53" viewBox="0 0 91 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.90975 18.3031C25.3181 -6.10104 64.8931 -6.10104 89.2972 18.3031C89.5876 18.5933 89.818 18.9379 89.9752 19.3172C90.1324 19.6965 90.2132 20.103 90.2132 20.5135C90.2132 20.9241 90.1324 21.3306 89.9752 21.7099C89.818 22.0892 89.5876 22.4338 89.2972 22.724L87.0889 24.9323C86.503 25.5175 85.7087 25.8462 84.8806 25.8462C84.0524 25.8462 83.2582 25.5175 82.6722 24.9323C61.9222 4.18646 28.2847 4.18646 7.53892 24.9323C6.95298 25.5175 6.15871 25.8462 5.33058 25.8462C4.50245 25.8462 3.70819 25.5175 3.12225 24.9323L0.913916 22.724C0.328706 22.138 0 21.3438 0 20.5156C0 19.6875 0.328706 18.8932 0.913916 18.3073L0.90975 18.3031ZM14.1681 31.5615C31.2514 14.4781 58.9556 14.4781 76.0431 31.5615C76.3335 31.8517 76.5638 32.1963 76.721 32.5755C76.8782 32.9548 76.9591 33.3613 76.9591 33.7719C76.9591 34.1824 76.8782 34.589 76.721 34.9682C76.5638 35.3475 76.3335 35.6921 76.0431 35.9823L73.8347 38.1906C73.5445 38.4816 73.1996 38.7125 72.82 38.8701C72.4403 39.0276 72.0333 39.1087 71.6222 39.1087C71.2112 39.1087 70.8042 39.0276 70.4245 38.8701C70.0449 38.7125 69.7 38.4816 69.4098 38.1906C62.9632 31.7444 54.22 28.123 45.1035 28.123C35.9869 28.123 27.2438 31.7444 20.7973 38.1906C20.2113 38.7758 19.417 39.1045 18.5889 39.1045C17.7608 39.1045 16.9665 38.7758 16.3806 38.1906L14.1722 35.9823C13.587 35.3963 13.2583 34.6021 13.2583 33.774C13.2583 32.9458 13.587 32.1516 14.1722 31.5656L14.1681 31.5615ZM27.5181 44.8198C29.8396 42.4979 32.5958 40.656 35.6292 39.3994C38.6626 38.1427 41.9138 37.496 45.1972 37.496C48.4806 37.496 51.7319 38.1427 54.7653 39.3994C57.7987 40.656 60.5549 42.4979 62.8764 44.8198C63.1668 45.11 63.3972 45.4546 63.5543 45.8339C63.7115 46.2131 63.7924 46.6197 63.7924 47.0302C63.7924 47.4408 63.7115 47.8473 63.5543 48.2266C63.3972 48.6058 63.1668 48.9504 62.8764 49.2406L60.6681 51.449C60.3779 51.7394 60.0333 51.9697 59.654 52.1269C59.2747 52.2841 58.8682 52.365 58.4577 52.365C58.0471 52.365 57.6406 52.2841 57.2613 52.1269C56.882 51.9697 56.5375 51.7394 56.2472 51.449C54.7963 49.9976 53.0736 48.8463 51.1776 48.0608C49.2816 47.2753 47.2495 46.871 45.1972 46.871C43.145 46.871 41.1128 47.2753 39.2169 48.0608C37.3209 48.8463 35.5982 49.9976 34.1472 51.449C33.5613 52.0342 32.767 52.3629 31.9389 52.3629C31.1108 52.3629 30.3165 52.0342 29.7306 51.449L27.5222 49.2406C26.937 48.6547 26.6083 47.8604 26.6083 47.0323C26.6083 46.2042 26.937 45.4099 27.5222 44.824L27.5181 44.8198Z" fill="black"/>
-                    </svg>
+
+                <CardDinamo params={{fatherClass:"loader", img:logoTransparente, }}/>
+
+                <div className="container-principal-section-loader">
+                    <div className="container-loader-animation">
+                        <div className="figure-loader" id=""></div>
+                        <div className="figure-loader" id=""></div>
+                        <div className="figure-loader" id=""></div>
+                        <div className="figure-loader" id=""></div>
+                        <div className="figure-loader" id=""></div>
+                        <div className="figure-loader" id=""></div>
+                        <div className="figure-loader" id=""></div>
+                        <div className="figure-loader" id=""></div>
+                        <div className="figure-loader" id=""></div>
+                        <div className="figure-loader" id=""></div>
+                    </div>
+
+                    <div className="message-under-loader">
+                        <CardSkillBasic params={{className:"messageLoader", icon:<GoShieldCheck />, content:"Procesando Solicitud..."}}/>
+                        <CardSkillBasic params={{className:"messageLoader2", content:"Por favio, espere un momento mientras preparamos todo."}}/>
+                    </div>
                 </div>
-                
-                <div>
-                    <span>Cargando</span>
-                </div>
+
+                <div className="footer-loader">
+                    <CardSkillBasic params={{className:"securityVersion", icon:<TbLockPassword />, content:"Dinamo Secutiry v1.0"}}/>
+                    <span>&copy; 2026 Dinamo. Todos los derechos reservados</span>
+                </div>                
+
             </section>
         </>
     )

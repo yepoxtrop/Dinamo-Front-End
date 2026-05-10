@@ -1,5 +1,5 @@
 {/* Componentes */}
-import { CardDianmoo } from "../cards/cardDinamo.jsx"
+import { CardDinamo } from "../cards/cardDinamo.jsx"
 import { Login } from "../../pages/general/login.jsx";
 {/* Media */}
 import logoTransparente from "../../assets/logo/logo_transparente.png"
@@ -16,7 +16,7 @@ export function HeaderIndex(){
     return(
         <>
             <header className="header-index">
-                <CardDianmoo params={{img:logoTransparente, fatherClass:"header"}}/>
+                <CardDinamo params={{img:logoTransparente, fatherClass:"header"}}/>
 
                 <div className="header-index-container-list">
                     <ul className="header-index-list">

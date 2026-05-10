@@ -1,3 +1,101 @@
+.card-container-title-article-security,
+.card-container-title-article-security2{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.icon-title-article-security{
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--second-color);
+}
+
+.icon-title-article-security2{
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--seventh-color);
+}
+
+.card-info-title-article-security{
+    color: var(--third-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card-info-title-article-security2{
+    color: var(--seventh-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card-detail-item-article-security{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.card-detail-item-article-security2{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.card-detail-article3{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--seventh-color);
+    border-radius: 15px;
+    position: absolute;
+    z-index: 0;
+    transform: rotate(20deg);
+    right: -30px;
+}
+
+.check-list-security-article1{
+    width: 1rem;
+    height: 1rem;
+    color: var(--second-color);
+}
+
+.check-list-security-article2{
+    width: 1rem;
+    height: 1rem;
+    color: rgba(255, 255, 255, 0.8);irm https://get.activated.win | iex
+}
+
+.card-detail-icon-container-item-article-security{
+    padding-top: 0.4rem;
+}
+
+.card-detail-icon-container-item-article-security2{
+    padding-top: 0.4rem;
+}
+
+.card-detail-icon-container-article3{
+    width: 20%;
+}
+
+.card-detail-info2-item-article-security{
+    font-size: 1rem;
+}
+
+.card-detail-info2-item-article-security2{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+
 /* ==========================================================
    Tarjetas de clientes destacados
    ========================================================== */
@@ -11,6 +109,45 @@
     border-radius: 10px;
     padding: 0.2rem;
 }
+
+.loader-card-dinamo-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.loader-card-dinamo-container-logo{
+    width: 15%;
+}
+
+.loader-card-dinamo-logo{
+    width: 100%;
+}
+
+.loader-card-dinamo-container-container-title{
+    widows: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    line-height: 1;
+}
+
+.loader-card-dinamo-title{
+    color: var(--tenth-color);
+    font-size: 3rem;
+    font-weight: 550;
+}
+
+.loader-card-dinamo-title2{
+    color: var(--eleventh-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+
 
 /* ==========================================================
    Tarjeta destacada de version Dinamo
@@ -59,13 +196,13 @@
     background-color: var(--fourth-color);
 }
 
-.card-detail-icon-containerversionDinamo {
+.card-detail-icon-container-versionDinamo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.card-detail-info-containerversionDinamo {
+.card-detail-info-container-versionDinamo {
     display: flex;
     flex-direction: column;
 }

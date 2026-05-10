@@ -7,7 +7,7 @@ import { BsExclamationSquareFill } from "react-icons/bs";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { PiCertificateFill } from "react-icons/pi";
 import { SiReadthedocs } from "react-icons/si";
-import { CardDianmoo } from "../cards/cardDinamo.jsx";
+import { CardDinamo } from "../cards/cardDinamo.jsx";
 {/* Hooks */}
 import { useSelector } from "react-redux";
 {/* Constantes */}
@@ -47,7 +47,7 @@ export function LeftPanelLogin(){
                 <div className="container-father-info-left-panel">
                     
                     {/* Tarjeta de encabezado */}
-                    <CardDianmoo params={{fatherClass:"loginLeft", img:logoV2, }} />
+                    <CardDinamo params={{fatherClass:"loginLeft", img:logoV2, }} />
 
                     {/* Vecotr del medio */}
                     <div className="container-vector-panel-left">
@@ -148,7 +148,7 @@ export function RightPanelLogin(){
                     <div className="container-father-form-login">
                         
                         {/* Tarjeta de Dinamo */}
-                        <CardDianmoo params={{fatherClass:"loginRight", img:logoTransparente, }} />
+                        <CardDinamo params={{fatherClass:"loginRight", img:logoTransparente, }} />
                         
                         <hr className="line-form-login" />
                         

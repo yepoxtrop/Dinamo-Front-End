@@ -14,12 +14,14 @@ import { PiUserListFill } from "react-icons/pi";
 import { MdOutlineSecurity } from "react-icons/md";
 import { FaRegCheckCircle } from "react-icons/fa";
 import PrincipalLoader from "../../components/loaders/loaders.jsx";
+import { CardSkillBasic, CardSkillDetail } from "../../components/cards/cardSkills.jsx";
 {/* Constantes */}
 import { URL_API } from "../../settings/variablesEntrono.js";
 {/* Estilos */}
 import '../../styles/general/pages/user/createSignature.css';
 {/* Imagenes */}
 import logoTransparente from "../../assets/logo/logo_transparente.png"
+import logoVector from "../../assets/dinamo_vector_minimalist.svg"
 {/* Estado */}
 import {store} from "../../services/stores/store.js";
 {/* Actions */}
@@ -87,12 +89,10 @@ export const CreateSignature = () => {
     return(
         <>  
             <section className="section-container-index">
-                <PrincipalLoader />
                 
                 {/* Menu */}
                 <LeftMenu />
                 
-        
                 {/* Contenido de la pagina */} 
                 <section className="container-data-index">
         
@@ -102,7 +102,7 @@ export const CreateSignature = () => {
                     <div className="container-data-info">
                         
                         {/* Formulario de inicio de sesion */}
-                        <div>
+                        <div className="conteiner-form-createSignature">
                             <div>
                                 <span>Información del solicitante</span>
                             </div>
@@ -110,61 +110,59 @@ export const CreateSignature = () => {
                         </div>
 
                         {/* Articulos de seguridad */}
-                        <div>
-                            <article>
-                                <div>
-                                    <div>
-                                        <MdOutlineSecurity />
-                                        <span>Parametros De Seguridad</span>
-                                    </div>
-                                    <div>
+                        <div className="container-articles-security">
+
+                            <article className="todo-list-articles-createSignature1">
+                                
+                                <div className="container-info-article-createSignature1">
+                                    <CardSkillBasic params={{className:"title-article-security", icon: <MdOutlineSecurity className="icon-title-article-security"/>, content: "Parametros De Seguridad"}}/>
+                                    
+                                    <div className="container-list-article-createSignature1">
                                         <ul>
                                             <li>
-                                                <FaRegCheckCircle />
-                                                <span>La contraseña debe tener al menos 12 caracteres y contener una combinación de letras, números y caracteres especiales.</span>
+                                                <CardSkillDetail params={{className:"item-article-security", icon: <FaRegCheckCircle className="check-list-security-article1" />, content: "La contraseña debe tener al menos 12 caracteres y contener una combinación de letras, números y caracteres especiales."}}/>
                                             </li>
                                             <li>
-                                                <FaRegCheckCircle />
-                                                <span>La firma digital es personal e intransferible, y el usuario es responsable de su uso.</span>
+                                                <CardSkillDetail params={{className:"item-article-security", icon: <FaRegCheckCircle className="check-list-security-article1" />, content: "La firma digital es personal e intransferible, y el usuario es responsable de su uso."}}/>
                                             </li>
                                             <li>
-                                                <FaRegCheckCircle />
-                                                <span>El usuario declara haber leído y acepta los términos y condiciones para el uso de la firma digital.</span>
+                                                <CardSkillDetail params={{className:"item-article-security", icon: <FaRegCheckCircle className="check-list-security-article1" />, content: "El usuario declara haber leído y acepta los términos y condiciones para el uso de la firma digital."}}/>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </article>
 
-                            <article>
-                                <div>
-                                    <div>
-                                        <MdOutlineSecurity />
-                                        <span>Siguientes Pasos</span>
-                                    </div>
-                                    <div>
+                            <article className="todo-list-articles-createSignature2">
+                                <div className="container-info-article-createSignature2">
+                                    <CardSkillBasic params={{className:"title-article-security2", icon: <MdOutlineSecurity className="icon-title-article-security2"/>, content: "Siguientes Pasos"}}/>
+                                    <div className="container-list-article-createSignature2">
                                         <ul>
                                             <li>
-                                                <span>1</span>
-                                                <span>Validación de correo electrónico</span>
+                                                <CardSkillDetail params={{className:"item-article-security2", icon: <FaRegCheckCircle className="check-list-security-article2"/>, content: "Validación de correo electrónico"}}/>
                                             </li>
                                             <li>
-                                                <span>2</span>
-                                                <span>Creación de firma digital(p12)</span>
+                                                <CardSkillDetail params={{className:"item-article-security2", icon: <FaRegCheckCircle className="check-list-security-article2"/>, content: "Creación de firma digital(p12)"}}/>
                                             </li>
                                             <li>
-                                                <span>3</span>
-                                                <span>Descarga de firma privada</span>
+                                                <CardSkillDetail params={{className:"item-article-security2", icon: <FaRegCheckCircle className="check-list-security-article2"/>, content: "Descarga de firma privada"}}/>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </article>
 
-                            <article>
-                                <div>
-                                    <img src={logoTransparente} alt="logoTransparente" />
-                                    <span>Nuevas Mejoras Pronto</span>
+                            <article className="todo-list-articles-createSignature3">
+                                <CardSkillDetail params={{className:"article3", icon:<img src={logoVector} alt="logoTransparente" className="img-logo-article3"/>, title: "Firmas Digitales"}} />
+                                <div className="container-image-article-createSignature3">
+                                    <div className="container-logo-article3">
+                                        <img src={logoTransparente} alt="logoTransparente" className="img-logo-article3"/>
+                                    </div>
+                                    <div className="container-info-article3">
+                                        <span className="info-article3">Nuevas Mejoras</span>
+                                        <span className="info-article3">Proximamente</span>
+                                    </div>
+                                    
                                 </div>
                             </article>
                         </div>

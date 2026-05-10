@@ -21,7 +21,7 @@ export const App = () => {
             </Route>
 
             <Route path="/signatures">
-                <Route path="createSignatures" element={<PrincipalLoader />} />
+                <Route path="createSignatures" element={<CreateSignature />} />
                 <Route path="totalSignatures" element={<DashBoard />} />
             </Route>
 

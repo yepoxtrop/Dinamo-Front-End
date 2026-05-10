@@ -68,12 +68,12 @@ export function CardSkillSimple({params}){
 export function CardSkillDetail({params}){
     return(
         <div className={`card-detail-${params.className}`}> 
-            <div className={`card-detail-icon-container${params.className}`}>
+            <div className={`card-detail-icon-container-${params.className}`}>
                 {params.icon}
             </div>
             <div className={`card-detail-info-container${params.className}`}>
-                <span className={`card-detail-info-${params.className}`}>{params.title}</span>
-                <span className={`card-detail-info2-${params.className}`}>{params.content}</span>
+                {params?.title?<span className={`card-detail-info-${params.className}`}>{params.title}</span>:<></>}
+                {params?.content?<span className={`card-detail-info2-${params.className}`}>{params.content}</span>:<></>}
             </div>
         </div>
     )

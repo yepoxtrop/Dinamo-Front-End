@@ -1,4 +1,4 @@
-import { CardDianmoo } from "../cards/cardDinamo.jsx"
+import { CardDinamo } from "../cards/cardDinamo.jsx"
 {/* Media */}
 //import logoTransparente from "../../assets/logo/logo_transparente.png"
 import logoTransparenteV2 from "../../assets/logo/logo_v2.png"
@@ -9,7 +9,7 @@ export function FooterIndex(){
     return(
         <>
             <footer className="footer-index">
-                <CardDianmoo params={{img:logoTransparenteV2, fatherClass:"footer"}}/>
+                <CardDinamo params={{img:logoTransparenteV2, fatherClass:"footer"}}/>
 
                 <div className="footer-table-container">
 

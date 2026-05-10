@@ -1,7 +1,7 @@
 {/* Estilos */}
 import '../../styles/cards.css';
 
-export function CardDianmoo({params}){
+export function CardDinamo({params}){
     return(
         <>
             <div className={`${params.fatherClass}-card-dinamo-container`}>
