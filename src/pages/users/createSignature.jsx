@@ -15,6 +15,7 @@ import { MdOutlineSecurity } from "react-icons/md";
 import { FaRegCheckCircle } from "react-icons/fa";
 import PrincipalLoader from "../../components/loaders/loaders.jsx";
 import { CardSkillBasic, CardSkillDetail } from "../../components/cards/cardSkills.jsx";
+import ToolBar from "../../components/combinations/toolbars.jsx";
 {/* Constantes */}
 import { URL_API } from "../../settings/variablesEntrono.js";
 {/* Estilos */}
@@ -96,7 +97,6 @@ export const CreateSignature = () => {
                 {/* Contenido de la pagina */} 
                 <section className="container-data-index">
         
-                    {/* Encabezado */}
 
                     {/* Contenido de la seccion */}
                     <div className="container-data-info">
@@ -160,7 +160,7 @@ export const CreateSignature = () => {
                                     </div>
                                     <div className="container-info-article3">
                                         <span className="info-article3">Nuevas Mejoras</span>
-                                        <span className="info-article3">Proximamente</span>
+                                        <span className="info-article3-1">Proximamente</span>
                                     </div>
                                     
                                 </div>

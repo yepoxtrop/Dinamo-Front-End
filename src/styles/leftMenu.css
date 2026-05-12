@@ -1,32 +1,34 @@
-/* Contenedor principal */
+/* ==========================================================
+   Contenedor principal
+   ========================================================== */
 .container-father-menu {
     position: sticky;
     top: 0;
-    left: 0;
     z-index: 10000;
-
+    align-self: flex-start;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
-
+    align-items: center;
     width: 20%;
     height: 100vh;
     padding: 0.5rem 1rem;
-
+    overflow-y: auto;
     background-color: var(--fourth-color);
 }
 
 .container-left-menu {
     width: 100%;
     height: auto;
-
     background-color: var(--fourth-color);
 }
 
-/* Logo y titulos */
+/* ==========================================================
+   Logo y titulos
+   ========================================================== */
 .container-logo-left-menu {
     display: flex;
+    align-items: center;
     width: 100%;
 }
 
@@ -37,21 +39,24 @@
 .container-title-left-menu {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .title-left-menu {
     color: var(--seventh-color);
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 630;
 }
 
 .title2-left-menu {
     color: var(--nineth-color);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
 }
 
-/* Listas del menu */
+/* ==========================================================
+   Listas del menu
+   ========================================================== */
 .list-left-menu,
 .sublist-left-menu {
     width: 100%;
@@ -62,10 +67,17 @@
     padding: 0 2rem;
 }
 
-/* Elementos auxiliares */
+/* ==========================================================
+   Elementos auxiliares
+   ========================================================== */
 .hr-left-menu {
-    margin-top: 10px;
-    margin-bottom: 12px;
+    margin-top: 0.625rem;
+    margin-bottom: 0.75rem;
+}
+
+.description-left-menu {
+    padding-left: 5px;
+ottom: 12px;
 }
 
 .description-left-menu {

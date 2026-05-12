@@ -7,10 +7,16 @@
 body{
     font-family: var(--font-family);
     box-sizing: border-box;
+    height: 100%;
+}
+
+#root{
+    height: 100%;
 }
 
 :root{
     /* Paleta de colores */
+    --cero-color: #000000;
     --first-color: #B5D4F4;
     --second-color: #185FA5;
     --third-color: #042C53;
