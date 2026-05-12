@@ -104,24 +104,19 @@ export function Form ({params, api_url, api_url2}){
 
 
 export function FormSignature({params}){
+    const fieldComponents = {
+        text: TargetInputText,
+        password: TargetInputPassword,
+        submit: InputSubmit,
+        checkbox: TargetInputCheckbox
+    }
     return(
         <>
             <form > 
-                <div>
-                    <TargetInputText />
-                    <TargetInputText />
-                </div>
-                <div>
-                    <TargetInputText />
-                    <TargetInputText />
-                </div>
-                <div>
-                    <TargetInputText />
-                    <TargetInputText />
-                </div>
-                <div>
-
-                </div>
+                {Object.entries(params).map(([key, value]) => {
+                    const Component = fieldComponents[key];
+                    return <div key={key} className="container-inputs">{Component ? <Component params={value.campo} /> : null}</div>;
+                })};
             </form>
         </>
     )

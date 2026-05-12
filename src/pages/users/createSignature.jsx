@@ -16,6 +16,7 @@ import { FaRegCheckCircle } from "react-icons/fa";
 import PrincipalLoader from "../../components/loaders/loaders.jsx";
 import { CardSkillBasic, CardSkillDetail } from "../../components/cards/cardSkills.jsx";
 import ToolBar from "../../components/combinations/toolbars.jsx";
+import { FormSignature } from "../../components/forms/form.jsx";
 {/* Constantes */}
 import { URL_API } from "../../settings/variablesEntrono.js";
 {/* Estilos */}
@@ -31,62 +32,31 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 {/* Paquetes */}
 import axios from "axios";
-
+{/* Clases */}
+import InputsForms from "../../utils/class/inputsClass.js";
 
 export const CreateSignature = () => {
     {/* Parámetros del formulario */}
         const paramsFormn = {
             "text":{
-                "campo":{
-                    "label": "Usuario De Dominio",
-                    "labelClassName": "label-username",
-                    "placeholder": "luis.sarmiento",
-                    "type": "text",
-                    "name": "username",
-                    "required": true,
-                    "maxLength": 50,
-                    "minLength": 3,
-                    "className": "input-text",
-                    "id": "username",
-                    "icon": LuCircleUserRound
-                }, 
+                "campo_0": new InputsForms("Nombre Completo", "label-username", "Linus Benedict Torvalds", "text", "realName", true, 100, 15, "input-text", "realName", LuCircleUserRound),
+                "campo_1": new InputsForms("Numero de Identificación", "label-identification", "1234567890", "text","identification", true, 15, 6, "input-text", "identification", LuCircleUserRound), 
+            },
+            "email":{
+                "campo_0": new InputsForms("correo electrónico", "label-email", "ej. linus@github.com", "text", "email", true, 100, 3, "input-text", "email", LuCircleUserRound)
             }, 
             "password": {
-                "campo":{
-                    "label": "Contraseña",
-                    "labelClassName": "label-password",
-                    "placeholder": "Ingresa tu contraseña",
-                    "type": "password",
-                    "name": "password",
-                    "required": true,
-                    "maxLength": 100,
-                    "minLength": 6,
-                    "className": "input-password",
-                    "id": "password",
-                    "icon": LuCircleUserRound
-                }
+                "campo_0":new InputsForms("Contraseña de Firma Digital", "label-password", "ej. 1234567890", "password", "password-signature", true, 15, 6, "input-password", "password-signature", LuCircleUserRound)
             },
             "checkbox": {
-                "campo":{
-                    "label": "Recordar mis credenciales",
-                    "type": "checkbox",
-                    "name": "remember",
-                    "className": "input-checkbox",
-                    "id": "remember",
-                    "required": false,
-                }
+                "campo_0":new InputsForms("Acepto los términos y condiciones", "label-terms", "", "checkbox", "terms", true, null, null, "input-checkbox", "terms", LuCircleUserRound)
             },
             "submit": {
-                "campo":{
-                    "label": "Iniciar Sesión",
-                    "type": "submit",
-                    "className": "input-submit",
-                    "value": "Iniciar Sesión",
-                    "id": "submit"
-                }
+                "campo_0":new InputsForms("Iniciar Proceso", "label-submit", "", "submit", "submit", true, null, null, "input-submit", "submit", LuCircleUserRound)
             }
         };
 
+        
     return(
         <>  
             <section className="section-container-index">
@@ -105,6 +75,10 @@ export const CreateSignature = () => {
                         <div className="conteiner-form-createSignature">
                             <div>
                                 <span>Información del solicitante</span>
+                            </div>
+
+                            <div>
+                                <FormSignature params={paramsFormn}/>
                             </div>
 
                         </div>
