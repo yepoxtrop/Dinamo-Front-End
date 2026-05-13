@@ -2,21 +2,21 @@
 import { LeftMenu } from "../../components/menus/leftMenu.jsx";
 import { Header } from "../../components/headers/header.jsx";
 import { Form } from "../../components/forms/form.jsx";
-import { LuCircleUserRound } from "react-icons/lu";
-import { HiOutlineIdentification } from "react-icons/hi2";
-import { MdOutlineMail } from "react-icons/md";
-import { GrUserManager } from "react-icons/gr";
-import { RiLockPasswordLine } from "react-icons/ri";
-import { VscEye } from "react-icons/vsc";
-import { VscEyeClosed } from "react-icons/vsc";
-import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
-import { PiUserListFill } from "react-icons/pi";
-import { MdOutlineSecurity } from "react-icons/md";
-import { FaRegCheckCircle } from "react-icons/fa";
 import PrincipalLoader from "../../components/loaders/loaders.jsx";
 import { CardSkillBasic, CardSkillDetail } from "../../components/cards/cardSkills.jsx";
 import ToolBar from "../../components/combinations/toolbars.jsx";
 import { FormSignature } from "../../components/forms/form.jsx";
+
+import { LuCircleUserRound } from "react-icons/lu";
+import { HiOutlineIdentification, HiOutlineBuildingOffice2 } from "react-icons/hi2";
+import { MdOutlineMail, MdOutlineSecurity } from "react-icons/md";
+import { GrUserManager } from "react-icons/gr";
+import { RiLockPasswordLine } from "react-icons/ri";
+import { VscEye,VscEyeClosed } from "react-icons/vsc";
+import { PiUserListFill } from "react-icons/pi";
+import { FaRegCheckCircle } from "react-icons/fa";
+import { FiSend } from "react-icons/fi";
+
 {/* Constantes */}
 import { URL_API } from "../../settings/variablesEntrono.js";
 {/* Estilos */}
@@ -24,37 +24,33 @@ import '../../styles/general/pages/user/createSignature.css';
 {/* Imagenes */}
 import logoTransparente from "../../assets/logo/logo_transparente.png"
 import logoVector from "../../assets/dinamo_vector_minimalist.svg"
-{/* Estado */}
-import {store} from "../../services/stores/store.js";
-{/* Actions */}
-{/* Hooks */}
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-{/* Paquetes */}
-import axios from "axios";
 {/* Clases */}
 import InputsForms from "../../utils/class/inputsClass.js";
 
 export const CreateSignature = () => {
     {/* Parámetros del formulario */}
-        const paramsFormn = {
-            "text":{
-                "campo_0": new InputsForms("Nombre Completo", "label-username", "Linus Benedict Torvalds", "text", "realName", true, 100, 15, "input-text", "realName", LuCircleUserRound),
-                "campo_1": new InputsForms("Numero de Identificación", "label-identification", "1234567890", "text","identification", true, 15, 6, "input-text", "identification", LuCircleUserRound), 
-            },
-            "email":{
-                "campo_0": new InputsForms("correo electrónico", "label-email", "ej. linus@github.com", "text", "email", true, 100, 3, "input-text", "email", LuCircleUserRound)
-            }, 
-            "password": {
-                "campo_0":new InputsForms("Contraseña de Firma Digital", "label-password", "ej. 1234567890", "password", "password-signature", true, 15, 6, "input-password", "password-signature", LuCircleUserRound)
-            },
-            "checkbox": {
-                "campo_0":new InputsForms("Acepto los términos y condiciones", "label-terms", "", "checkbox", "terms", true, null, null, "input-checkbox", "terms", LuCircleUserRound)
-            },
-            "submit": {
-                "campo_0":new InputsForms("Iniciar Proceso", "label-submit", "", "submit", "submit", true, null, null, "input-submit", "submit", LuCircleUserRound)
-            }
-        };
+    const paramsFormn = {
+        "text":[
+            new InputsForms("Nombre Completo", "label-username", "Linus Benedict Torvalds", "text", "realName", true, 100, 15, "input-text-signature", "realName", <LuCircleUserRound className="icon-input-text"/>), 
+            new InputsForms("Numero de Identificación", "label-identification", "1234567890", "text","identification", true, 15, 6, "input-text-signature", "identification", <HiOutlineIdentification className="icon-input-text" />), 
+        ],
+        "email":[
+            new InputsForms("correo Electrónico", "label-email", "ej. linus@github.com", "email", "email", true, 100, 3, "input-email-signature", "email", <MdOutlineMail className="icon-input-email"/>)
+        ],
+        "password":[
+            new InputsForms("Contraseña de Firma Digital", "label-password", "ej. 1234567890", "password", "password-signature", true, 15, 6, "input-password-signature", "password-signature", <RiLockPasswordLine className="icon-input-password"/>)
+        ]
+    };
+
+    const paramsTerms = [
+        new InputsForms("Acepto los términos y condiciones sobre el uso de la firma digital.", "label-terms", "", "checkbox", "terms", true, null, null, "input-checkbox", "terms", LuCircleUserRound),
+        new InputsForms("Quieres notificaciones sobre nuevas actualizaciones.", "label-terms", "", "checkbox", "terms", false, null, null, "input-checkbox", "terms", LuCircleUserRound)
+    ]
+
+    const paramsButtons = [
+        new InputsForms("Guardar Borrador", "label-submit", "", "submit", "submit", true, null, null, "input-submit-signature-draft", "submit", null, "Guardar Borrador"),
+        new InputsForms("Iniciar Proceso", "label-submit", "", "submit", "submit", true, null, null, "input-submit-signature", "submit", null, "Iniciar Proceso")
+    ]
 
         
     return(
@@ -73,12 +69,14 @@ export const CreateSignature = () => {
                         
                         {/* Formulario de inicio de sesion */}
                         <div className="conteiner-form-createSignature">
-                            <div>
-                                <span>Información del solicitante</span>
+                            
+                            <div className="container-tile-form-createSignature">
+                                <span className="tile1-form-createSignature">Información del solicitante</span>
+                                <span className="tile2-form-createSignature">Complete los datos requeridos para la generación de su firma digital.</span>
                             </div>
-
+                            <hr />
                             <div>
-                                <FormSignature params={paramsFormn}/>
+                                <FormSignature params={paramsFormn} classNameForm={"form-create-signature"} paramsButtons={paramsButtons} paramsTerms={paramsTerms}/>
                             </div>
 
                         </div>

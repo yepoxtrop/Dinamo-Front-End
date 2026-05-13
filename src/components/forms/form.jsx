@@ -1,7 +1,7 @@
 {/* Componentes */}
 import { InputSubmit } from "../../components/inputs/inputSubmit.jsx";
 import { Label } from "../../components/labels/label.jsx";
-import { TargetInputText, TargetInputPassword, TargetInputCheckbox } from "../combinations/targetInputs.jsx";
+import { TargetInputText, TargetInputPassword, TargetInputCheckbox, TargetInputEmail, TargetInputFile } from "../combinations/targetInputs.jsx";
 {/* Hooks */}
 import { useNavigate } from "react-router-dom";
 {/* Estado */}
@@ -103,20 +103,103 @@ export function Form ({params, api_url, api_url2}){
 
 
 
-export function FormSignature({params}){
+export function FormSignature({params, paramsTerms, paramsButtons, classNameForm}){
     const fieldComponents = {
         text: TargetInputText,
         password: TargetInputPassword,
         submit: InputSubmit,
-        checkbox: TargetInputCheckbox
+        checkbox: TargetInputCheckbox,
+        email: TargetInputEmail
     }
     return(
         <>
-            <form > 
-                {Object.entries(params).map(([key, value]) => {
+            <form className={classNameForm}>
+                <div className="container-principal-input-form-signature">
+                    {Object.entries(params).map(([key, value]) => {
                     const Component = fieldComponents[key];
-                    return <div key={key} className="container-inputs">{Component ? <Component params={value.campo} /> : null}</div>;
-                })};
+                    if (!Array.isArray(value)) {
+                        return (
+                            <div key={key} className={"container-inputs-signature"}>
+                                {Component ? <Component params={value} /> : null}
+                            </div>
+                        );
+                    }
+
+                    return value.map((item, index) => (
+                        <div key={`${key}-${index}`} className="container-inputs-signature">
+                            {Component ? <Component params={item} /> : null}
+                        </div>
+                    ));
+                })}
+                </div>
+                
+                <div className="container-second-input-form-signature">
+                    {Object.entries(paramsTerms).map(([key, value]) => {
+                        return <div key={key} className="container-inputs"><TargetInputCheckbox params={value} /></div>;
+                    })}
+                </div>
+                
+                <div className="container-buttons-input-form-signature">
+                    {Object.entries(paramsButtons).map(([key, value]) => {
+                        return <div key={key} className="container-inputs"><InputSubmit params={value} /></div>;
+                    })}
+                </div>
+                
+            </form>
+        </>
+    )
+}
+
+export function FormRenewSignature({params, paramsFiles, paramsButtons}){
+    const fieldComponents = {
+        text: TargetInputText,
+        password: TargetInputPassword,
+        submit: InputSubmit,
+        checkbox: TargetInputCheckbox,
+        email: TargetInputEmail
+    }
+    return(
+        <>
+            <form enctype="multipart/form-data">
+                <div>
+                    <div></div>
+
+                    <div>
+                        <div>
+                            <span>Configuración de Nueva Clave</span>
+                        </div>
+                        <div>
+                            {Object.entries(params).map(([key, value]) => {
+                                const Component = fieldComponents[key];
+                                if (!Array.isArray(value)) {
+                                    return (
+                                        <div key={key} className={"container-inputs-signature"}>
+                                            {Component ? <Component params={value} /> : null}
+                                        </div>
+                                    );
+                                }
+
+                                return value.map((item, index) => (
+                                    <div key={`${key}-${index}`} className="container-inputs-signature">
+                                        {Component ? <Component params={item} /> : null}
+                                    </div>
+                                ))
+                            })}
+                        </div>
+
+                        <div className="container-buttons-input-form-signature">
+                            {Object.entries(paramsButtons).map(([key, value]) => {
+                                return <div key={key} className="container-inputs"><InputSubmit params={value} /></div>;
+                            })}
+                        </div>
+
+                        <div>
+                            <span>Este proceso generará un nuevo archivo .p12 válido por 3 meses.</span>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div></div>
             </form>
         </>
     )

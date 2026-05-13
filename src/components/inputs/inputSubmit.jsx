@@ -25,13 +25,16 @@ export function InputSubmit ({params}){
     }, [buttons])
 
     return(
-        <>
-            <input 
-                type="submit" 
-                className={`${params.className}${isBlock?'-block':''}`} 
-                id={params.id}
-                value={params.value}
-            />
+        <>  
+            <div className="container-input">
+                {params?.icon?params.icon: <></>}
+                <input 
+                    type="submit" 
+                    className={`${params.className}${isBlock?'-block':''}`} 
+                    id={params.id}
+                    value={params.value}
+                />
+            </div>
         </>
     )
 }

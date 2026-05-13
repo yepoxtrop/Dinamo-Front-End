@@ -1,0 +1,66 @@
+/* ==========================================================
+   Layout principal
+   ========================================================== */
+.section-container-index {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100dvh;
+}
+
+.container-menu-index {
+    width: 20%;
+}
+
+.container-data-renewSignature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 80%;
+    height: 100%;
+    background-color: var(--sixth-color);
+}
+
+.container-data-info-renewSignature {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    min-height: 100dvh;
+    padding: 2rem;
+    overflow-y: auto;
+    width: 100%;
+}
+
+/* ==========================================================
+   Formulario de creacion de firmas
+   ========================================================== */
+.conteiner-form-renewSignature {
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container-tile-form-renewSignature{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tile1-form-renewSignature{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--fourth-color);
+}
+
+.tile2-form-renewSignature{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--eleventh-color);
+}
+

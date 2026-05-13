@@ -1,11 +1,10 @@
 {/* Componentes */}
-import { Lineicons } from "@lineiconshq/react-lineicons";
 {/* Estilos */}
 import '../../styles/inputs.css';
 {/* Hooks */}
 import { useState } from "react";
 
-export function InputText ({params}){
+export function InputEmail ({params}){
 
     const [inputValue, setInputValue] = useState("");
     const [className, setClassName] = useState(params.className);
@@ -21,9 +20,9 @@ export function InputText ({params}){
     return(
         <>
             <div className="container-input">
-                <Lineicons icon={params.icon} className="icon-input-text" />
+                {params.icon}
                 <input 
-                    type="text" 
+                    type="email" 
                     name={params.name} 
                     className={params.className} 
                     placeholder={params.placeholder}

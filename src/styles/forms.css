@@ -1,13 +1,72 @@
+/* ===========================================
+   ESTILOS GENERALES DE FORMULARIOS
+   =========================================== */
+
+/* Estilo base para todos los formularios */
 form {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
-.container-inputs{
+/* ===========================================
+   FORMULARIO DE CREACIÓN DE FIRMA DIGITAL
+   =========================================== */
+
+/* Contenedor principal del formulario de creación de firma */
+.form-create-signature {
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 0.85rem;
+}
+
+/* ===========================================
+   CONTENEDORES DE INPUTS
+   =========================================== */
+
+/* Contenedor genérico para inputs */
+.container-inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor específico para inputs en formularios de firma */
+.container-inputs-signature {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===========================================
+   LAYOUT DEL FORMULARIO DE FIRMA
+   =========================================== */
+
+/* Contenedor principal para inputs del formulario de firma (grid de 2 columnas) */
+.container-principal-input-form-signature {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+}
+
+/* Contenedor para el segundo input del formulario de firma */
+.container-second-input-form-signature {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Contenedor para botones del formulario de firma */
+.container-buttons-input-form-signature {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
 }

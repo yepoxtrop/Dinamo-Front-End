@@ -17,7 +17,7 @@ export function InputPassword ({params}){
     return(
         <>  
             <div className="container-input">
-                <Lineicons icon={params.icon} className="icon-input-text" />
+                {params.icon}
                 <input 
                     type={isPasswordVisible ? "text" : "password"} 
                     name={params.name} 

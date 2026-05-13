@@ -5,7 +5,9 @@ import { Index } from "./pages/general/index.jsx";
 import { DashBoard } from "./pages/users/dashBoard.jsx";
 import { Error404 } from "./pages/general/404.jsx";
 import { CreateSignature } from "./pages/users/createSignature.jsx";
+import { RenewSignature } from "./pages/users/renewSignature.jsx";
 import PrincipalLoader from "./components/loaders/loaders.jsx";
+
 export const App = () => {
     return(
         <Routes>
@@ -22,6 +24,7 @@ export const App = () => {
 
             <Route path="/signatures">
                 <Route path="createSignatures" element={<CreateSignature />} />
+                <Route path="renewSignatures" element={<RenewSignature />} />
                 <Route path="totalSignatures" element={<DashBoard />} />
             </Route>
 

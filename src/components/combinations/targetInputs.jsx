@@ -2,6 +2,8 @@
 import { InputText } from "../inputs/inputText.jsx";
 import { InputPassword } from "../inputs/inputPassword.jsx";
 import { InputCheckbox } from "../inputs/inputCheckbox.jsx";
+import { InputEmail } from "../inputs/inputEmail.jsx";
+import { InputFile } from "../inputs/inputFile.jsx";
 import { Label } from "../labels/label.jsx";
 {/* Estilos */}
 import '../../styles/targets.css'
@@ -28,7 +30,7 @@ export function TargetInputText ({params}){
             <InputText params={params} />
         </div>
     )
-}
+} 
 
 /**
  * Componente que combina un label y un input de tipo contraseña.
@@ -50,6 +52,16 @@ export function TargetInputPassword ({params}){
         <div className="target-input-password">
             <Label params={{"htmlFor":params.name, "value": params.label}} />
             <InputPassword params={params} />
+        </div>
+    )
+}
+
+
+export function TargetInputEmail ({params}){
+    return(
+        <div className="target-input-email">
+            <Label params={{"htmlFor":params.name, "value": params.label}} />
+            <InputEmail params={params} />
         </div>
     )
 }
@@ -82,6 +94,17 @@ export function TargetSubItemMenu({params}){
             <div className="target-sub-item-menu">
                 {params.icon}
                 <span className="text-sub-item-menu">{params.info}</span>
+            </div>
+        </>
+    )
+}
+
+export function TargetInputFile({params}){
+    return(
+        <>
+            <div className="target-input-file">
+                <Label params={{"htmlFor":params.name, "value": params.label}} />
+                <InputFile params={params} />
             </div>
         </>
     )
