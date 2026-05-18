@@ -6,14 +6,9 @@ import { useState } from "react";
 export function InputText ({params}){
 
     const [inputValue, setInputValue] = useState("");
-    const [className, setClassName] = useState(params.className);
-    const handleChange = (event) => {
+
+    function handleChange(event) {
         setInputValue(event.target.value);
-        if (inputValue === "") {
-            setClassName(params.className);
-        }else{
-            setClassName(params.className + "-active");
-        }
     };
 
     return(
@@ -21,7 +16,7 @@ export function InputText ({params}){
             <div className="container-input">
                 {params.icon}
                 <input 
-                    type="email" 
+                    type="text" 
                     name={params.name} 
                     className={params.className} 
                     placeholder={params.placeholder}
@@ -32,6 +27,32 @@ export function InputText ({params}){
                     onChange={handleChange}
                 />
             </div>
+        </>
+    )
+}
+
+
+export function InputTextSimple ({params}){
+
+    const [inputValue, setInputValue] = useState("");
+
+    function handleChange(event) {
+        setInputValue(event.target.value);
+    };
+
+    return(
+        <>
+            <input 
+                type="text" 
+                name={params.name} 
+                className={params.className} 
+                placeholder={params.placeholder}
+                required={params.required}
+                maxLength={params.maxLength}
+                minLength={params.minLength}
+                id={params.id}
+                onChange={handleChange}
+            />
         </>
     )
 }

@@ -8,9 +8,14 @@
     margin: 0 0 1rem 0;
 }
 
+/* Target del input tipo email */
+.target-input-email{
+    margin: 0 0 1rem 0;
+}
+
 /* Target del input tipo checkbox */
 .target-input-checkbox{
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 1rem 0;
 }
 
 /* Target del componente sidebar */

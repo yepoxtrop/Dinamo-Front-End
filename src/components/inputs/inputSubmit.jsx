@@ -32,7 +32,7 @@ export function InputSubmit ({params}){
                     type="submit" 
                     className={`${params.className}${isBlock?'-block':''}`} 
                     id={params.id}
-                    value={params.value}
+                    value={params?.value?params.value:""}
                 />
             </div>
         </>

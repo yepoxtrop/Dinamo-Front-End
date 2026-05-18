@@ -19,7 +19,6 @@ export function InputFile ({params}){
     return(
         <>
             <div className="container-input">
-                {params.icon}
                 <input 
                     type="file" 
                     name={params.name} 

@@ -15,8 +15,38 @@ input[type="text"], input[type="password"], input[type="email"]{
     font-size: 16px;
     padding-left: 2.2rem;
     padding-right: 2.2rem;
-    color: var(--nineth-color);
+    color: rgba(55, 138, 221, 0.8);
+    transition: ease-in-out 0.3s;
 }
+
+input[type="text"].input-text-username:focus, input[type="password"].input-password-user:focus, input[type="email"].input-email-user:focus, input[type="text"].codigo-authentication:focus{
+    outline: none;
+    border-color: var(--fifth-color);
+    border-width: 1px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    color: var(--second-color);
+}
+
+
+input[type="text"].codigo-authentication {
+    height: auto;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.container-input:focus-within .icon-input-text {
+    color: var(--fifth-color);
+}
+
+.container-input:focus-within .icon-input-email {
+    color: var(--fifth-color);
+}
+
+.container-input:focus-within .icon-input-password {
+    color: var(--fifth-color);
+}
+
+
 
 input[type="submit"]{
     width: 100%;

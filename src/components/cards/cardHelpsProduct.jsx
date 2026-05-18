@@ -126,7 +126,7 @@ export function CardHelpProductFunctions({params}){
     return(
         <>
             <div className={params.className}>
-
+                {params?.icon2?<div className={`help-functions-icon2-${clase}`}>{params.icon2}</div>:null}
                 <div className={`help-functions-container-icon-${clase}`}>
                     <div className={`help-functions-icon-${clase}`}>{params.icon}</div>
                     <div className={`help-functions-container-title-${clase}`}>
@@ -139,6 +139,7 @@ export function CardHelpProductFunctions({params}){
                     <span className={`help-functions-info-${clase}`}>{params.info}</span>
                 </div>
                 <div className={`help-functions-container-card-basics-${clase}`}>
+                    
                     {params.extras.map((valor, llave)=>{
                         return(
                             <>
@@ -152,3 +153,43 @@ export function CardHelpProductFunctions({params}){
         </>
     )
 }
+
+
+export function CardHelpInformative({params}){
+
+    const clase = useClassCards(params.className);
+    
+    return(
+        <>
+            <div className={params.className}>
+                {params?.icon2?<div className={`help-functions-icon2-${clase}`}>{params.icon2}</div>:null}
+                <div className={`help-functions-container-icon-${clase}`}>
+                    <div className={`help-functions-icon-${clase}`}>
+                        {params.icon}
+                        <span className={`help-functions-title-${clase}`}>{params.title}</span>
+                    </div>
+                    <div className={`help-functions-container-title-${clase}`}>
+                        <span className={`help-functions-subTitle-${clase}`}>{params.subTitle}</span>
+                    </div>
+                </div>
+                {params.line?<hr className={`help-functions-line-${clase}`}/>:<></>}
+                <div className={`help-functions-container-info-${clase}`}>
+                    <span className={`help-functions-info-${clase}`}>{params.info}</span>
+                </div>
+                <div className={`help-functions-container-card-basics-${clase}`}>
+                    
+                    {params.extras.map((valor, llave)=>{
+                        return(
+                            <>
+                                <CardSkillBasic params={{content:valor, className:clase}} key={llave} />
+                            </>
+                        )
+                        
+                    })}
+                </div>
+            </div>
+        </>
+    )
+}
+
+

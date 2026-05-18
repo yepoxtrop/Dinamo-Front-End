@@ -8,6 +8,7 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 import { PiCertificateFill } from "react-icons/pi";
 import { SiReadthedocs } from "react-icons/si";
 import { CardDinamo } from "../cards/cardDinamo.jsx";
+import { RiUserLine } from "react-icons/ri";
 {/* Hooks */}
 import { useSelector } from "react-redux";
 {/* Constantes */}
@@ -90,7 +91,7 @@ export function RightPanelLogin(){
                 "minLength": 3,
                 "className": "input-text",
                 "id": "username",
-                "icon": User4Outlined
+                "icon": <RiUserLine />
             }, 
         }, 
         "password": {
@@ -105,7 +106,7 @@ export function RightPanelLogin(){
                 "minLength": 6,
                 "className": "input-password",
                 "id": "password",
-                "icon": Locked2Outlined
+                "icon": <PiCertificateFill />
             }
         },
         "checkbox": {

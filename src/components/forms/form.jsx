@@ -1,7 +1,14 @@
 {/* Componentes */}
 import { InputSubmit } from "../../components/inputs/inputSubmit.jsx";
+import { InputTextSimple } from "../inputs/inputText.jsx";
 import { Label } from "../../components/labels/label.jsx";
-import { TargetInputText, TargetInputPassword, TargetInputCheckbox, TargetInputEmail, TargetInputFile } from "../combinations/targetInputs.jsx";
+import { TargetInputText, 
+         TargetInputPassword, 
+         TargetInputCheckbox, 
+         TargetInputEmail, 
+         TargetInputFile } from "../combinations/targetInputs.jsx";
+import { CardHelpInformative } from "../cards/cardHelpsProduct.jsx";
+import { CardSkillDetailStatus } from "../cards/cardSkills.jsx";
 {/* Hooks */}
 import { useNavigate } from "react-router-dom";
 {/* Estado */}
@@ -14,6 +21,7 @@ import axios from "axios";
 {/* Estilos */}
 import '../../styles/forms.css';
 import { Link } from "react-router-dom";
+import { InputFile } from "../inputs/inputFile.jsx";
 
 export function Form ({params, api_url, api_url2}){
     
@@ -101,6 +109,61 @@ export function Form ({params, api_url, api_url2}){
     )
 }
 
+export function FormRegister ({params}){
+    const fieldComponents = {
+        text: TargetInputText,
+        password: TargetInputPassword,
+        email: TargetInputEmail,
+        submit: InputSubmit,
+        checkbox: TargetInputCheckbox
+    };
+    return(
+        <>
+            <form>
+                {Object.entries(params).map(([key, value]) => {
+                    const Component = fieldComponents[key];
+                    return value.map((item, index) => (
+                        <div key={`${key}-${index}`} className="container-inputs">
+                            {Component ? <Component params={item} /> : null}
+                        </div>
+                    ));
+                })}
+            </form>
+        </>
+    )
+}
+
+export function FormAuthentication({paramsInputs, paramsButtons}){
+    const fieldComponents = {
+        text: InputTextSimple,
+        submit: InputSubmit,
+    };
+    return(
+        <>
+            <form>
+                <div className="div-codes-form-container">
+                    {Object.entries(paramsInputs).map(([key, value]) => {
+                        const Component = fieldComponents[key];
+                        return value.map((item, index) => (
+                            <div key={`${key}-${index}`} className="container-inputs">
+                                {Component ? <Component params={item} /> : null}
+                            </div>
+                        ));
+                    })}
+                </div>
+                
+                {Object.entries(paramsButtons).map(([key, value]) => {
+                    const Component = fieldComponents[key];
+                    return value.map((item, index) => (
+                        <div key={`${key}-${index}`} className="container-inputs">
+                            {Component ? <Component params={item} /> : null}
+                        </div>
+                    ));
+                })}
+            </form>
+        </>
+    )
+}
 
 
 export function FormSignature({params, paramsTerms, paramsButtons, classNameForm}){
@@ -150,7 +213,7 @@ export function FormSignature({params, paramsTerms, paramsButtons, classNameForm
     )
 }
 
-export function FormRenewSignature({params, paramsFiles, paramsButtons}){
+export function FormRenewSignature({params, paramsFiles, paramsButtons, classNameForm, paramsCard}){
     const fieldComponents = {
         text: TargetInputText,
         password: TargetInputPassword,
@@ -160,9 +223,19 @@ export function FormRenewSignature({params, paramsFiles, paramsButtons}){
     }
     return(
         <>
-            <form enctype="multipart/form-data">
+            <form encType="multipart/form-data" className={classNameForm}>
                 <div>
-                    <div></div>
+                    <div>
+                        {Object.entries(paramsFiles).map(([key, value]) => {
+                            return <div key={key} className="container-inputs"><TargetInputFile params={value} /></div>;
+                        })}
+                    </div>
+
+                    <CardHelpInformative params={paramsCard} />
+                </div>
+
+                <div>
+                    
 
                     <div>
                         <div>
@@ -199,7 +272,7 @@ export function FormRenewSignature({params, paramsFiles, paramsButtons}){
                         
                     </div>
                 </div>
-                <div></div>
+                
             </form>
         </>
     )

@@ -1,0 +1,133 @@
+.left-panel-register {
+    /* Anchura */
+    max-width: 70%;
+    min-width: 0%;
+    width: 70%;
+
+    /* Altura */
+    min-height: 100vh;
+    max-height: 100vh;
+    height: 100vh;
+
+    /* Orientacion */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    flex-direction: column;
+
+    background-color: var(--fourth-color);
+    background-image: linear-gradient(var(--second-color) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--second-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0px 20px, 11px 0px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.right-panel-register {
+    /* Anchura */
+    max-width: 1000%;
+    min-width: 30%;
+    width: 30%;
+
+    /* Altura */
+    min-height: 100vh;
+    max-height: 100vh;
+    height: 100vh;
+
+    /* Orientacion */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* Margen */
+    padding: 2rem;
+
+    /* Fondo */
+    background-color: var(--sixth-color);
+
+    /* Posicionamiento */
+    position: relative;
+    overflow: hidden;
+}
+
+.container-right-panel-register-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    border: 2px solid var(--first-color);
+    border-radius: 10px;
+    border-top: 10px solid var(--fifth-color);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-title-register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.title1-register{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--third-color);
+}
+
+.container-form-register{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.form-register-extra-options-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.form-register-extra-options-container hr {
+    flex: 1;
+    height: 1px;
+    border: none;
+    background-color: var(--nineth-color);
+}
+
+.form-register-extra-options-container p {
+    color: var(--second-color);
+}
+
+
+
+.form-register-extra-logins-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-redirect-login-container-register{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-to-login{
+    color: var(--second-color);
+    font-weight: 500;
+    text-decoration: none;
+}

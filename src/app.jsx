@@ -1,6 +1,7 @@
 {/* Componentes */}
 import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
 import { Login } from "./pages/general/login.jsx";
+import { Register } from "./pages/general/register.jsx";
 import { Index } from "./pages/general/index.jsx";
 import { DashBoard } from "./pages/users/dashBoard.jsx";
 import { Error404 } from "./pages/general/404.jsx";
@@ -13,8 +14,7 @@ export const App = () => {
         <Routes>
             <Route path="/" element={<Index />} />{/* Pagina de login */}
             <Route path="/login" element={<Login />} />{/* Pagina de login */}
-            <Route path="/index" element={<Index />} />{/* Pagina principal después de login */}
-            <Route path="/dashBoard" element={<DashBoard />} />{/* Pagina principal después de login */}
+            <Route path="/register" element={<Register />} />{/* Pagina de registro */}
             
             <Route path="/documents">
                 <Route path="signDocuments" element={<DashBoard />} />

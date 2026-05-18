@@ -79,6 +79,18 @@ export function CardSkillDetail({params}){
     )
 }
 
+export function CardSkillDetailStatus({params}){
+    return(
+        <div className={`card-detail-${params.className}`}> 
+            <div className={`card-detail-icon-container-${params.className}`}>
+                {params?.title?<span className={`card-detail-info-${params.className}`}>{params.title}</span>:<></>}
+                {params.icon}
+            </div>
+            <CardSkillBasic params={{className: params.className, content: params.content}} />
+        </div>
+    )
+}
+
 /**
  * Renderiza un chip o tarjeta basica de informacion.
  *

@@ -10,6 +10,25 @@ form {
     align-items: center;
 }
 
+
+.div-codes-form-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+/* ===========================================
+   FORMULARIO DE RENOVACIÓN DE FIRMA DIGITAL
+   =========================================== */
+.form-renew-signature{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
 /* ===========================================
    FORMULARIO DE CREACIÓN DE FIRMA DIGITAL
    =========================================== */
