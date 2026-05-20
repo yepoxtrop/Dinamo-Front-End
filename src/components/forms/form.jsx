@@ -11,6 +11,7 @@ import { CardHelpInformative } from "../cards/cardHelpsProduct.jsx";
 import { CardSkillDetailStatus } from "../cards/cardSkills.jsx";
 {/* Hooks */}
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
 {/* Estado */}
 import { store } from "../../services/stores/store.js";
 {/* Actions */}
@@ -22,6 +23,8 @@ import axios from "axios";
 import '../../styles/forms.css';
 import { Link } from "react-router-dom";
 import { InputFile } from "../inputs/inputFile.jsx";
+{/* Constants */}
+import {URL_API} from "../../settings/variablesEntrono.js";
 
 export function Form ({params, api_url, api_url2}){
     
@@ -117,9 +120,36 @@ export function FormRegister ({params}){
         submit: InputSubmit,
         checkbox: TargetInputCheckbox
     };
+
+    const [formData, setFormData] = useState({
+            "username": "",
+            "email": "",
+            "password": "",
+            "terms": false
+        });
+
+    async function handleSubmit(event){
+
+        event.preventDefault();
+        setFormData({
+            "username": event.target.username.value,
+            "email": event.target.emailAdress.value,
+            "password": event.target.contrasena.value,
+            "terms": event.target.terms.checked
+        });
+        try {
+            const peticion = await axios.post(`${URL_API}/Usuario/Crear_Usuario`, formData);
+            console.log(peticion)
+        } catch (error) {
+            console.log(error)        
+        }
+
+
+    }
+    console.log(formData)
     return(
         <>
-            <form>
+            <form onSubmit={handleSubmit}>
                 {Object.entries(params).map(([key, value]) => {
                     const Component = fieldComponents[key];
                     return value.map((item, index) => (
@@ -133,14 +163,14 @@ export function FormRegister ({params}){
     )
 }
 
-export function FormAuthentication({paramsInputs, paramsButtons}){
+export function FormAuthentication({paramsInputs, paramsButtons, className}){
     const fieldComponents = {
         text: InputTextSimple,
         submit: InputSubmit,
     };
     return(
         <>
-            <form>
+            <form className={className}>
                 <div className="div-codes-form-container">
                     {Object.entries(paramsInputs).map(([key, value]) => {
                         const Component = fieldComponents[key];

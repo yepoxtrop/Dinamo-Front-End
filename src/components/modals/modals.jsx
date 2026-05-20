@@ -32,21 +32,25 @@ export function ModalRegister(){
             <div className="container-modal">
                 
                 <div className="card-modal-register">
-                    <div>
-                        <div>
+
+                    <div className="container-icon-modal-register">
+                        <div className="container-icon-modal">
                             <BsFillShieldLockFill className="icon-modal-register"/>
                         </div>
                     </div>
-                    <div>
-                        <span>Verifica tu cuenta</span>
-                        <p> Hemos enviado un código de seguridad de 6 dígitos a tu correo electrónico. Por favor, ingrésalo a continuación para continuar. </p>
+
+                    <div className="container-title-modal-register">
+                        <span className="title-modal-register">Verifica tu cuenta</span>
+                        <p className="description-modal-register"> Hemos enviado un código de seguridad de 6 dígitos a tu correo electrónico. Por favor, ingrésalo a continuación para continuar. </p>
                     </div>
-                    <div>
-                        <FormAuthentication paramsInputs={paramsFormInput} paramsButtons={paramsFormButton} />
+
+                    <div className="container-form-modal-register">
+                        <FormAuthentication paramsInputs={paramsFormInput} paramsButtons={paramsFormButton} className={"form-modal-register"}/>
                     </div>
-                    <div>
-                        <span> ¿No recibiste el código? Reenviar código </span>
-                        <span>Ya puedes solicitar un nuevo código.</span>
+                     
+                    <div className="container-footer-modal-register">
+                        <span className="link-modal-register">¿No recibiste el código? Reenviar código</span>
+                        <span className="time-modal-register">Ya puedes solicitar un nuevo código.</span>
                     </div>
                 </div>
             </div>

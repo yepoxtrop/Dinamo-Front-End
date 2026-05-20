@@ -15,7 +15,7 @@ export const Register = () =>{
         <>
             {/* Pagina de inicio de sesión */}
             <section className="body-register">
-                <ModalRegister />
+                {/* <ModalRegister /> */}
                 {/* Panel izquierdo(diseño) */}
                 <LeftPanelRegister />
                 

@@ -58,13 +58,13 @@ export function LeftPanelRegister(){
 export function RightPanelRegister(){
     const paramsFormn = {
         "text":[
-            new InputsForms("Nombre Usuario", "label-username", "ej. Linus.Torvalds", "text", "realName", true, 100, 15, "input-text-username", "realName", <LuUserRound className="icon-input-text"/>), 
+            new InputsForms("Nombre Usuario", "label-username", "ej. Linus.Torvalds", "text", "userName", true, 100, 5, "input-text-username", "username", <LuUserRound className="icon-input-text"/>), 
         ],
         "email":[
-            new InputsForms("Correo Electrónico", "label-email", "ej. email@example.com", "email", "email", true, 100, 3, "input-email-user", "email", <MdOutlineEmail className="icon-input-email"/>)
+            new InputsForms("Correo Electrónico", "label-email", "ej. email@example.com", "email", "emailAdress", true, 100, 3, "input-email-user", "email", <MdOutlineEmail className="icon-input-email"/>)
         ],
         "password":[
-            new InputsForms("Contraseña", "label-password", "* * * * * * * * * *", "password", "password-signature", true, 15, 6, "input-password-user", "password-signature", <TbLockPassword className="icon-input-password"/>)
+            new InputsForms("Contraseña", "label-password", "* * * * * * * * * *", "password", "contrasena", true, 15, 6, "input-password-user", "password-signature", <TbLockPassword className="icon-input-password"/>)
         ],
         "checkbox":[
             new InputsForms("Acepto los términos y condiciones.", "label-terms", "", "checkbox", "terms", true, null, null, "input-checkbox", "terms", null),
@@ -86,7 +86,7 @@ export function RightPanelRegister(){
                         <span className="title1-register">Crea tu cuenta</span>
                         <span className="title2-register">Únete a la plataforma líder en gestión documental.</span>
                     </div>
-
+ 
                     <div className="container-form-register">
                         <FormRegister params={paramsFormn} />
                         
