@@ -10,6 +10,7 @@ import { TargetInputText,
 import { CardHelpInformative } from "../cards/cardHelpsProduct.jsx";
 import { CardSkillDetailStatus } from "../cards/cardSkills.jsx";
 {/* Hooks */}
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 {/* Estado */}
@@ -17,6 +18,7 @@ import { store } from "../../services/stores/store.js";
 {/* Actions */}
 import { setLogin } from "../../services/stores/slices/users/slice.js";
 import { setWait } from "../../services/stores/slices/buttons/slice.js";
+import { setNormalRegisterState } from "../../services/stores/slices/register/slice.js";
 {/* Paquetes */}
 import axios from "axios";
 {/* Estilos */}
@@ -24,7 +26,11 @@ import '../../styles/forms.css';
 import { Link } from "react-router-dom";
 import { InputFile } from "../inputs/inputFile.jsx";
 {/* Constants */}
-import {URL_API} from "../../settings/variablesEntrono.js";
+import { URL_API, 
+         URL_USUARIO_CREAR_NORMAL, 
+         URL_USUARIO_NUEVO_TOKEN_AUTH,
+         URL_USUARIO_COMPARAR_TOKEN_AUTH
+        } from "../../settings/variablesEntrono.js";
 
 export function Form ({params, api_url, api_url2}){
     
@@ -37,7 +43,6 @@ export function Form ({params, api_url, api_url2}){
     };
 
     {/* Envio de datos con hook personalizado */}
-
     const dispatch = store.dispatch;
     const navigate = useNavigate();
 
@@ -113,6 +118,11 @@ export function Form ({params, api_url, api_url2}){
 }
 
 export function FormRegister ({params}){
+    const dispatch = store.dispatch;
+    const dataGlobalStatus = useSelector((state)=>{
+        return state.register.normalRegister;
+    });
+
     const fieldComponents = {
         text: TargetInputText,
         password: TargetInputPassword,
@@ -122,31 +132,31 @@ export function FormRegister ({params}){
     };
 
     const [formData, setFormData] = useState({
-            "username": "",
-            "email": "",
-            "password": "",
-            "terms": false
-        });
+        "username": "",
+        "email": "",
+        "password": "",
+        "terms": false
+    });
+
 
     async function handleSubmit(event){
-
         event.preventDefault();
-        setFormData({
+        const dataForm = {
             "username": event.target.username.value,
             "email": event.target.emailAdress.value,
             "password": event.target.contrasena.value,
             "terms": event.target.terms.checked
-        });
+        }
+        setFormData(dataForm);
         try {
-            const peticion = await axios.post(`${URL_API}/Usuario/Crear_Usuario`, formData);
-            console.log(peticion)
+            const peticion = await axios.post(`${URL_API}${URL_USUARIO_CREAR_NORMAL}`, dataForm);
+            dispatch(setNormalRegisterState([false, false, event.target.emailAdress.value]));
+            
         } catch (error) {
+            dispatch()
             console.log(error)        
         }
-
-
     }
-    console.log(formData)
     return(
         <>
             <form onSubmit={handleSubmit}>
@@ -164,13 +174,46 @@ export function FormRegister ({params}){
 }
 
 export function FormAuthentication({paramsInputs, paramsButtons, className}){
+
+    const dispatch = store.dispatch;
     const fieldComponents = {
         text: InputTextSimple,
         submit: InputSubmit,
     };
+    const dataGlobalStatus = useSelector((state)=>{
+        return state.register.normalRegister;
+    });
+
+    async function handleSubmit(event){
+        event.preventDefault();
+        
+        
+        let token = "";
+
+        const dataForm = {
+            "cadena": token.concat(
+                event.target.codigoAuthentication1.value, 
+                event.target.codigoAuthentication2.value, 
+                event.target.codigoAuthentication3.value, 
+                event.target.codigoAuthentication4.value, 
+                event.target.codigoAuthentication5.value,
+                event.target.codigoAuthentication6.value
+            ),
+            "email" : dataGlobalStatus.emailUser
+        }
+        try {
+            const peticion = await axios.post(`${URL_API}${URL_USUARIO_COMPARAR_TOKEN_AUTH}`, dataForm);
+            console.log(peticion)
+        } catch (error) {
+            dispatch()
+            console.log(error)        
+        }
+    }
+
+    
     return(
         <>
-            <form className={className}>
+            <form className={className} onSubmit={handleSubmit}>
                 <div className="div-codes-form-container">
                     {Object.entries(paramsInputs).map(([key, value]) => {
                         const Component = fieldComponents[key];

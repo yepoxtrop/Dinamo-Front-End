@@ -1,3 +1,12 @@
+#modal-oauth-visible{
+    display: flex;
+}
+
+#modal-oauth-hidden{
+    display: none;
+    transition: all ease-in-out 0.3s;
+}
+
 .container-modal{
     position: absolute;
     padding: 4rem;
@@ -83,7 +92,14 @@
 .link-modal-register{
     color: var(--second-color);
     font-size: 0.9rem;
+}
+
+#link-new-code-enable{
     cursor: pointer;
+}
+
+#link-new-code-disable{
+    cursor: not-allowed;
 }
 
 .time-modal-register{

@@ -1,4 +1,11 @@
+/* URL DEL API */
 export const URL_API = import.meta.env.VITE_URL_API;
+
+/* RUTAS DEL API */
+export const URL_USUARIO_CREAR_NORMAL = import.meta.env.VITE_URL_USUARIO_CREAR_NORMAL;
+export const URL_USUARIO_NUEVO_TOKEN_AUTH = import.meta.env.VITE_URL_USUARIO_NUEVO_TOKEN_AUTH;
+export const URL_USUARIO_COMPARAR_TOKEN_AUTH = import.meta.env.VITE_URL_USUARIO_COMPARAR_TOKEN_AUTH;
+
 export const ID_CLIENTE_GOOGLE = import.meta.env.VITE_ID_CLIENTE_GOOGLE;
 export const ID_CLIENTE_GITHUB = import.meta.env.VITE_ID_CLIENTE_GITHUB;
 export const ID_CLIENTE_SECRET_GITHUB = import.meta.env.VITE_ID_CLIENTE_SECRET_GITHUB;
